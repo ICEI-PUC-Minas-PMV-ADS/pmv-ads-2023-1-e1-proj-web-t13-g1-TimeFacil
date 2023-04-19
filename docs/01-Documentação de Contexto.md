@@ -14,12 +14,19 @@
   Como objetivos específicos, destaca-se a necessidade de que a solução permita: 
 
 *Aos professores, a criação de salas, com temas definidos (para que os alunos apenas se organizem em grupos conforme a disponibilidade de horário ou afinidade pessoal) ou com temas em aberto (para que os alunos possam também sugerir temas para o trabalho a ser entregue); 
+
 *Aos professores, estabelecer um limite máximo de alunos que poderão integrar cada grupo;	 
-*Aos alunos, sugerir temas para o trabalho a ser entregue, quando for o caso, e sugerir dias e horários para os encontros periódicos; 		 
+
+*Aos alunos, sugerir temas para o trabalho a ser entregue, quando for o caso, e sugerir dias e horários para os encontros periódicos; 	
+
 *Aos alunos e aos professores, comentar nas sugestões apresentadas, seja para tentar conciliar os horários sugeridos, seja para debater o nível de complexidade da sugestão; 
+
 *Aos alunos, aderir às ideais feitas por colegas, até o limite de adesões estabelecido pelo professor, quando o grupo seria fechado para novas adesões; 
+
 *Aos alunos, abandonar a adesão à ideia, quando o grupo seria novamente aberto. 
+
 *Aos professores, confirmar a formação do grupo. 
+
 
 ## Justificativa
 
