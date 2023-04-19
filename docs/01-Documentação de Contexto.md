@@ -1,6 +1,8 @@
 # Introdução
 
-Texto descritivo com a visão geral do projeto abordado. Inclui o contexto, o problema, os objetivos, a justificativa e o público-alvo do projeto.
+      A cada semestre, os alunos do curso de Tecnologia em Análise e Desenvolvimento de Sistemas precisam se organizar em pequenos grupos para realizar o projeto norteador daquele eixo temático. A ausência de interação entre os alunos (e entre alunos e professores), em especial no sistema EAD, dificulta a formação dessas equipes e, para sanar esse obstáculo, tem sido usado, como solução para coletar ideias, conciliar interesses e disponibilidade de horários, planilhas e plataformas online, encontros síncronos com os professores e ferramentas não oficiais, como grupos e comunidades em redes sociais e aplicativos de mensagens, alguns criados pelos próprios alunos. 
+
+      Há uma multiplicidade de soluções utilizadas, com diversos serviços, de diversas empresas, hospedados em sítios e plataformas diferentes e não compatíveis, o que pode estender o tempo necessário para ambientação e inicialização dos trabalhos. Essa conjuntura requer o desenvolvimento de uma solução que simplifique e dê agilidade ao processo de formação de grupos de alunos. 
 
 ## Problema
 Nesse momento você deve apresentar o problema que a sua aplicação deve  resolver. No entanto, não é a hora de comentar sobre a aplicação.
