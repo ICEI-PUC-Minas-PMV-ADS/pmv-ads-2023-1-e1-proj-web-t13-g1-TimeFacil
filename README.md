@@ -10,14 +10,15 @@ Uma aplicação WEB Front-End com a finalidade de auxiliar na formação de grup
 
 ## Integrantes
 
-* Nome completo do aluno 1
-* Nome completo do aluno 2
-* Nome completo do aluno 3
-* Nome completo do aluno 4
+* Frederico Adjovani de Aguilar Lemos 
+* Arthur Valles Coelli
+* João Pedro Oggione Cerqueira Baptista Rodrigues
+* Letícia Rangel Vilarim
+* Sabrina Da Silva Freitas
 
 ## Orientador
 
-* Nome completo do professor 1
+* Nathalia Assis Valentim
 
 ## Instruções de utilização
 
