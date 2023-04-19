@@ -30,12 +30,13 @@
 
 ## Justificativa
 
-Descreva a importância ou a motivação para trabalhar com esta aplicação que você escolheu. Indique as razões pelas quais você escolheu seus objetivos específicos ou as razões para aprofundar em certos aspectos do software.
+A empresa Qatalog1 e a Cornell University2 realizaram conjuntamente, no ano de 2021, um estudo3 sobre gerenciamento, acesso, compartilhamento e criação de informação (MASC, do inglês management, access, sharing and creation) em um ambiente de trabalho baseado em software, no qual profissionais trabalham em equipes distribuídas. 
 
-O grupo de trabalho pode fazer uso de questionários, entrevistas e dados estatísticos, que podem ser apresentados, com o objetivo de esclarecer detalhes do problema que será abordado pelo grupo.
+ O grupo de pesquisa aplicou três questionários com 1.000 participantes cada para recolher dados, em 31 de Março de 2021. Os participantes estavam sediados nos EUA e no Reino Unido, trabalhando remotamente e familiarizados com aplicações de software moderno no local de trabalho. 
 
-> **Links Úteis**:
-> - [Como montar a justificativa](https://guiadamonografia.com.br/como-montar-justificativa-do-tcc/)
+Entre outros pontos, a pesquisa revelou que os softwares têm dificultado o foco e o alinhamento entre as equipes envolvidas em projetos criativos. Em 43% dos respondentes declararam gastar tempo excessivo alternando em diferentes ferramentas on-line. Ainda que a maior parte das pessoas (59%) afirme haver um lugar central para todas as informações relacionadas ao trabalho e, também, que 82% declarem estar trabalhando com ferramentas projetadas para melhorar a conectividade, 54% ainda pensam que essas soluções de software tornam mais difícil encontrar informações. Segundo a pesquisa, as pessoas estão perdendo tempo vasculhando canais de mensagens, navegando em painéis de gerenciamento de projetos e cavando através de sistemas de armazenamento em nuvem. Eles gastam cerca de 20% de seu típico dia de trabalho fazendo isso; um tempo que poderia ser despendido fazendo um trabalho focado como projetar um novo produto ou obtendo feedback de usuários.  
+
+Levando em consideração os dados coletados pela pesquisa, juntamente com a dificuldade que os envolvidos neste projeto tiveram na formação de grupos ou na proposição de temas, o desenvolvimento de uma aplicação que aprimore o processo de formação de grupos e a interação entre essas pessoas é fundamental para a melhoria do aprendizado e da gestão de tempo dos alunos e professores. 
 
 ## Público-Alvo
 
