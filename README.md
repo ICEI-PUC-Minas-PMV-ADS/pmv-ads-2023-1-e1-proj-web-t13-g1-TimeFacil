@@ -1,12 +1,12 @@
 # TIME FACIL
 
-`CURSO`
+`TECNOLOGO EM DESENVOLVIMENTO E ANALISE DE SISTEMAS`
 
-`DISCIPLINA`
+`PROJETO 1`
 
-`SEMESTRE`
+`1 SEMESTE`
 
-Descrever resumidamente, em um ou dois parágrafos, o projeto que está sendo desenvolvido.
+Uma aplicação WEB Front-End com a finalidade de auxiliar na formação de grupos para trabalhos, levando em consideração temas pre-estabelecidos ou que serão fornecidos pelas pessoas. 
 
 ## Integrantes
 
