@@ -1,28 +1,29 @@
-# TIME FACIL
+# TIMEFÁCIL
 
-`TECNOLOGO EM DESENVOLVIMENTO E ANALISE DE SISTEMAS`
+`TECNOLOGIA EM DESENVOLVIMENTO E ANÁLISE DE SISTEMAS`
 
-`PROJETO 1`
+`Projeto: Desenvolvimento de Aplicação Web Front-End`
 
-`1 SEMESTE`
+`1º Semestre`
 
-Uma aplicação WEB Front-End com a finalidade de auxiliar na formação de grupos para trabalhos, levando em consideração temas pre-estabelecidos ou que serão fornecidos pelas pessoas. 
+Uma aplicação WEB Front-End com a finalidade de auxiliar na formação de grupos para trabalhos, levando em consideração temas pre-estabelecidos ou que serão fornecidos pelas pessoas.
 
 ## Integrantes
 
-* Frederico Adjovani de Aguilar Lemos 
-* Arthur Valles Coelli
-* João Pedro Oggione Cerqueira Baptista Rodrigues
-* Letícia Rangel Vilarim
-* Sabrina Da Silva Freitas
+- Arthur Valles Coelli
+- Daniel Drumond Fonte Boa
+- Frederico Adjovai Silva de Aguilar Lemos
+- João Pedro Oggione Cerqueira Baptista Rodrigues
+- Letícia Rangel Vilarim
+- Sabrina Da Silva Freitas
 
-## Orientador
+## Orientadora
 
-* Nathalia Assis Valentim
+- Nathalia Assis Valentim
 
 ## Instruções de utilização
 
-Assim que a primeira versão do sistema estiver disponível, deverá complementar com as instruções de utilização. Descreva como instalar eventuais dependências e como executar a aplicação.
+[Pendente]
 
 # Documentação
 
@@ -42,12 +43,12 @@ Assim que a primeira versão do sistema estiver disponível, deverá complementa
 
 # Hospedagem
 
-* Insira o endereço eletrônico público de acesso ao conteúdo publicado. 
+- [Pendente]
 
 # Armazenamento do Código-Fonte
 
-* <a href="src/README.md">Código Fonte</a>
+- <a href="src/README.md">Código Fonte</a>
 
 # Armazenamento da Apresentação
 
-* <a href="presentation/README.md">Apresentação da solução</a>
+- <a href="presentation/README.md">Apresentação da solução</a>
