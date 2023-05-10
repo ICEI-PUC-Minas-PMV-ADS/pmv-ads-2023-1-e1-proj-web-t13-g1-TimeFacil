@@ -1,15 +1,15 @@
 /* || Botões.*/
 input[type="submit"] {
 	border: 0;
-	border-radius: 10px;
+	border-radius: 6px;
 	color: $cor-fundo-variante;
 	cursor: pointer;
 	font-family: Lato, sans-serif;
 	font-size: 16px;
 	font-weight: 400;
 	height: 40px;
-	padding-left: 16px;
-	padding-right: 16px;
+	line-height: 40px;
+	padding: 0px 16px 0px 16px;
 	text-align: center;
 	vertical-align: middle;
 }
@@ -42,3 +42,5 @@ input[type="submit"] {
 .botao-excluir:active {
 	transform: translateY(1px);
 }
+
+/* || Formulários.*/
