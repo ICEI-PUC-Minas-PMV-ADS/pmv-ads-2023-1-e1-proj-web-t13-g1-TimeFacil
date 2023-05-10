@@ -6,7 +6,7 @@
 
 `1º Semestre`
 
-Uma aplicação WEB Front-End com a finalidade de auxiliar na formação de grupos para trabalhos, levando em consideração temas pre-estabelecidos ou que serão fornecidos pelas pessoas.
+Uma aplicação _web_ que objetiva facilitar a formação de grupos para a realização de trabalhos acadêmicos, sobretudo em cursos ofertados na modalidade a distância.
 
 ## Integrantes
 

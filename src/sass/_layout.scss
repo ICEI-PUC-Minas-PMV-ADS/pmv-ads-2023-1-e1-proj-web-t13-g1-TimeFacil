@@ -44,7 +44,6 @@ body {
 	display: block;
 	font-size: large;
 	height: 100%;
-	padding: 10px 10px;
 	position: fixed;
 	top: 50px;
 	width: 250px;
@@ -52,6 +51,7 @@ body {
 
 .sidebar-icon {
 	display: inline-block;
+	padding: 10px 0px 0px 10px;
 	vertical-align: middle;
 }
 
@@ -59,27 +59,49 @@ body {
 /* || Pseudoclasses necessárias para formatar o item "Aluno", que contém um link..*/
 .sidebar-item a:link,
 .sidebar-item a:visited {
+	background-color: $cor-fundo-variante;
 	color: $cor-fonte;
 	display: block;
+	line-height: 40px;
 	list-style-type: none;
 	text-decoration: none;
 }
 
-.sidebar-item a:hover,
-.sidebar-subitem a:hover {
-	background-color: $cor-fundo-variante;
+.sidebar-item:first-of-type,
+.sidebar-subitem:first-of-type {
+	border-top: solid 1px $cor-borda;
+}
+
+.sidebar-item:last-child,
+.sidebar-subitem:last-child {
+	border-bottom: solid 1px $cor-borda;
 }
 
 .sidebar-subitem,
 .sidebar-subitem a:link,
 .sidebar-subitem a:visited {
+	background-color: $cor-fundo;
 	color: $cor-fonte-variante;
 	display: block;
 	font-size: medium;
 	line-height: 35px;
 	list-style-type: none;
-	padding-left: 30px;
+	text-indent: 60px;
 	text-decoration: none;
+	box-sizing: border-box;
+}
+
+.sidebar-item a:hover,
+.sidebar-subitem a:hover {
+	background-color: $cor-hover;
+}
+
+.sidebar-item a:active,
+.sidebar-subitem a:active {
+	background-color: $cor-fundo-variante;
+	border: solid 1px;
+	border-left: solid 3px;
+	border-color: $cor-primaria;
 }
 
 /* || Conteúdo Principal.*/
