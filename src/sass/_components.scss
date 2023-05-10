@@ -1,0 +1,44 @@
+/* || Botões.*/
+input[type="submit"] {
+	border: 0;
+	border-radius: 10px;
+	color: $cor-fundo-variante;
+	cursor: pointer;
+	font-family: Lato, sans-serif;
+	font-size: 16px;
+	font-weight: 400;
+	height: 40px;
+	padding-left: 16px;
+	padding-right: 16px;
+	text-align: center;
+	vertical-align: middle;
+}
+
+.botao-confirmar {
+	background-color: $cor-secundaria;
+}
+
+.botao-cancelar {
+	background-color: $cor-alerta;
+}
+
+.botao-excluir {
+	background-color: $cor-erro;
+}
+
+.botao-confirmar:hover {
+	background-color: $cor-secundaria-variante;
+}
+
+.botao-cancelar:hover {
+	background-color: $cor-alerta-variante;
+}
+
+.botao-excluir:hover {
+	background-color: $cor-erro-variante;
+}
+.botao-confirmar:active,
+.botao-cancelar:active,
+.botao-excluir:active {
+	transform: translateY(1px);
+}

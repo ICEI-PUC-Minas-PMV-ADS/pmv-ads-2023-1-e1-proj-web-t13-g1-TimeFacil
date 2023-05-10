@@ -1,0 +1,26 @@
+/* Os valores abaixo devem ser alterados apenas nos arquivos armazenados em /sass. Eventuais alterações feitas diretamente neste arquivo serão sobrescritas quando houver nova compilação.*/
+/* || Reset.*/
+*,
+*:after,
+*:before {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+// || Paleta de Cores.
+$cor-primaria: #00547a;
+$cor-primaria-variante: #3387ad;
+$cor-secundaria: #9732ad;
+$cor-secundaria-variante: #ca65e0;
+$cor-fonte: #47525e;
+$cor-fonte-variante: #8492a6;
+$cor-fundo: #f9fafc;
+$cor-fundo-variante: #ffffff;
+$cor-borda: #d3dce6;
+$cor-sucesso: #28a754;
+$cor-erro: #dc3545;
+$cor-erro-variante: #ff6878;
+$cor-alerta: #fd7e14;
+$cor-alerta-variante: #ffb147;
+$cor-info: #adb5bd;
