@@ -1,24 +1,17 @@
-img{
-    margin-left: 620px;
-    margin-top: 40px;
-    width: 320px;
-    
-}
-
-.theme_idea{
+.foto{
     text-align: center;
-    margin-top: 70px;
-    margin-left: 200px;
 }
 
-.host_idea {
+.tema{
+    text-align: center;
+}
+
+.ideia {
     text-align: center; 
-    margin-left: 200px;
 }
 
-.botao{
+.bot{
     text-align: center;
-    margin-top: 50px;
-    margin-left: 200px;
+    margin-top: 100px;
     
 }
