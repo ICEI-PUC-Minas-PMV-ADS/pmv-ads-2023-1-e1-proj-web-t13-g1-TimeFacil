@@ -1,0 +1,28 @@
+
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.row {
+  display: flex;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+.label {
+  font-weight: bold;
+  width: 150px;
+  color: #8190a5
+}
+
+.value {
+  color: #8190a5;
+}
+
+.input {
+  width: 200px;
+  line-height: normal;
+  vertical-align: top;
+}
