@@ -1,31 +1,28 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 	<head>
 		<meta charset="UTF-8" />
 		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<link rel="stylesheet" href="main.css" />
 		<script defer type="text/javascript" src="script.js"></script>
-		<link rel="stylesheet" href="entrar-grupo.css">
-
-    	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
-    	integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
 		<style>
 			@import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap");
 		</style>
-		<title>TimeFácil - Formação Ágil de Equipes</title>
+		<title>TimeFácil - Criar Atividade</title>
 		<link rel="icon" type="image/x-icon" href="icones/favicon.png" />
 	</head>
 	<body>
 		<!-- Barra Superior -->
 		<header class="navbar">
-			<a href="/index.html"><img class="navbar-logo" src="imagens/brasao-menufixo.png" alt="" /></a>
+			<a href="./index.html"><img class="navbar-logo" src="imagens/brasao-menufixo.png" alt="" /></a>
 			<!-- Avatar -->
 			<a href="">
 				<!-- Imagem inserida apenas para avaliação do layout. Em produção, deverá buscar a imagem usada no cadastro do usuário -->
 				<img class="avatar" src="https://vectorified.com/images/avatar-icon-png-18.jpg" alt="Perfil" />
 			</a>
 		</header>
+
 		<!-- Barra Lateral -->
 		<nav class="sidebar">
 			<ul>
@@ -67,27 +64,28 @@
 		</nav>
 		<!-- Conteúdo Principal-->
 		<main>
-			<div class="foto">
-				<img id="foto-fundo" src="imagens/foto-fundo.png" alt="Foto">
-				</div>
-
-				<div class="tema">
-					 Tema:  <br>
-				 <textarea id="mensagem" name="texto" placeholder="Insira informações sobre o tema." rows="6" cols="90"></textarea>
-				 </div>
-
-				 <div class="ideia">
-
-					 <textarea name="texto" placeholder="Sugestão de dias e horários." rows="1" cols="90"></textarea>
-
-				</div>
-
-			   <div class="bot">
-				<button id="botao" type="button" class="btn btn-outline-success" onclick="confirmaSaida()" >Entrar no grupo</button>
-			   </div>
-
-				</body>
-			  <script src="entrar-grupo.js"></script>
+			<form class="formulario" action="">
+				<label for="atividade">Atividade:</label>
+				<input type="text" id="atividade" name="atividade" class="campo-valor" required size="80" spellcheck="true" />
+				<br />
+				<p class="campo-label">Tema Fixo?</p>
+				<label for="sim">Sim</label>
+				<input class="campo-valor" type="radio" id="sim" name="temaFixo" required value="sim" />
+				<label for="nao">Não</label> <input class="campo-valor" type="radio" id="nao" name="temaFixo" value="nao" />
+				<br />
+				<p class="campo-label">Integrantes:</p>
+				<label for="minimo">Mínimo:</label>
+				<input class="campo-valor" type="number" id="minimo" name="min" size="1" required min="2" />
+				<label for="maximo">Máximo:</label>
+				<input class="campo-valor" type="number" id="maximo" name="max" size="1" required />
+				<br />
+				<label for="prazo">Prazo de Formação:</label>
+				<input class="campo-valor" type="date" id="prazo" name="prazoFormacao" required />
+				<br />
+				<input class="botao-cancelar" type="reset" value="Cancelar" id="cancela" />
+				<!-- <a class="botao-cancelar" id="cancela" href="index.html">Cancelar</a> -->
+				<input class="botao-confirmar" type="submit" value="Criar Atividade" id="confirma" onclick="criaAtividade()" />
+			</form>
 		</main>
 	</body>
 </html>
