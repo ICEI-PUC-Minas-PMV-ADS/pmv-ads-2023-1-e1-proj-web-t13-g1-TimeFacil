@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 	<head>
 		<meta charset="UTF-8" />
 		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -9,19 +9,20 @@
 		<style>
 			@import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap");
 		</style>
-		<title>TimeFácil - Formação Ágil de Equipes</title>
+		<title>TimeFácil - Criar Atividade</title>
 		<link rel="icon" type="image/x-icon" href="icones/favicon.png" />
 	</head>
 	<body>
 		<!-- Barra Superior -->
 		<header class="navbar">
-			<a href="index.html"><img class="navbar-logo" src="imagens/brasao-menufixo.png" alt="" /></a>
+			<a href="/index.html"><img class="navbar-logo" src="imagens/brasao-menufixo.png" alt="" /></a>
 			<!-- Avatar -->
-			<a href="">
+			<a href="/perfil.html">
 				<!-- Imagem inserida apenas para avaliação do layout. Em produção, deverá buscar a imagem usada no cadastro do usuário -->
 				<img class="avatar" src="https://vectorified.com/images/avatar-icon-png-18.jpg" alt="Perfil" />
 			</a>
 		</header>
+
 		<!-- Barra Lateral -->
 		<nav class="sidebar">
 			<ul>
@@ -63,14 +64,28 @@
 		</nav>
 		<!-- Conteúdo Principal-->
 		<main>
-			Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex nihil, perferendis nisi magni natus placeat possimus
-			inventore maiores rem, debitis, dicta vel temporibus iusto eligendi adipisci quo quas quaerat quod? Quia quas
-			fugiat odit unde pariatur obcaecati dolorum sequi, beatae incidunt, ab impedit repellendus, rerum dolor quisquam
-			vitae nemo. Minus assumenda atque voluptatum eum tenetur error similique sed numquam fugit. Facilis laudantium
-			fugit architecto ab minus sint fuga consequatur nemo cumque obcaecati eaque sit aperiam dignissimos, accusamus
-			magni cupiditate, quos laborum quaerat magnam quis hic explicabo, in optio iste. Modi! Aut corrupti sed sequi sint
-			et reiciendis ratione ad nam rem accusamus eos doloremque praesentium vero omnis dignissimos soluta aspernatur
-			minima neque quo repudiandae nihil, ducimus quia officiis? Facilis, explicabo.
+			<form class="formulario" action="">
+				<label for="atividade">Atividade:</label>
+				<input type="text" id="atividade" name="atividade" class="campo-valor" required size="80" spellcheck="true" />
+				<br />
+				<p class="campo-label">Tema Fixo?</p>
+				<label for="sim">Sim</label>
+				<input class="campo-valor" type="radio" id="sim" name="temaFixo" required value="sim" />
+				<label for="nao">Não</label> <input class="campo-valor" type="radio" id="nao" name="temaFixo" value="nao" />
+				<br />
+				<p class="campo-label">Integrantes:</p>
+				<label for="minimo">Mínimo:</label>
+				<input class="campo-valor" type="number" id="minimo" name="min" size="1" required min="2" />
+				<label for="maximo">Máximo:</label>
+				<input class="campo-valor" type="number" id="maximo" name="max" size="1" required />
+				<br />
+				<label for="prazo">Prazo de Formação:</label>
+				<input class="campo-valor" type="date" id="prazo" name="prazoFormacao" required />
+				<br />
+				<input class="botao-cancelar" type="reset" value="Cancelar" id="cancela" />
+				<!-- <a class="botao-cancelar" id="cancela" href="index.html">Cancelar</a> -->
+				<input class="botao-confirmar" type="submit" value="Criar Atividade" id="confirma" onclick="criaAtividade()" />
+			</form>
 		</main>
 	</body>
 </html>
