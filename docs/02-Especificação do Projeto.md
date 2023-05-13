@@ -48,22 +48,22 @@ As tabelas que se seguem apresentam os requisitos funcionais e não funcionais q
 
 |ID    | Descrição do Requisito  | Prioridade |
 |------|-----------------------------------------|----|
-|RF-01|O site deve permitir ao professor criar uma página para sua matéria.|Alta|
-|RF-02|O site deve permitir ao professor criar uma página para a atividade em grupo.|Alta|
-|RF-03|O site deve permitir ao professor definir se a atividade tem um tema fixo ou não.|Média|
-|RF-04|O site deve permitir ao professor definir o número mínimo e máximo de membros em um grupo.|Média|
-|RF-05|O site deve permitir aos alunos criar seus grupos dentro das páginas de trabalhos dos professores.|Alta|
-|RF-06|O site deve permitir aos alunos definir temas para seus grupos se a função foi disponibilizada para o trabalho específico.|Média|
-|RF-07|O site deve permitir aos alunos entrar em outros grupos em que não foi atingido o número máximo de alunos.|Alta|
-|RF-08|O site deve permitir aos alunos sair de grupo.|Média|
-|RF-09|O site deve impedir que mais alunos entrem em um grupo quando o número máximo de membros for atingido.|Média|
-|RF-10|O site deve exibir informações sobre os grupos, como nome, tema e número de membros.|Alta|
-|RF-11|O site deve permitir ao professor definir uma data limite para formação dos grupos.|Baixa|
-|RF-12|O site deve permitir aos usuários enviar mensagens dentro de um grupo.|Baixa|
-|RF-13|O site deve permitir o cadastro de professores e alunos.|Alta|
-|RF-14|O site deve permitir o login dos usuários cadastrados.|Alta|
-|RF-15|O site deve permitir ao aluno, ao criar o grupo, a sugerir horários de reunião.|Baixa|
-|RF-16|O site deve permitir que o professor exclua as páginas criadas.|Baixa|
+|RF-01|O site deve permitir ao professor criar uma página para sua matéria.  |Alta|
+|RF-02|O site deve permitir ao professor criar uma página para a atividade em grupo.  |Alta|
+|RF-03|O site deve permitir ao professor definir se a atividade tem um tema fixo ou não.  |Média|
+|RF-04|O site deve permitir ao professor definir o número mínimo e máximo de membros em um grupo.  |Média|
+|RF-05|O site deve permitir aos alunos criar seus grupos dentro das páginas de trabalhos dos professores.  |Alta|
+|RF-06|O site deve permitir aos alunos definir temas para seus grupos se a função foi disponibilizada para o trabalho específico.  |Média|
+|RF-07|O site deve permitir aos alunos entrar em outros grupos em que não foi atingido o número máximo de alunos.  |Alta|
+|RF-08|O site deve permitir aos alunos sair de grupo.  |Média|
+|RF-09|O site deve impedir que mais alunos entrem em um grupo quando o número máximo de membros for atingido.  |Média|
+|RF-10|O site deve exibir informações sobre os grupos, como nome, tema e número de membros.  |Alta|
+|RF-11|O site deve permitir ao professor definir uma data limite para formação dos grupos.  |Baixa|
+|RF-12|O site deve permitir aos usuários enviar mensagens dentro de um grupo.  |Baixa|
+|RF-13|O site deve permitir o cadastro de professores e alunos.  |Alta|
+|RF-14|O site deve permitir o login dos usuários cadastrados.  |Alta|
+|RF-15|O site deve permitir ao aluno, ao criar o grupo, a sugerir horários de reunião.  |Baixa|
+|RF-16|O site deve permitir que o professor exclua as páginas criadas.  |Baixa|
 
 ### Requisitos não Funcionais
 
