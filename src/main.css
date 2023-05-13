@@ -128,7 +128,8 @@ main {
 }
 
 /* || Botões.*/
-input[type=submit] {
+input[type=submit],
+input[type=reset] {
   border: 0;
   border-radius: 6px;
   color: #ffffff;
@@ -144,6 +145,15 @@ input[type=submit] {
 }
 
 .botao-confirmar {
+  background-color: #9732ad;
+}
+
+.botao-cancelar {
+  background-color: #fd7e14;
+  margin-left: 20px;
+}
+
+.button-container a.button-confirmar {
   display: inline-block;
   padding: 10px 20px;
   background-color: #9732ad;
@@ -153,7 +163,7 @@ input[type=submit] {
   color: #fff;
 }
 
-.botao-cancelar {
+.button-container a.button-cancelar {
   display: inline-block;
   padding: 10px 20px;
   background-color: #fd7e14;
@@ -164,13 +174,7 @@ input[type=submit] {
 }
 
 .botao-excluir {
-  display: inline-block;
-  padding: 10px 20px;
   background-color: #dc3545;
-  text-decoration: none;
-  border-radius: 5px;
-  margin-right: 10px;
-  color: #fff;
 }
 
 .botao-confirmar:hover {
@@ -195,29 +199,112 @@ input[type=submit] {
   -o-transform: translateY(1px);
 }
 
+/* || Formulários.*/
+label,
+.campo-label {
+  display: inline-block;
+  line-height: 40px;
+  font-weight: bold;
+  color: #8492a6;
+  padding: 10px 20px;
+}
+
+.campo-valor {
+  border-radius: 5px;
+  display: inline-block;
+  line-height: 30px;
+  margin-bottom: 20px;
+  padding-inline-start: 10px;
+}
+
+/* || Dias da Semana.*/
 .clickable-box {
-  width: 50px;
-  height: 25px;
-  background-color: lightgray;
-  margin-right: 10px;
-  display: flex;
   align-items: center;
-  justify-content: center;
+  background-color: lightgray;
+  color: #47525e;
   cursor: pointer;
-  color: #47525E;
+  display: flex;
+  height: 25px;
+  justify-content: center;
+  margin-right: 10px;
   transition: background-color 0.3s;
+  width: 50px;
 }
 
 .clickable-box.clicked {
   background-color: #0b478d;
-  font-weight: bold;
   color: white;
+  font-weight: bold;
 }
 
 .clickable-box:hover {
   background-color: #4f86c6;
 }
 
-/* || Formulários.*/
+/* || Outros campos.*/
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.row {
+  display: flex;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+.label {
+  font-weight: bold;
+  width: 150px;
+  color: #8190a5;
+}
+
+.value {
+  color: #8190a5;
+}
+
+.input {
+  width: 200px;
+  line-height: normal;
+  vertical-align: top;
+}
+
+.tema {
+  text-align: center;
+}
+
+.ideia {
+  text-align: center;
+}
+
+.bot {
+  text-align: center;
+}
+
+.foto {
+  text-align: center;
+  padding-bottom: 40px;
+}
+
+#foto-fundo {
+  width: 290px;
+  height: 180px;
+}
+
+@media screen and (max-width: 768px) {
+  .navbar,
+  .tema,
+  .ideia {
+    width: 760px;
+  }
+}
+@media screen and (max-width: 1200px) {
+  .navbar,
+  .tema,
+  .ideia {
+    width: 900px;
+  }
+}
 
 /*# sourceMappingURL=main.css.map */

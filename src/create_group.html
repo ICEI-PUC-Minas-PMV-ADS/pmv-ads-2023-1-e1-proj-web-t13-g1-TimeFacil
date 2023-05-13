@@ -1,135 +1,138 @@
 <!DOCTYPE html>
 
 <html>
-<head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="main.css" />
-    <link rel="stylesheet" href="create_group.css" />
-    <script defer type="text/javascript" src="script.js"></script>
-    <style>
-        @import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap");
-    </style>
-    <title>TimeFácil - Criar Grupo</title>
-    <link rel="icon" type="image/x-icon" href="icones/favicon.png" />
-</head>
-<body>
-    <!-- Barra Superior -->
-  <header class="navbar">
-    <a href="/index.html"><img class="navbar-logo" src="imagens/brasao-menufixo.png" alt="" /></a>
-    <!-- Avatar -->
-    <a href="/perfil.html">
-    <!-- Imagem inserida apenas para avaliação do layout. Em produção, deverá buscar a imagem usada no cadastro do usuário -->
-      <img class="avatar" src="https://vectorified.com/images/avatar-icon-png-18.jpg" alt="Perfil" />
-    </a>
-  </header>
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" href="main.css" />
+		<link rel="stylesheet" href="create_group.css" />
+		<script defer type="text/javascript" src="script.js"></script>
+		<style>
+			@import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap");
+		</style>
+		<title>TimeFácil - Criar Grupo</title>
+		<link rel="icon" type="image/x-icon" href="icones/favicon.png" />
+	</head>
+	<body>
+		<!-- Barra Superior -->
+		<header class="navbar">
+			<a href="/index.html"><img class="navbar-logo" src="imagens/brasao-menufixo.png" alt="" /></a>
+			<!-- Avatar -->
+			<a href="">
+				<!-- Imagem inserida apenas para avaliação do layout. Em produção, deverá buscar a imagem usada no cadastro do usuário -->
+				<img class="avatar" src="https://vectorified.com/images/avatar-icon-png-18.jpg" alt="Perfil" />
+			</a>
+		</header>
 
-    <!-- Barra Lateral -->
-    <nav class="sidebar">
-        <ul>
-            <li class="sidebar-item">
-                <span class="sidebar-icon"><img src="icones/turmas.png" /></span>
-                <span>Turmas</span>
-                <ul class="sidebar-subitem">
-                    <li><a href="paginas/criar-turma.html">Criar turma</a></li>
-                    <li><a href="paginas/editar-turma.html">Editar turma</a></li>
-                </ul>
-            </li>
-            <li class="sidebar-item">
-                <span class="sidebar-icon"><img src="icones/atividades.png" /></span>
-                <span>Atividades</span>
-                <ul class="sidebar-subitem">
-                    <li><a href="paginas/atividades-abertas.html">Atividades abertas</a></li>
-                    <li><a href="paginas/criar-atividade.html">Criar atividade</a></li>
-                    <li><a href="paginas/editar-atividade.html">Editar atividade</a></li>
-                    <li><a href="paginas/atividades-fechadas.html">Atividades fechadas</a></li>
-                </ul>
-            </li>
-            <li class="sidebar-item">
-                <span class="sidebar-icon"><img src="icones/grupos.png" /></span>
-                <span>Grupos</span>
-                <ul class="sidebar-subitem">
-                    <li><a href="paginas/grupos-abertos.html">Grupos abertos</a></li>
-                    <li><a href="./create_group.html">Criar grupo</a></li>
-                    <li><a href="paginas/editar-grupo.html">Editar grupo</a></li>
-                </ul>
-            </li>
-            <li class="sidebar-item">
-                <a href="paginas/alunos.html">
-                    <span class="sidebar-icon"><img src="icones/alunos.png" /></span>
-                    <span>Alunos</span>
-                </a>
-            </li>
-        </ul>
-    </nav>
-<main>
-  <form>
-  <div class="container">
-    <div class="row">
-      <div id="headerContainer" class="header"></div>
-      <div class="label">Disciplina:</div>
-      <div class="value" id="disciplina">Cálculo I</div>
-    </div>
+		<!-- Barra Lateral -->
+		<nav class="sidebar">
+			<ul>
+				<li class="sidebar-item">
+					<span class="sidebar-icon"><img src="icones/turmas.png" /></span>
+					<span>Turmas</span>
+					<ul class="sidebar-subitem">
+						<li><a href="">Criar turma</a></li>
+						<li><a href="">Editar turma</a></li>
+					</ul>
+				</li>
+				<li class="sidebar-item">
+					<span class="sidebar-icon"><img src="icones/atividades.png" /></span>
+					<span>Atividades</span>
+					<ul class="sidebar-subitem">
+						<li><a href="">Atividades abertas</a></li>
+						<li><a href="criar-atividade.html">Criar atividade</a></li>
+						<li><a href="">Editar atividade</a></li>
+						<li><a href="">Atividades fechadas</a></li>
+					</ul>
+				</li>
+				<li class="sidebar-item">
+					<span class="sidebar-icon"><img src="icones/grupos.png" /></span>
+					<span>Grupos</span>
+					<ul class="sidebar-subitem">
+						<li><a href="">Grupos abertos</a></li>
+						<li><a href="entrar_grupo.html">Entrar em grupo</a></li>
+						<li><a href="create_group.html">Criar grupo</a></li>
+						<li><a href="">Editar grupo</a></li>
+					</ul>
+				</li>
+				<li class="sidebar-item">
+					<a href="">
+						<span class="sidebar-icon"><img src="icones/alunos.png" /></span>
+						<span>Alunos</span>
+					</a>
+				</li>
+			</ul>
+		</nav>
+		<main>
+			<form>
+				<div class="container">
+					<div class="row">
+						<div id="headerContainer" class="header"></div>
+						<div class="label">Disciplina:</div>
+						<div class="value" id="disciplina">Cálculo I</div>
+					</div>
 
-    <div class="row">
-      <div class="label">Atividade:</div>
-      <div class="value" id="atividade">Trabalho 1 - Arestas</div>
-    </div>
+					<div class="row">
+						<div class="label">Atividade:</div>
+						<div class="value" id="atividade">Trabalho 1 - Arestas</div>
+					</div>
 
-    <div class="row">
-      <div class="label">Prazo:</div>
-      <div class="value" id="prazo">30/12/2023</div>
-    </div>
+					<div class="row">
+						<div class="label">Prazo:</div>
+						<div class="value" id="prazo">30/12/2023</div>
+					</div>
 
-    <div class="row">
-      <div class="label">Integrantes:</div>
-      <div class="value"> Mínimo: </div><div class="value" id="integrantes_min" style="margin-right: 10px;">2</div>
-      <div class="value"> Máximo: </div><div class="value" id="integrantes_max">6</div>
-    </div>
+					<div class="row">
+						<div class="label">Integrantes:</div>
+						<div class="value">Mínimo:</div>
+						<div class="value" id="integrantes_min" style="margin-right: 10px">2</div>
+						<div class="value">Máximo:</div>
+						<div class="value" id="integrantes_max">6</div>
+					</div>
 
-    <div class="row">
-      <div class="label">Tema:</div>
-      <input type="text" class="input" id="tema"/>
-    </div>
+					<div class="row">
+						<div class="label">Tema:</div>
+						<input type="text" class="input" id="tema" />
+					</div>
 
-    <div class="row">
-      <div class="label" style="width: 300px;">Sugestão de Dias para Reunião:</div>
-    </div>
+					<div class="row">
+						<div class="label" style="width: 300px">Sugestão de Dias para Reunião:</div>
+					</div>
 
-    <div class="row">
-      <div class="clickable-box" id="dia_dom" onclick="handleClick(event)">Dom</div>
-      <div class="clickable-box" id="dia_seg" onclick="handleClick(event)">Seg</div>
-      <div class="clickable-box" id="dia_ter" onclick="handleClick(event)">Ter</div>
-      <div class="clickable-box" id="dia_qua" onclick="handleClick(event)">Qua</div>
-      <div class="clickable-box" id="dia_qui" onclick="handleClick(event)">Qui</div>
-      <div class="clickable-box" id="dia_sex" onclick="handleClick(event)">Sex</div>
-      <div class="clickable-box" id="dia_sab" onclick="handleClick(event)">Sáb</div>
-    </div>
+					<div class="row">
+						<div class="clickable-box" id="dia_dom" onclick="handleClick(event)">Dom</div>
+						<div class="clickable-box" id="dia_seg" onclick="handleClick(event)">Seg</div>
+						<div class="clickable-box" id="dia_ter" onclick="handleClick(event)">Ter</div>
+						<div class="clickable-box" id="dia_qua" onclick="handleClick(event)">Qua</div>
+						<div class="clickable-box" id="dia_qui" onclick="handleClick(event)">Qui</div>
+						<div class="clickable-box" id="dia_sex" onclick="handleClick(event)">Sex</div>
+						<div class="clickable-box" id="dia_sab" onclick="handleClick(event)">Sáb</div>
+					</div>
 
-    <div class="row">
-      <div class="label" style="width: 320px;">Sugestão de Horário para Reunião:</div>
-      <input type="time" id="hora" step="900"/>
-    </div>
+					<div class="row">
+						<div class="label" style="width: 320px">Sugestão de Horário para Reunião:</div>
+						<input type="time" id="hora" step="900" />
+					</div>
 
-    <div class="row">
-      <div class="label">Comentário/Observação:</div>
-    </div>
+					<div class="row">
+						<div class="label">Comentário/Observação:</div>
+					</div>
 
-    <div class="row">
-      <textarea type="text" class="input" style="width: 500px; height: 120px;" id="comentario"></textarea>
-    </div>
+					<div class="row">
+						<textarea type="text" class="input" style="width: 500px; height: 120px" id="comentario"></textarea>
+					</div>
 
-    <div class="row">
-      <div class="button-container">
-        <a href="index.html" class="botao-confirmar" id="teste" onclick="generateJSON()">Criar</a>
-      </div>
-      <div class="button-container">
-        <a href="index.html" class="botao-cancelar">Cancelar</a>
-      </div>
-    </div>
-  </div>
-</form>
-</main>
-</body>
+					<div class="row">
+						<div class="button-container">
+							<a href="index.html" class="button-confirmar" id="teste" onclick="generateJSON()">Criar</a>
+						</div>
+						<div class="button-container">
+							<a href="index.html" class="button-cancelar">Cancelar</a>
+						</div>
+					</div>
+				</div>
+			</form>
+		</main>
+	</body>
 </html>
