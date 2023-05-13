@@ -1,0 +1,223 @@
+@charset "UTF-8";
+/* Os valores abaixo devem ser alterados apenas nos arquivos armazenados em /sass. Eventuais alterações feitas diretamente neste arquivo serão sobrescritas quando houver nova compilação.*/
+/* || Reset.*/
+*,
+*:after,
+*:before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+*:focus {
+  outline: none;
+}
+
+/* || Página.*/
+html,
+body {
+  background-color: #ffffff;
+  font-family: Lato, sans-serif;
+  font-size: 16px;
+  height: auto;
+  width: auto;
+}
+
+/* || Barra Superior.*/
+.navbar {
+  background-color: #00547a;
+  border: 0;
+  height: 50px;
+  margin: 0;
+  padding: 0;
+  position: fixed;
+  width: 100%;
+}
+
+.navbar-logo {
+  float: left;
+  height: 40px;
+  margin-left: 10px;
+  margin-top: 5px;
+}
+
+.avatar {
+  border-radius: 50%;
+  float: right;
+  height: 40px;
+  overflow: hidden;
+  margin-right: 10px;
+  margin-top: 5px;
+  width: 40px;
+}
+
+/* || Barra Lateral.*/
+.sidebar {
+  background-color: #f9fafc;
+  border-right: 1px solid #d3dce6;
+  color: #47525e;
+  display: block;
+  font-size: large;
+  height: 100%;
+  position: fixed;
+  top: 50px;
+  width: 250px;
+}
+
+.sidebar-icon {
+  display: inline-block;
+  padding: 10px 0px 0px 10px;
+  vertical-align: middle;
+}
+
+.sidebar-item,
+.sidebar-item a:link,
+.sidebar-item a:visited {
+  background-color: #ffffff;
+  color: #47525e;
+  display: block;
+  line-height: 40px;
+  list-style-type: none;
+  text-decoration: none;
+}
+
+.sidebar-item:first-of-type,
+.sidebar-subitem:first-of-type {
+  border-top: solid 1px #d3dce6;
+}
+
+.sidebar-item:last-child,
+.sidebar-subitem:last-child {
+  border-bottom: solid 1px #d3dce6;
+}
+
+.sidebar-subitem,
+.sidebar-subitem a:link,
+.sidebar-subitem a:visited {
+  background-color: #f9fafc;
+  color: #8492a6;
+  display: block;
+  font-size: medium;
+  line-height: 35px;
+  list-style-type: none;
+  text-indent: 60px;
+  text-decoration: none;
+  box-sizing: border-box;
+}
+
+.sidebar-item a:hover,
+.sidebar-subitem a:hover {
+  background-color: #e0e1e3;
+}
+
+.sidebar-item a:active,
+.sidebar-subitem a:active {
+  background-color: #ffffff;
+  border: solid 1px;
+  border-left: solid 3px;
+  border-color: #00547a;
+}
+
+/* || Conteúdo Principal.*/
+main {
+  display: flex;
+  font-size: large;
+  height: 100%;
+  width: 100%;
+  padding: 60px 10px 10px 260px;
+}
+
+/* || Botões.*/
+input[type=submit] {
+  border: 0;
+  border-radius: 6px;
+  color: #ffffff;
+  cursor: pointer;
+  font-family: Lato, sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  height: 40px;
+  line-height: 40px;
+  padding: 0px 16px 0px 16px;
+  text-align: center;
+  vertical-align: middle;
+}
+
+.botao-confirmar {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #9732ad;
+  text-decoration: none;
+  border-radius: 5px;
+  margin-right: 10px;
+  color: #fff;
+}
+
+.botao-cancelar {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #fd7e14;
+  text-decoration: none;
+  border-radius: 5px;
+  margin-right: 10px;
+  color: #fff;
+}
+
+.botao-excluir {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #dc3545;
+  text-decoration: none;
+  border-radius: 5px;
+  margin-right: 10px;
+  color: #fff;
+}
+
+.botao-confirmar:hover {
+  background-color: #ca65e0;
+}
+
+.botao-cancelar:hover {
+  background-color: #ffb147;
+}
+
+.botao-excluir:hover {
+  background-color: #ff6878;
+}
+
+.botao-confirmar:active,
+.botao-cancelar:active,
+.botao-excluir:active {
+  transform: translateY(1px);
+  -webkit-transform: translateY(1px);
+  -moz-transform: translateY(1px);
+  -ms-transform: translateY(1px);
+  -o-transform: translateY(1px);
+}
+
+.clickable-box {
+  width: 50px;
+  height: 25px;
+  background-color: lightgray;
+  margin-right: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  color: #47525E;
+  transition: background-color 0.3s;
+}
+
+.clickable-box.clicked {
+  background-color: #0b478d;
+  font-weight: bold;
+  color: white;
+}
+
+.clickable-box:hover {
+  background-color: #4f86c6;
+}
+
+/* || Formulários.*/
+
+/*# sourceMappingURL=main.css.map */

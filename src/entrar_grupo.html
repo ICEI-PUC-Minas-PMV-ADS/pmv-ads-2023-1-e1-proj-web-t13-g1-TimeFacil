@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" href="main.css" />
+		<script defer type="text/javascript" src="script.js"></script>
+		<link rel="stylesheet" href="entrar-grupo.css">
+
+    	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" 
+    	integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+		<style>
+			@import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap");
+		</style>
+		<title>TimeFácil - Formação Ágil de Equipes</title>
+		<link rel="icon" type="image/x-icon" href="icones/favicon.png" />
+	</head>
+	<body>
+		<!-- Barra Superior -->
+		<header class="navbar">
+			<a href="/index.html"><img class="navbar-logo" src="imagens/brasao-menufixo.png" alt="" /></a>
+			<!-- Avatar -->
+			<a href="/perfil.html">
+				<!-- Imagem inserida apenas para avaliação do layout. Em produção, deverá buscar a imagem usada no cadastro do usuário -->
+				<img class="avatar" src="https://vectorified.com/images/avatar-icon-png-18.jpg" alt="Perfil" />
+			</a>
+		</header>
+		<!-- Barra Lateral -->
+		<nav class="sidebar">
+			<ul>
+				<li class="sidebar-item">
+					<span class="sidebar-icon"><img src="icones/turmas.png" /></span>
+					<span>Turmas</span>
+					<ul class="sidebar-subitem">
+						<li><a href="paginas/criar-turma.html">Criar turma</a></li>
+						<li><a href="paginas/editar-turma.html">Editar turma</a></li>
+					</ul>
+				</li>
+				<li class="sidebar-item">
+					<span class="sidebar-icon"><img src="icones/atividades.png" /></span>
+					<span>Atividades</span>
+					<ul class="sidebar-subitem">
+						<li><a href="paginas/atividades-abertas.html">Atividades abertas</a></li>
+						<li><a href="paginas/criar-atividade.html">Criar atividade</a></li>
+						<li><a href="paginas/editar-atividade.html">Editar atividade</a></li>
+						<li><a href="paginas/atividades-fechadas.html">Atividades fechadas</a></li>
+					</ul>
+				</li>
+				<li class="sidebar-item">
+					<span class="sidebar-icon"><img src="icones/grupos.png" /></span>
+					<span>Grupos</span>
+					<ul class="sidebar-subitem">
+						<li><a href="paginas/grupos-abertos.html">Grupos abertos</a></li>
+						<li><a href="paginas/criar-grupo.html">Criar grupo</a></li>
+						<li><a href="paginas/editar-grupo.html">Editar grupo</a></li>
+					</ul>
+				</li>
+				<li class="sidebar-item">
+					<a href="paginas/alunos.html">
+						<span class="sidebar-icon"><img src="icones/alunos.png" /></span>
+						<span>Alunos</span>
+					</a>
+				</li>
+			</ul>
+		</nav>
+		<!-- Conteúdo Principal-->
+		<main>
+			<div class="foto">
+				<img id="foto-fundo" src="imagens/foto-fundo.png" alt="Foto">
+				</div>
+				
+				<div class="tema">
+					 Tema:  <br>
+				 <textarea id="mensagem" name="texto" placeholder="Insira informações sobre o tema." rows="6" cols="90"></textarea>
+				 </div>
+			
+				 <div class="ideia">
+			
+					 <textarea name="texto" placeholder="Sugestão de dias e horários." rows="1" cols="90"></textarea>
+				
+				</div>
+			
+			   <div class="bot">
+				<button id="botao" type="button" class="btn btn-outline-success" onclick="confirmaSaida()" >Entrar no grupo</button>
+			   </div>
+			
+				</body>
+			  <script src="script.js"></script>
+		</main>
+	</body>
+</html>
+
+   

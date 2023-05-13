@@ -1,0 +1,35 @@
+.tema{
+    text-align: center;
+    
+  }
+  
+  .ideia {
+    text-align: center;
+  
+  }
+  
+  .bot {
+    text-align: center;
+  }
+  .foto {
+    text-align: center;
+    padding-bottom: 40px;
+    
+  }
+  #foto-fundo{
+    width: 290px;
+    height: 180px;
+  }
+  
+  @media screen and (max-width:768px)  {
+    .navbar, .tema, .ideia {
+      width: 760px;
+  
+    }
+  }
+  @media screen and (max-width:1200px)  {
+    .navbar, .tema, .ideia {
+      width: 900px;
+  
+    }
+  }
