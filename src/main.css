@@ -292,4 +292,19 @@ label,
   height: 180px;
 }
 
+@media screen and (max-width: 768px) {
+  .navbar,
+  .tema,
+  .ideia {
+    width: 760px;
+  }
+}
+@media screen and (max-width: 1200px) {
+  .navbar,
+  .tema,
+  .ideia {
+    width: 900px;
+  }
+}
+
 /*# sourceMappingURL=main.css.map */

@@ -19,13 +19,12 @@ input[type="reset"] {
 	background-color: $cor-secundaria;
 }
 
-//Necessário porque os "botões" de cancelamento usados nos formulários são apenas links formatados para parecer botões.
 .botao-cancelar {
 	background-color: $cor-alerta;
 	margin-left: 20px;
 }
 
-//Necessário para o funcionamento de criar-grupo.html. Refatorar até o final do projeto.
+//Necessário para o funcionamento de create_group.html. Refatorar até o final do projeto.
 .button-container a.button-confirmar {
 	display: inline-block;
 	padding: 10px 20px;
@@ -36,7 +35,7 @@ input[type="reset"] {
 	color: #fff;
 }
 
-//Necessário para o funcionamento de criar-grupo.html. Refatorar até o final do projeto.
+//Necessário para o funcionamento de create_group.html. Refatorar até o final do projeto.
 .button-container a.button-cancelar {
 	display: inline-block;
 	padding: 10px 20px;
@@ -169,17 +168,17 @@ label,
 	height: 180px;
 }
 
-// // @media screen and (max-width: 768px) {
-// // 	.navbar,
-// // 	.tema,
-// // 	.ideia {
-// // 		width: 760px;
-// // 	}
-// // }
-// // @media screen and (max-width: 1200px) {
-// // 	.navbar,
-// // 	.tema,
-// // 	.ideia {
-// // 		width: 900px;
-// // 	}
-// }
+@media screen and (max-width: 768px) {
+	.navbar,
+	.tema,
+	.ideia {
+		width: 760px;
+	}
+}
+@media screen and (max-width: 1200px) {
+	.navbar,
+	.tema,
+	.ideia {
+		width: 900px;
+	}
+}
