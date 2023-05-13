@@ -36,8 +36,9 @@ Para organização e distribuição das tarefas do projeto, a equipe está utili
 - Doing: Quando uma tarefa tiver sido iniciada, ela é movida para cá.
 - Done: nesta lista são colocadas as tarefas que passaram pelos testes e controle de qualidade e estão prontos para ser entregues ao usuário. Não há mais edições ou revisões necessárias, ele está agendado e pronto para a ação.
 
-O quadro kanban do grupo, desenvolvido na ferramenta de gerenciamento de projetos, está disponível através da URL https://teams.microsoft.com/_#/school/tab::f9a4759e-1536-4108-be88-929e5033cdcb/Geral?threadId=19:v6ttnfxHh5OVjJQKMyJGTBOjFtPcx8dkzP-IK4E5cfU1@thread.tacv2&ctx=channel e é apresentado, no estado atual, na Figura 1. 
+O quadro _kanban_ do grupo, desenvolvido na ferramenta de gerenciamento de projetos, está disponível através da URL https://teams.microsoft.com/_#/school/tab::f9a4759e-1536-4108-be88-929e5033cdcb/Geral?threadId=19:v6ttnfxHh5OVjJQKMyJGTBOjFtPcx8dkzP-IK4E5cfU1@thread.tacv2&ctx=channel e é apresentado, no estado atual, na Figura 1. 
 
+![kanban](img/tasks.png)
 
 
 
