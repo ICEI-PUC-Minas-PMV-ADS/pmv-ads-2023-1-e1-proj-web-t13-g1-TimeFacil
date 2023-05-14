@@ -2,7 +2,7 @@
 
 O template padrão utilizado na elaboração do site é o em formado left sidebar (barra lateral esquerda), que consiste em um menu de navegação logalizado na parte lateral esquerda e o conteudo será exibido a direta destá barra de navegação. 
 
-![Tela Template](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-1-e1-proj-web-t13-g1-TimeFacil/blob/main/docs/img/template2.png)
+![Tela Template](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-1-e1-proj-web-t13-g1-TimeFacil/blob/main/docs/img/template2.jpg)
 
 
 > **Links Úteis**:
