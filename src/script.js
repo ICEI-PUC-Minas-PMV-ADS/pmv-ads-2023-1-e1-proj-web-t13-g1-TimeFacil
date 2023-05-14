@@ -72,3 +72,91 @@ function criaAtividade() {
 		alert("Ação cancelada!");
 	}
 }
+
+    //Metodo para abrir modal
+function novaTurmaModal(modalName) {
+
+
+    let modal = document.getElementById(modalName);
+    if (typeof modal == 'undefined' || modal === null)
+        return;
+    modal.style.display = 'Block';
+}
+    // Metodo para fechar modal
+function cancelarNovaTurma(modalName) {
+
+
+    let modal = document.getElementById(modalName);
+    if (typeof modal == 'undefined' || modal === null)
+        return;
+    modal.style.display = 'None';
+}
+
+    //Metodo para adicionar linhas em uma tabala através da inserção de valores em um formulario. 
+function adicionarTurma ( eixo,turma,disciplina){
+
+    //Metodo para adicionar linhas em uma tabala através da inserção de valores em um formulario. 
+
+    var tableTurma = document.getElementById("tabela-turmas")
+
+    var rowCount = tableTurma.rows.length;
+    var row = tableTurma.insertRow(rowCount);
+
+    var cell1 = row.insertCell(0);
+    cell1.innerHTML = eixo;
+
+    var cell2 = row.insertCell(1);
+    cell2.innerHTML = disciplina;
+
+    var cell3 = row.insertCell(2);
+
+    cell3.innerHTML = turma;
+
+
+    var cell4 = row.insertCell(3);
+    var qtdAlunos = document.createElement('a');
+    var textQtdAluno = document.createTextNode('0');
+    qtdAlunos.appendChild(textQtdAluno);
+    qtdAlunos.href = '#';
+    cell4.appendChild(qtdAlunos);
+
+    var cell5 = row.insertCell(4);
+    var iconeEditar = document.createElement('input');
+    iconeEditar.type = 'image';
+    iconeEditar.src = 'icones/editar.png';
+    iconeEditar.id = 'icones-coluna';
+
+    var iconeExcluir = document.createElement('input');
+    iconeExcluir.type = 'image';
+    iconeExcluir.src = 'icones/excluir.png';
+    iconeExcluir.id = 'icones-coluna';
+    iconeExcluir.onclick = function(){
+       deletarTurma(this); 
+    }
+    var iconeAdcALuno = document.createElement('input');
+    iconeAdcALuno.type = 'image';
+    iconeAdcALuno.src = 'icones/adicionar-aluno.png';
+    iconeAdcALuno.id = 'icones-coluna';
+
+    cell5.appendChild(iconeEditar);
+    cell5.appendChild(iconeExcluir);
+    cell5.appendChild(iconeAdcALuno);
+   
+    alert('Disciplina ' + disciplina + ' da turma ' + turma + ' do eixo ' + eixo + ' foi criado com sucesso!');
+    cancelarNovaTurma('modal-nova-turma');
+    
+        
+}
+
+    //Metodo para deletar linhas de uma tabela. 
+function deletarTurma ( input ){
+    var confirmacao = confirm('Deseja Realmente Excluir este Grupo?')
+
+    if (confirmacao){
+    var linha = input.parentNode.parentNode;
+    var tabela = document.getElementById('tabela-turmas');
+    var numLinha = linha.rowIndex;
+    tabela.deleteRow(numLinha); 
+    }
+
+}
