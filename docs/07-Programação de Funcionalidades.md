@@ -22,9 +22,11 @@ http://127.0.0.1:5500/src/entrar_grupo.html
 
 ### Gerenciar Turmas (RF-01)
 
-As telas de gerencia de turma/disciplina permite ao professor criar turmas, onde essas turmas terão informações como alunos: Disciplina Mestrada, Eixo/Periodo e Codigo de Turma. Nessa tela também permite que o professor excluia, alterar e adicionar aluno a uma turma. Através de uma tabela o professor conseguirá fazer o filtro de alguma turma para mais facil acesso, como também visualizar quantos membros e quais membros fazem parte daquela turma. 
+A tela de gerencia de turma permite ao professor criar turmas, onde essas turmas terão informações como alunos: Disciplina Mestrada, Eixo/Periodo e Codigo de Turma. Nessa tela também permite que o professor excluia, alterar e adicionar aluno a uma turma. Através de uma tabela o professor conseguirá fazer o filtro de alguma turma para mais facil acesso, como também visualizar quantos membros e quais membros fazem parte daquela turma. 
 
 ![Entrar-grupo tela](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-1-e1-proj-web-t13-g1-TimeFacil/blob/main/docs/img/gerenciar-turma.jpg)
+![Entrar-grupo tela](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-1-e1-proj-web-t13-g1-TimeFacil/blob/main/docs/img/adicionar-turma.jpg)
+![Entrar-grupo tela](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-1-e1-proj-web-t13-g1-TimeFacil/blob/main/docs/img/excluir-turma.jpg)
 
 Artefatos da funcionalidade
 - gerenciar-turma.html
