@@ -1,8 +1,8 @@
 # Template padrão do site
 
-<span style="color:red">Pré-requisitos: <a href="2-Especificação do Projeto.md"> Especificação do Projeto</a></span>, <a href="3-Projeto de Interface.md"> Projeto de Interface</a>, <a href="4-Metodologia.md"> Metodologia</a>
+O template padrão utilizado na elaboração do site é o em formado left sidebar (barra lateral esquerda), que consiste em um menu de navegação logalizado na parte lateral esquerda e o conteudo será exibido a direta destá barra de navegação. 
 
-Layout padrão do site (HTML e CSS) que será utilizado em todas as páginas com a definição de identidade visual, aspectos de responsividade e iconografia.
+(https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-1-e1-proj-web-t13-g1-TimeFacil/blob/main/docs/img/template.png)
 
 > **Links Úteis**:
 >
