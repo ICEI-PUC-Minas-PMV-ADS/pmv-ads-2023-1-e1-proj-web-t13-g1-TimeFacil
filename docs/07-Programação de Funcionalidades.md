@@ -17,7 +17,7 @@ Para cada requisito funcional, pode ser entregue um artefato desse tipo
 Entrar em um grupo (RF-07)
 A tela permite ao aluno entrar no grupo ao clicar no botão e retorna ao usuário uma caixa de confirmação em que ele pode confirmar ou cancelar a ação.
 
- docs/img/entrar-grupo.png
+(img/entrar-grupo.png)
 
 Artefatos da funcionalidade
 ● entrar_grupo.html
