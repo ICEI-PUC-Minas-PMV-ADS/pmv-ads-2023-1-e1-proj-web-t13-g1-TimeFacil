@@ -20,6 +20,25 @@ Instruções de acesso
 6. Abra um navegador de Internet e informe a seguinte URL:
 http://127.0.0.1:5500/src/entrar_grupo.html
 
+### Gerenciar Turmas (RF-01)
+
+As telas de gerencia de turma/disciplina permite ao professor criar turmas, onde essas turmas terão informações como alunos: Disciplina Mestrada, Eixo/Periodo e Codigo de Turma. Nessa tela também permite que o professor excluia, alterar e adicionar aluno a uma turma. Através de uma tabela o professor conseguirá fazer o filtro de alguma turma para mais facil acesso, como também visualizar quantos membros e quais membros fazem parte daquela turma. 
+
+![Entrar-grupo tela](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-1-e1-proj-web-t13-g1-TimeFacil/blob/main/docs/img/gerenciar-turma.png)
+
+Artefatos da funcionalidade
+- gerenciar-turma.html
+- script.js
+- main.css
+
+Instruções de acesso
+
+3. Faça o download do arquivo do projeto (ZIP) ou clone do projeto no GitHub;
+4. Descompacte o arquivo em uma pasta específica;
+5. Abra o Visual Studio Code e execute o Live Server;
+6. Abra um navegador de Internet e informe a seguinte URL:
+http://127.0.0.1:5500/src/entrar_grupo.html
+
 <span style="color:red">Pré-requisitos: <a href="2-Especificação do Projeto.md"> Especificação do Projeto</a></span>, <a href="3-Projeto de Interface.md"> Projeto de Interface</a>, <a href="4-Metodologia.md"> Metodologia</a>, <a href="3-Projeto de Interface.md"> Projeto de Interface</a>, <a href="5-Arquitetura da Solução.md"> Arquitetura da Solução</a>
 
 Implementação do sistema descritas por meio dos requisitos funcionais e/ou não funcionais. Deve relacionar os requisitos atendidos os artefatos criados (código fonte) além das estruturas de dados utilizadas e as instruções para acesso e verificação da implementação que deve estar funcional no ambiente de hospedagem.
