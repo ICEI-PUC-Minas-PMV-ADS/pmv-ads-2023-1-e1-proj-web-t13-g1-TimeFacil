@@ -39,7 +39,7 @@ Para organização e distribuição das tarefas do projeto, a equipe está utili
 O quadro _kanban_ do grupo, desenvolvido na ferramenta de gerenciamento de projetos, está disponível através da URL https://teams.microsoft.com/_#/school/tab::f9a4759e-1536-4108-be88-929e5033cdcb/Geral?threadId=19:v6ttnfxHh5OVjJQKMyJGTBOjFtPcx8dkzP-IK4E5cfU1@thread.tacv2&ctx=channel e é apresentado, no estado atual, na Figura 1. 
 
 ![kanban](img/tasks.png)
-
+<p align=center>Figura 1 - Tela do kanban utilizada pelo grupo</p>
 
 
 <!-- ## Controle de Versão
