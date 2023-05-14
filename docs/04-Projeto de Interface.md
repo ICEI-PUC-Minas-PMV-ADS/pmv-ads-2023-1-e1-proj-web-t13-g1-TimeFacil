@@ -60,3 +60,9 @@ Permite ao aluno ingressar em um grupo existente.
 
 ![Entrar em grupo](img/10.entrar-em-grupo.png)
 <p align=center>Figura 10 – Entrar em grupo</p>
+
+## Tela - Gerenciar Turmas
+A tela de gerencia de turma permite ao professor criar turmas, onde essas turmas terão informações como alunos: Disciplina Mestrada, Eixo/Periodo e Codigo de Turma. Nessa tela também permite que o professor excluia, alterar e adicionar aluno a uma turma. Através de uma tabela o professor conseguirá fazer o filtro de alguma turma para mais facil acesso, como também visualizar quantos membros e quais membros fazem parte daquela turma.
+
+![Gerenciar Turmas](img/gerenciar-turma.jpg)
+<p align=center>Figura 11 – Gerenciar Turmas</p>
