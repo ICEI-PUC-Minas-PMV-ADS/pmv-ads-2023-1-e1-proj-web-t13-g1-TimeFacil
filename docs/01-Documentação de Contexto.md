@@ -43,3 +43,310 @@ Levando em consideração os dados coletados pela pesquisa, juntamente com a dif
 ## Público-Alvo
 
 Professores e alunos que precisam gerenciar ou participar de grupos de trabalho acadêmicos, principalmente nos cursos ofertados na modalidade a distância.
+
+
+
+
+
+Personas
+As personas levantadas durante o processo de entendimento do problema são
+apresentadas na Figuras que se seguem.
+HADASSA VIEIRA
+Idade: 18 anos.
+Ocupação: Acadêmica
+do primeiro período no
+curso de análise e
+desenvolvimento de
+sistemas, acabou de
+sair do ensino médio.
+
+Aplicativos:
+● Instagram;
+● Pinterest;
+● WhatsApp;
+● Twitter;
+● Google Docs.
+
+Motivações:
+● Morar fora
+do seu país;
+● Ser uma boa
+profissional;
+● Atuar na
+área de TI.
+Frustrações:
+
+● Possui TDAH;
+● Insegurança;
+sobre sua nova
+jornada;
+● Miopia e
+astigmatismo.
+História, Hobbies:
+
+● Acabou de se formar no ensino
+médio e precisa trabalhar e
+estudar, optou pelo ensino EAD,
+pois isso facilitaria sua vida.
+● Aprender idiomas;
+● Tocar violão;
+● Tocar flauta;
+● Jogar videogame.
+6
+
+SARA MATISYAHU
+Idade: 28 anos.
+Ocupação: Formada em
+Letras, resolveu mudar de
+profissão e ingressar na área
+de TI.
+
+Aplicativos:
+● Instagram;
+● WhatsApp;
+● Twitter;
+● Kindle;
+● LinkedIn;
+● Bancos Digitais.
+
+Motivações:
+● Ganhar mais
+dinheiro;
+● Trabalhar full
+time em
+home office;
+● Viajar o
+mundo;
+● Ter mais
+recursos.
+
+Frustrações:
+● Está fazendo
+transição de carreira e
+possui dificuldades
+com desenvolvimento
+de sistemas;
+● Tempo limitado para
+estudar;
+● Dificuldades com as
+plataformas EAD.
+
+História, Hobbies:
+● Sara trabalhou como
+professora durante 4 anos e
+resolveu mudar de carreira
+depois que teve seu
+primeiro filho, como possui
+tempo limitado para si, ela
+resolveu ingressar num
+ensino EAD para facilitar em
+sua vida doméstica e
+acadêmica.
+● Tempo de qualidade com o
+filho;
+● Leitura;
+● Dança;
+● Assistir séries.
+
+MARIA JATOBÁ
+Idade: 59 anos.
+Ocupação: Professora de
+inglês, atuando na
+modalidade EAD.
+
+Aplicativos:
+● WhatsApp;
+● Amazon Prime;
+● Facebook;
+● Spotify;
+● YouTube.
+
+Motivações:
+● Levar ensino a
+mais pessoas;
+● Conseguir
+entregar um bom
+desempenho nas
+aulas;
+● Ser um exemplo
+de profissional;
+● Vencer
+
+Frustrações:
+● Lidar com a
+modalidade EAD em
+plataformas como a
+planilha Excel;
+● Medo de não
+conseguir se conectar
+com os alunos da
+forma que gostaria;
+● Falta de auxílio
+
+História, Hobbies:
+● Socorro é formada em
+Letras - Inglês e é
+docente da língua
+estrangeira há mais de
+20 anos, sempre
+ministrou suas aulas de
+forma presencial, mas
+com o advento da
+pandemia, foi forçada a
+7
+obstáculos. durante a navegação;
+● Excesso de
+informações e
+ferramentas de difícil
+compreensão;
+● Problemas de vista.
+migrar para o ensino à
+distância, tendo que se
+adaptar aos meios
+digitais, enfrentou
+bastante dificuldade na
+hora do planejamento
+de turmas e projetos.
+● Ir a concertos de ópera;
+● Peças teatrais;
+● Ir à praia;
+● Traduzir livros.
+
+ HEITOR DA SILVA
+Idade: 43 anos.
+Ocupação: Professor de
+Sistemas de Informação, ministra
+cursos online e orienta alunos em
+projeto de pesquisa.
+Aplicativos:
+● Youtube
+● WhatsApp
+● Discord
+● Steam
+● Teams
+● Canvas
+● Telegram
+Motivações:
+● Continuar
+atuando na sua
+área e contribuir
+de forma
+significante;
+● Otimizar apps e
+facilitar o uso de
+aplicações
+trazendo mais
+acessibilidade;
+● Criar uma
+aplicação que
+atenda toda
+diversidade de
+pessoas.
+Frustrações:
+● Lentidão no carregamento
+de aplicações web;
+● Problemas com otimização
+de dados;
+● Falta de botões grandes.
+História, Hobbies:
+● Heitor sempre gostou
+de tecnologia e de
+inclusão, ele sempre
+estudou sobre
+computação, desde
+criança tinha o
+interesse de fazer
+algo que ajudasse as
+pessoas a ter uma
+melhor experiência.
+● Jogos eletrônicos;
+● Jogos em AR e VR;
+● Passar tempo de
+qualidade com os
+filhos;
+● Dar aulas.
+Histórias de usuários
+A partir da compreensão do dia a dia das personas identificadas para o projeto,
+foram registradas as seguintes histórias de usuários.
+8
+
+Eu como... [PERSONA]
+quero/desejo...[O QUE]… para ...[POR QUE]
+
+HADASSA VIEIRA
+Alternar a exibição da
+aplicação para o modo
+noturno.
+Minimizar o
+desconforto durante a
+navegação.
+
+HEITOR DA SILVA
+Inserir texto alternativo
+nos campos em que
+houver imagens.
+Atender pessoas com
+deficiência visual.
+
+ MARIA JATOBÁ
+Usar a aplicação em
+dispositivos diferentes.
+Poder interagir com os
+colegas mesmo
+quando estiver
+distante de um
+computador de mesa.
+
+HADASSA VIEIRA
+Apresente os
+grupos/trabalhos em
+cards com diferentes
+cores, e eles se
+organizarem de forma
+a ter melhor
+entendimento.
+Para facilitar
+identificação de
+grupos ainda vagos e
+saber qual é o status
+de cada um deles.
+
+HEITOR DA SILVA
+Interface simples e
+intuitiva.
+Tornar a experiência
+mais simples,
+agradável e eficiente.
+
+HEITOR DA SILVA
+Criar um ambiente em
+que os alunos
+possam, sozinhos, se
+organizar em grupos.
+Despender tempo e
+energia nas tarefas
+relacionadas à
+docência.
+
+SARA MATISYAHU
+Ingressar rapidamente
+em um grupo de
+trabalho.
+Poder concentrar o
+tempo disponível após
+a jornada de trabalho
+nos estudos, não em
+repetidas reuniões
+para a formação de
+grupos.
+
+HADASSA VIEIRA
+Interagir com os
+colegas e com o
+professor antes de
+ingressar em um
+grupo.
+Entender melhor as
+ideias apresentadas e
+ver com quais delas
+tenho mais afinidade. 
