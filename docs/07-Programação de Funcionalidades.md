@@ -13,3 +13,21 @@ Para cada requisito funcional, pode ser entregue um artefato desse tipo
 > - [JSON Data Set Sample](https://opensource.adobe.com/Spry/samples/data_region/JSONDataSetSample.html)
 > - [JSON - Introduction (W3Schools)](https://www.w3schools.com/js/js_json_intro.asp)
 > - [JSON Tutorial (TutorialsPoint)](https://www.tutorialspoint.com/json/index.htm)
+
+Entrar em um grupo (RF-07)
+A tela permite ao aluno entrar no grupo ao clicar no botão e retorna ao usuário uma caixa de confirmação em que ele pode confirmar ou cancelar a ação.
+
+ docs/img/entrar-grupo.png
+
+Artefatos da funcionalidade
+● entrar_grupo.html
+● script.js
+● main.css
+● foto-fundo.png
+
+Instruções de acesso
+3. Faça o download do arquivo do projeto (ZIP) ou clone do projeto no GitHub;
+4. Descompacte o arquivo em uma pasta específica;
+5. Abra o Visual Studio Code e execute o Live Server;
+6. Abra um navegador de Internet e informe a seguinte URL:
+http://127.0.0.1:5500/src/entrar_grupo.html
