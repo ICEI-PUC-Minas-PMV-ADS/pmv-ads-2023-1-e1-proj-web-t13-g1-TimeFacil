@@ -44,6 +44,7 @@ Instruções de acesso
 A tela permite ao aluno entrar no grupo ao clicar no botão e retorna ao usuário uma caixa de confirmação em que ele pode confirmar ou cancelar a ação.
 
 ![Entrar-grupo tela](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-1-e1-proj-web-t13-g1-TimeFacil/blob/main/docs/img/entrar-grupo.png)
+![confirma-entrar-grupo](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-1-e1-proj-web-t13-g1-TimeFacil/blob/main/docs/img/confirmar-entrar-grupo.png)
 
 Artefatos da funcionalidade
 - entrar_grupo.html
