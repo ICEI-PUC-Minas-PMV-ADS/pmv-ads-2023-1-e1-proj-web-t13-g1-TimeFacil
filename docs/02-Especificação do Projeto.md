@@ -1,7 +1,5 @@
 # Especificações do Projeto
 
-<span style="color:red">Pré-requisitos: <a href="1-Documentação de Contexto.md"> Documentação de Contexto</a></span>
-
 A definição exata do problema e os pontos mais relevantes a serem tratados neste projeto foi consolidada com a participação dos usuários em um trabalho de imersão feita pelos membros da equipe a partir da observação dos usuários em seu local natural e por meio de entrevistas. Os detalhes levantados nesse processo foram consolidados na forma de personas e histórias de usuários.
 
 ## Personas
@@ -85,7 +83,7 @@ As questões que limitam a execução desse projeto e que se configuram como obr
 
 |ID| Restrição                                             |
 |--|-------------------------------------------------------|
-|RE-01|A aplicação deve ser entregue de forma plenamente funcional até 25/06/2023.  | 
+|RE-01|A aplicação deve ser entregue de forma plenamente funcional até 25/06/2023.  |
 |RE-02|A aplicação deve ser integralmente desenvolvida pelos membros do grupo.  |
 |RE-03|A metodologia de gestão que deverá ser empregada para o desenvolvimento do projeto é a Metodologia Ágil SCRUM.  |
 |RE-04|O site deverá ser desenvolvido nas linguagens de marcação HTML e CSS e programação Javascript.  |
