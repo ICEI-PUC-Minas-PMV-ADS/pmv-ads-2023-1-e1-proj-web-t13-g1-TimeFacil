@@ -23,6 +23,13 @@ A tela de login permite o acesso de professores e alunos ao site. Com base na es
 ![Login](img/4.login.png)
 <p align=center>Figura 4 - Tela de login</p>
 
+## Tela - Criar Conta
+A tela de criar conta permite a criação de contas para professores e alunos ao site, informando matrícula.
+
+![Criar Conta](img/registrar.png)
+
+<p align=center>Figura 4 - Tela de login</p>
+
 ## Tela – Criar Atividade
 Permite ao professor criar uma atividade para uma disciplina que lecione. A atividade pode ter um tema livre (situação em que os alunos poderão formar grupos a partir de temas por eles sugeridos) ou tema fixo (caso em que os alunos apelas se organizarão em grupos a partir de critérios como horários sugeridos para os encontros ou afinidade pessoal). 
 
