@@ -214,7 +214,8 @@ label,
   display: inline-block;
   line-height: 30px;
   margin-bottom: 20px;
-  padding-inline-start: 10px;
+  -webkit-padding-start: 10px;
+          padding-inline-start: 10px;
 }
 
 /* || Dias da Semana.*/
@@ -306,6 +307,7 @@ label,
     width: 900px;
   }
 }
+/*Importado de main.css/*
 
 /* || Conteúdo Principal Turmas*/
 /*  SESSÃO ARTHUR - COMEÇO*/
@@ -324,7 +326,6 @@ main {
   display: inline-block;
   color: #47525e;
   margin: auto 20px;
-
 }
 
 #divlogocontect {
@@ -341,13 +342,12 @@ main {
   width: 100%;
   margin-top: 10px;
   display: flex;
-
 }
 
 #campo-pesquisa {
   width: 70%;
   height: 40px;
-  font: 23px 'Lato';
+  font: 23px "Lato";
   border: solid #d3dce6 1px;
   border-radius: 5px;
   padding-left: 20px;
@@ -355,7 +355,6 @@ main {
   font-style: italic;
   margin-top: 4px;
   margin-left: 10%;
-
 }
 
 #campo-pesquisa:focus {
@@ -364,12 +363,10 @@ main {
 }
 
 /* || Tabela c/ Turmas */
-
 #div-tabela {
-
   margin-top: 20px;
   width: 82vw;
-  border: solid 1px #8492A6;
+  border: solid 1px #8492a6;
   border-radius: 5px;
   height: 65vh;
   overflow-y: auto;
@@ -382,11 +379,10 @@ main {
 
 table#tabela-turmas {
   border-collapse: collapse;
-
 }
 
 thead#head-table {
-  background-color: #E0E0E0;
+  background-color: #e0e0e0;
   height: 50px;
   position: sticky;
   top: 0;
@@ -417,17 +413,17 @@ td#coluna-alunos {
   width: 5%;
 }
 
-th#coluna-acoes,td#coluna-acoes {
+th#coluna-acoes,
+td#coluna-acoes {
   width: 10%;
 }
 
-#icones-coluna{
+#icones-coluna {
   margin: 0 5px;
   max-width: 23px;
 }
 
 /* || Modal Criar Turma */
-
 .modal {
   background-color: rgba(206, 214, 209, 0.64);
   align-items: center;
@@ -442,20 +438,19 @@ th#coluna-acoes,td#coluna-acoes {
 
 #conteudo-modal {
   background-color: #ffffff;
-  border: 2px solid #8492A6;
+  border: 2px solid #8492a6;
   border-radius: 5px;
   width: 850px;
   height: 350px;
   font-size: 1.2em;
   margin: 15% auto;
-
 }
 
 #cont-modal-header {
   text-align: center;
   padding-top: 10px;
   font-size: 2.3em;
-  font-family: 'Grand Hotel', cursive;
+  font-family: "Grand Hotel", cursive;
 }
 
 #cont-modal-corpo {
@@ -478,7 +473,7 @@ th#coluna-acoes,td#coluna-acoes {
   width: 200px;
   height: 40px;
   margin: 30px 0px 20px 10px;
-  border: .5px solid;
+  border: 0.5px solid;
   border-radius: 5px;
   padding-left: 10px;
   font-size: 1.1em;
@@ -489,7 +484,7 @@ th#coluna-acoes,td#coluna-acoes {
   max-width: 650px;
   height: 40px;
   margin: 30px 0px 50px 10px;
-  border: .5px solid;
+  border: 0.5px solid;
   border-radius: 5px;
   padding-left: 10px;
   font-size: 1.1em;
@@ -520,17 +515,16 @@ th#coluna-acoes,td#coluna-acoes {
   border: solid #d3dce6 2px;
   text-align: center;
   vertical-align: middle;
-  transition: .5s;
+  transition: 0.5s;
 }
 
 #botao-nova-turma:hover {
   background-color: #91cdec;
-  transition: .1s;
+  transition: 0.1s;
 }
 
 #botao-nova-turma:active {
   background-color: #c5cfda;
-  ;
 }
 
 #botao-cancelar {
@@ -556,7 +550,4 @@ th#coluna-acoes,td#coluna-acoes {
   transform: translateY(1px);
 }
 
-
-
-/*  SESSÃO ARTHUR - FINAL*/
-/*# sourceMappingURL=main.css.map */
+/*  SESSÃO ARTHUR - FINAL*//*# sourceMappingURL=main.css.map */

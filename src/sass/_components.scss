@@ -182,3 +182,250 @@ label,
 		width: 900px;
 	}
 }
+
+/*Importado de main.css/*
+
+/* || Conteúdo Principal Turmas*/
+/*  SESSÃO ARTHUR - COMEÇO*/
+main {
+	display: flex;
+	font-size: large;
+	height: 100%;
+	width: 100%;
+	padding: 60px 10px 10px 260px;
+}
+
+#conteudo {
+	color: red;
+	flex-grow: 1;
+	height: 100%;
+	display: inline-block;
+	color: #47525e;
+	margin: auto 20px;
+}
+
+#divlogocontect {
+	margin-top: 10px;
+	text-align: center;
+}
+
+#img-logo-conteudo {
+	max-width: 150px;
+	width: auto;
+}
+
+#barraPesquisa {
+	width: 100%;
+	margin-top: 10px;
+	display: flex;
+}
+
+#campo-pesquisa {
+	width: 70%;
+	height: 40px;
+	font: 23px "Lato";
+	border: solid #d3dce6 1px;
+	border-radius: 5px;
+	padding-left: 20px;
+	box-shadow: 2px 2px 5px #119ad9;
+	font-style: italic;
+	margin-top: 4px;
+	margin-left: 10%;
+}
+
+#campo-pesquisa:focus {
+	outline: 0;
+	font-style: normal;
+}
+
+/* || Tabela c/ Turmas */
+
+#div-tabela {
+	margin-top: 20px;
+	width: 82vw;
+	border: solid 1px #8492a6;
+	border-radius: 5px;
+	height: 65vh;
+	overflow-y: auto;
+}
+
+#tabela-turmas {
+	width: 100%;
+	text-align: center;
+}
+
+table#tabela-turmas {
+	border-collapse: collapse;
+}
+
+thead#head-table {
+	background-color: #e0e0e0;
+	height: 50px;
+	position: sticky;
+	top: 0;
+	font-size: 1.2em;
+}
+
+table#tabela-turmas tr {
+	height: 50px;
+}
+
+th#coluna-eixo,
+td#coluna-eixo {
+	width: 10%;
+}
+
+th#coluna-disc,
+td#coluna-disc {
+	width: 55%;
+}
+
+th#coluna-turma,
+td#coluna-turma {
+	width: 10%;
+}
+
+th#coluna-alunos,
+td#coluna-alunos {
+	width: 5%;
+}
+
+th#coluna-acoes,
+td#coluna-acoes {
+	width: 10%;
+}
+
+#icones-coluna {
+	margin: 0 5px;
+	max-width: 23px;
+}
+
+/* || Modal Criar Turma */
+
+.modal {
+	background-color: rgba(206, 214, 209, 0.64);
+	align-items: center;
+	justify-content: center;
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100vw;
+	height: 100vh;
+	display: none;
+}
+
+#conteudo-modal {
+	background-color: #ffffff;
+	border: 2px solid #8492a6;
+	border-radius: 5px;
+	width: 850px;
+	height: 350px;
+	font-size: 1.2em;
+	margin: 15% auto;
+}
+
+#cont-modal-header {
+	text-align: center;
+	padding-top: 10px;
+	font-size: 2.3em;
+	font-family: "Grand Hotel", cursive;
+}
+
+#cont-modal-corpo {
+	text-align: center;
+}
+
+#div-eixo-periodo {
+	position: absolute;
+	text-align: left;
+	margin-left: 45px;
+}
+
+#div-turma {
+	text-align: right;
+	margin-right: 50px;
+}
+
+#input-eixo-periodo,
+#input-turma {
+	width: 200px;
+	height: 40px;
+	margin: 30px 0px 20px 10px;
+	border: 0.5px solid;
+	border-radius: 5px;
+	padding-left: 10px;
+	font-size: 1.1em;
+}
+
+#input-disciplina {
+	width: 80%;
+	max-width: 650px;
+	height: 40px;
+	margin: 30px 0px 50px 10px;
+	border: 0.5px solid;
+	border-radius: 5px;
+	padding-left: 10px;
+	font-size: 1.1em;
+}
+
+#cont-modal-rodape {
+	float: right;
+}
+
+/* || Botões - Arthur */
+#botao-atualizar {
+	height: 50px;
+}
+
+#botao-pesquisa {
+	margin-top: 4px;
+	height: 40px;
+	margin-left: 10px;
+}
+
+#botao-nova-turma {
+	background-color: #cee4f0;
+	width: 152px;
+	height: 45px;
+	font-size: 20px;
+	color: black;
+	margin-top: 1px;
+	border: solid #d3dce6 2px;
+	text-align: center;
+	vertical-align: middle;
+	transition: 0.5s;
+}
+
+#botao-nova-turma:hover {
+	background-color: #91cdec;
+	transition: 0.1s;
+}
+
+#botao-nova-turma:active {
+	background-color: #c5cfda;
+}
+
+#botao-cancelar {
+	font-size: 25px;
+	width: 150px;
+	color: black;
+	margin-right: 40px;
+}
+
+#botao-adicionar-turma {
+	font-size: 25px;
+	width: 150px;
+	background-color: #cee4f0;
+	color: black;
+	margin-right: 50px;
+}
+
+#botao-adicionar-turma:hover {
+	background-color: #91cdec;
+}
+
+#botao-adicionar-turma:active {
+	transform: translateY(1px);
+}
+
+/*  SESSÃO ARTHUR - FINAL*/
