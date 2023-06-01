@@ -71,20 +71,39 @@
 				<br />
 				<p class="campo-label">Tema Fixo?</p>
 				<label for="sim">Sim</label>
-				<input class="campo-valor" type="radio" id="sim" name="temaFixo" required value="sim" />
-				<label for="nao">Não</label> <input class="campo-valor" type="radio" id="nao" name="temaFixo" value="nao" />
+				<input
+					class="campo-valor"
+					type="radio"
+					id="temaFixoSim"
+					onclick="mostraEscondeTema()"
+					name="temaFixo"
+					required
+					value="sim"
+				/>
+				<label for="nao">Não</label>
+				<input
+					class="campo-valor"
+					type="radio"
+					id="temaFixoNao"
+					onclick="mostraEscondeTema()"
+					name="temaFixo"
+					value="nao"
+					checked="checked"
+				/>
+				<br />
+				<label id="temaLabel" for="tema">Tema:</label>
+				<input type="text" id="tema" name="tema" class="campo-valor" size="80" spellcheck="true" />
 				<br />
 				<p class="campo-label">Integrantes:</p>
 				<label for="minimo">Mínimo:</label>
-				<input class="campo-valor" type="number" id="minimo" name="min" size="1" required min="2" />
+				<input class="campo-valor" type="number" id="integrantesMin" name="minimo" size="1" required min="2" />
 				<label for="maximo">Máximo:</label>
-				<input class="campo-valor" type="number" id="maximo" name="max" size="1" required />
+				<input class="campo-valor" type="number" id="integrantesMax" name="maximo" size="1" required min="2" />
 				<br />
 				<label for="prazo">Prazo de Formação:</label>
 				<input class="campo-valor" type="date" id="prazo" name="prazoFormacao" required />
 				<br />
 				<input class="botao-cancelar" type="reset" value="Cancelar" id="cancela" />
-				<!-- <a class="botao-cancelar" id="cancela" href="index.html">Cancelar</a> -->
 				<input class="botao-confirmar" type="submit" value="Criar Atividade" id="confirma" onclick="criaAtividade()" />
 			</form>
 		</main>
