@@ -64,25 +64,74 @@ function confirmaSaida() {
 	}
 }
 
-//Criar Atividade
-function criaAtividade() {
-	if (confirm("Confirma a criação da atividade?") == true) {
-		alert("Atividade criada com sucesso!");
-	} else {
-		alert("Ação cancelada!");
-	}
-}
+//=================================
+//Criar Atividade - Início da seção
+//=================================
 
+//Variáveis para leitura e escrita de strings no LocalStorage
+let getLocalStorage = () => JSON.parse(localStorage.getItem("db_atividade")) ?? [];
+let setLocalStorage = (dataAtividade) => localStorage.setItem("db_atividade", JSON.stringify(dataAtividade));
+
+//Criação, leitura, edição e exclusão de atividades no LocalStorage
+let createAtividade = (atividade) => {
+	let dataAtividade = getLocalStorage();
+	dataAtividade.push(atividade);
+	setLocalStorage(dataAtividade);
+};
+
+let readAtividade = () => getLocalStorage();
+
+let updateAtividade = (index, atividade) => {
+	let dataAtividade = readAtividade();
+	dataAtividade[index] = atividade;
+	setLocalStorage(dataAtividade);
+};
+
+let deleteAtividade = (index) => {
+	let dataAtividade = readAtividade();
+	dataAtividade.splice(index, 1);
+	setLocalStorage(dataAtividade);
+};
+
+//Interação
 //Oculta, em Criar Atividade, o campo "Tema", até que o usuário clique em "Sim", no campo "Tema Fixo?"
 function mostraEscondeTema() {
 	if (document.getElementById("temaFixoSim").checked) {
 		document.getElementById("temaLabel").style.display = "inline-block";
 		document.getElementById("tema").style.display = "inline-block";
+		//Torna o campo "Tema" obrigatório
+		document.getElementById("tema").required = "true";
 	} else {
 		document.getElementById("temaLabel").style.display = "none";
 		document.getElementById("tema").style.display = "none";
 	}
 }
+
+//Valida formulário
+const formularioValido = () => {
+	return document.getElementById("formularioAtividade").reportValidity();
+};
+
+let gravaAtividade = () => {
+	if (formularioValido()) {
+		let atividade = {
+			atividade: document.getElementById("atividade").value,
+			temaFixo: document.querySelector("input[name='temaFixoSimNao']:checked").value,
+			tema: document.getElementById("tema").value,
+			integrantesMin: document.getElementById("integrantesMin").value,
+			integrantesMax: document.getElementById("integrantesMax").value,
+			prazo: document.getElementById("prazo").value,
+		};
+		createAtividade(atividade);
+	}
+};
+
+//Envia itens do formulário para o LocalStorage
+document.getElementById("criarAtividade").addEventListener("click", gravaAtividade);
+
+//===============================
+// Criar Atividade - Fim da seção
+//===============================
 
 //Metodo para abrir modal
 function novaTurmaModal(modalName) {
