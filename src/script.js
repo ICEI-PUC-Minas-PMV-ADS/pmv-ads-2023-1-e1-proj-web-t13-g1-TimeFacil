@@ -75,8 +75,20 @@ let setLocalStorage = (dataAtividade) => localStorage.setItem("db_atividade", JS
 //Criação, leitura, edição e exclusão de atividades no LocalStorage
 let createAtividade = (atividade) => {
 	let dataAtividade = getLocalStorage();
-	dataAtividade.push(atividade);
-	setLocalStorage(dataAtividade);
+	if (!atividadeVazio(atividade)) {
+		dataAtividade.push(atividade);
+		setLocalStorage(dataAtividade);
+	}
+};
+
+//Variável para evitar a gravação do valor null no LocalStorage.
+let atividadeVazio = (atividade) => {
+	for (let key in atividade) {
+		if (atividade[key] !== "") {
+			return false;
+		}
+	}
+	return true;
 };
 
 let readAtividade = () => getLocalStorage();
@@ -108,26 +120,44 @@ function mostraEscondeTema() {
 }
 
 //Valida formulário
-const formularioValido = () => {
-	return document.getElementById("formularioAtividade").reportValidity();
-};
-
 let gravaAtividade = () => {
-	if (formularioValido()) {
+	const formulario = document.getElementById("formularioAtividade");
+	const integrantesMin = document.getElementById("integrantesMin");
+	const integrantesMax = document.getElementById("integrantesMax");
+	const prazo = document.getElementById("prazo");
+
+	if (formulario.checkValidity()) {
+		const dataAtual = new Date();
+		const dataPrazo = new Date(prazo.value);
+
+		if (dataPrazo < dataAtual) {
+			alert("O prazo de formação da atividade não pode estar no passado.");
+			return;
+		}
+
+		if (integrantesMax.value < integrantesMin.value) {
+			alert("O número máximo de integrantes não pode ser inferior ao número mínimo.");
+			return;
+		}
+
 		let atividade = {
 			atividade: document.getElementById("atividade").value,
 			temaFixo: document.querySelector("input[name='temaFixoSimNao']:checked").value,
 			tema: document.getElementById("tema").value,
-			integrantesMin: document.getElementById("integrantesMin").value,
-			integrantesMax: document.getElementById("integrantesMax").value,
-			prazo: document.getElementById("prazo").value,
+			integrantesMin: integrantesMin.value,
+			integrantesMax: integrantesMax.value,
+			prazo: prazo.value,
 		};
 		createAtividade(atividade);
+		formulario.reset();
+		alert("Atividade salva com sucesso!");
 	}
 };
 
-//Envia itens do formulário para o LocalStorage
-document.getElementById("criarAtividade").addEventListener("click", gravaAtividade);
+document.getElementById("formularioAtividade").addEventListener("submit", function (event) {
+	event.preventDefault();
+	gravaAtividade();
+});
 
 //===============================
 // Criar Atividade - Fim da seção
