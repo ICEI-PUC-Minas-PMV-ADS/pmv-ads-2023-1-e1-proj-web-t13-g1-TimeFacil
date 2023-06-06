@@ -92,6 +92,12 @@ label,
 	padding-inline-start: 10px;
 }
 
+//Necessário para ocultar, em Criar Atividade, o campo "Tema", até que o usuário clique em "Sim", no campo "Tema Fixo?"
+#tema,
+#temaLabel {
+	display: none;
+}
+
 /* || Dias da Semana.*/
 //Importado de main.css
 .clickable-box {
