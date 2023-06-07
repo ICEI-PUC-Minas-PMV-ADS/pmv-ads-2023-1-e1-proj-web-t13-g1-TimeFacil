@@ -6,7 +6,6 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<link rel="stylesheet" href="main.css" />
 		<script defer type="text/javascript" src="script.js"></script>
-
 		<style>
 			@import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap");
 		</style>
@@ -49,7 +48,7 @@
 					<span>Grupos</span>
 					<ul class="sidebar-subitem">
 						<li><a href="paginas/grupos-abertos.html">Grupos abertos</a></li>
-						<li><a href="paginas/criar-grupo.html">Criar grupo</a></li>
+						<li><a href="./create_group.html">Criar grupo</a></li>
 						<li><a href="paginas/editar-grupo.html">Editar grupo</a></li>
 					</ul>
 				</li>
@@ -62,28 +61,30 @@
 			</ul>
 		</nav>
 		<!-- Conteúdo Principal-->
+
 		<main>
+	
+			<div class="cards">
+            <section class="card">
+            <img src="imagens/foto-fundo.png" alt="Foto de fundo">
+            <h3>Time Fácil</h3>
+            <p>Desenvolvimento de um site.</p>
+            <a href="entrar_grupo.html"><button>Visitar</button></a>
+            </section>
 
-        <div>
-		<img id="foto-fundo" src="imagens/foto-fundo.png" alt="Foto"> 
-        
-        
-        <div class="tema">
-          <h5>Tema:</h5> 
-            <textarea id="mensagem" name="texto_tema" placeholder="Insira informações sobre o tema." rows="12" cols="100"></textarea>
-        </div>
-        
-        <div class="ideia">
-            <textarea name="texto" placeholder="Sugestão de dias e horários." rows="2" cols="100"></textarea>
-        </div>
+            <section class="card">
+                <img src="imagens/foto-fundo.png" alt="Foto de fundo">
+                <h3>Grupo 2</h3>
+                <p>Clique para saber mais sobre o Grupo.</p>
+                  <a href="entrar_grupo.html"><button>Visitar</button></a> 
+            </section>
+			</div>
 
-        <div class="bot">
-            
-            <button id="botao" type="button"  onclick="confirmaSaida()" >Entrar no grupo</button>
-               </div>
-
-        </body>
-			  <script src="script.js"></script>
+			<div class="title_grupo">
+				<h1>Grupos <img src="icones/grupos.png" alt="icon"> </h1>
+			</div>
+			
 		</main>
+		
 	</body>
 </html>

@@ -54,15 +54,22 @@ function generateJSON() {
 	window.location.href = "index.html";
 }
 //Entrar em Grupo.
-function confirmaSaida() {
-	var confirmado = confirm("Você deseja mesmo entrar no grupo?");
-
-	if (confirmado === true) {
-		alert("Você entrou no grupo!");
-	} else {
-		alert("Ação cancelada!");
+function confirmaSaida(){
+	var meuBotao = document.getElementById("botao");
+	if (meuBotao.innerHTML == "Entrar no grupo") {
+	 var confirmado = confirm ('Você deseja mesmo entrar no grupo?');
+	  if(confirmado == true){
+		alert ('Você entrou no grupo!');
+		meuBotao.innerHTML = "Sair do grupo"; 
+	  }     
+	  if (confirmado == false){
+		alert ('Ação cancelada!');
+	  }
+	  } else {
+	  alert ('Você saiu do grupo!');
+	  meuBotao.innerHTML = "Entrar no grupo";
 	}
-}
+  }
 
 //=================================
 //Criar Atividade - Início da seção
