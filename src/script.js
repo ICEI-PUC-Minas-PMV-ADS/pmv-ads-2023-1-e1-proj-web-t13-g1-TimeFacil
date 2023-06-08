@@ -72,15 +72,6 @@ function confirmaSaida() {
 let getLocalStorage = () => JSON.parse(localStorage.getItem("db_atividade")) ?? [];
 let setLocalStorage = (dataAtividade) => localStorage.setItem("db_atividade", JSON.stringify(dataAtividade));
 
-//Métodos par acriação, leitura, edição e exclusão de atividades no LocalStorage
-let createAtividade = (atividade) => {
-	let dataAtividade = getLocalStorage();
-	if (!atividadeVazio(atividade)) {
-		dataAtividade.push(atividade);
-		setLocalStorage(dataAtividade);
-	}
-};
-
 //Método para evitar a gravação do valor null no LocalStorage.
 let atividadeVazio = (atividade) => {
 	for (let key in atividade) {
@@ -89,6 +80,15 @@ let atividadeVazio = (atividade) => {
 		}
 	}
 	return true;
+};
+
+//Métodos para criação, leitura, edição e exclusão de atividades no LocalStorage
+let createAtividade = (atividade) => {
+	let dataAtividade = getLocalStorage();
+	if (!atividadeVazio(atividade)) {
+		dataAtividade.push(atividade);
+		setLocalStorage(dataAtividade);
+	}
 };
 
 let readAtividade = () => getLocalStorage();
@@ -101,8 +101,10 @@ let updateAtividade = (index, atividade) => {
 
 let deleteAtividade = (index) => {
 	let dataAtividade = readAtividade();
-	dataAtividade.splice(index, 1);
-	setLocalStorage(dataAtividade);
+	if (index !== -1) {
+		dataAtividade.splice(index, 1);
+		setLocalStorage(dataAtividade);
+	}
 };
 
 //Interação
@@ -127,19 +129,20 @@ let gravaAtividade = () => {
 	const prazo = document.getElementById("prazo");
 
 	if (formulario.checkValidity()) {
+		// Testa se o número máximo de integrantes é maior do que o número mínimo
+		if (integrantesMax.value < integrantesMin.value) {
+			alert("O número máximo de integrantes não pode ser inferior ao número mínimo.");
+			return;
+		}
+		//Testa se o prazo máximo de formação está no futuro
 		let dataAtual = new Date();
 		let dataPrazo = new Date(prazo.value);
-
 		if (dataPrazo < dataAtual) {
 			alert("O prazo de formação da atividade não pode estar no passado.");
 			return;
 		}
 
-		if (integrantesMax.value < integrantesMin.value) {
-			alert("O número máximo de integrantes não pode ser inferior ao número mínimo.");
-			return;
-		}
-
+		//Objeto com os dados inseridos no formulário
 		let atividade = {
 			atividade: document.getElementById("atividade").value,
 			temaFixo: document.querySelector("input[name='temaFixoSimNao']:checked").value,
@@ -148,11 +151,15 @@ let gravaAtividade = () => {
 			integrantesMax: integrantesMax.value,
 			prazo: prazo.value,
 		};
+
+		//Receba!
 		createAtividade(atividade);
 		formulario.reset();
 		alert("Atividade salva com sucesso!");
 	}
 };
+
+//Trecho usado para não carregar o EventListener do formularioAtividade quando o usuário estiver na página "Gerenciar Atividades".
 if (window.location.pathname.includes("criar-atividade.html")) {
 	if (document.getElementById("formularioAtividade")) {
 		document.getElementById("formularioAtividade").addEventListener("submit", function (event) {
@@ -172,6 +179,7 @@ if (window.location.pathname.includes("criar-atividade.html")) {
 		gerenciarAtividades();
 	});
 
+	//Carrega os dados armazenados no LocalStorage
 	function gerenciarAtividades() {
 		let atividades = readAtividade();
 		let tabelaBody = document.querySelector("#tabela-atividades tbody");
@@ -200,12 +208,41 @@ if (window.location.pathname.includes("criar-atividade.html")) {
 				let celulaPrazo = row.insertCell();
 				celulaPrazo.textContent = atividade.prazo;
 				celulaPrazo.classList.add("tabela-celula");
+
+				let celulaAcoes = row.insertCell();
+				celulaAcoes.classList.add("tabela-celula");
+
+				// Adiciona o ícone de edição
+				let iconeEditarAtividade = document.createElement("span");
+				iconeEditarAtividade.classList.add("icone-editar-atividade");
+				let editarImg = document.createElement("img");
+				editarImg.src = "icones/editar.png";
+				iconeEditarAtividade.appendChild(editarImg);
+				iconeEditarAtividade.addEventListener("click", function () {
+					//PENDENTE O MÉTODO DE EDIÇÃO! IMPLEMENTAR!
+				});
+				celulaAcoes.appendChild(iconeEditarAtividade);
+
+				//Adiciona o ícone de exclusão
+				let iconeDeletarAtividade = document.createElement("span");
+				iconeDeletarAtividade.classList.add("icone-deletar-atividade");
+				let excluirImg = document.createElement("img");
+				excluirImg.src = "icones/excluir.png";
+				iconeDeletarAtividade.appendChild(excluirImg);
+				iconeDeletarAtividade.addEventListener("click", function () {
+					// Exclui a linha
+					let rowIndex = this.parentNode.parentNode.rowIndex - 1;
+					if (confirm("Tem certeza de que deseja excluir essa atividade?")) {
+						deleteAtividade(rowIndex);
+						// Atualiza a tabela após a exclusão
+						gerenciarAtividades();
+						alert("Atividade excluída com sucesso!");
+					}
+				});
+				celulaAcoes.appendChild(iconeDeletarAtividade);
 			}
 		}
 	}
-
-	// Chama a função para gerenciar as atividades quando necessário
-	gerenciarAtividades();
 }
 //======================================
 //Gerenciar Atividades - Fim da seção
