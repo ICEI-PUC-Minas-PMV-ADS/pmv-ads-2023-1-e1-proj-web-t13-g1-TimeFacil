@@ -219,7 +219,24 @@ if (window.location.pathname.includes("criar-atividade.html")) {
 				editarImg.src = "icones/editar.png";
 				iconeEditarAtividade.appendChild(editarImg);
 				iconeEditarAtividade.addEventListener("click", function () {
-					//PENDENTE O MÉTODO DE EDIÇÃO! IMPLEMENTAR!
+					let rowIndex = this.parentNode.parentNode.rowIndex - 1;
+					let atividade = readAtividade()[rowIndex];
+					preencherFormulario(atividade);
+
+					document.getElementById("atividade").value = atividade.atividade;
+					document.getElementById("temaFixoSim").checked = atividade.temaFixo === "Sim";
+					document.getElementById("temaFixoNao").checked = atividade.temaFixo === "Não";
+					document.getElementById("tema").value = atividade.tema;
+					document.getElementById("integrantesMin").value = atividade.integrantesMin;
+					document.getElementById("integrantesMax").value = atividade.integrantesMax;
+					document.getElementById("prazo").value = atividade.prazo;
+
+					// Chama o método updateAtividade para salvar a atividade atualizada
+					updateAtividade(rowIndex, atividade);
+
+					// Atualiza a tabela após a edição
+					gerenciarAtividades();
+					alert("Atividade editada com sucesso!");
 				});
 				celulaAcoes.appendChild(iconeEditarAtividade);
 

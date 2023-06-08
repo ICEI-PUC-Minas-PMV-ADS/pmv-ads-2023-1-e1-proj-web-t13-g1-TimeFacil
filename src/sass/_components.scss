@@ -79,17 +79,51 @@ label,
 	display: inline-block;
 	line-height: 40px;
 	font-weight: bold;
-	color: $cor-fonte-variante;
+	color: $cor-fonte;
 	padding: 10px 20px;
-	// padding-inline-start: 100px;
+	width: 200px;
 }
 
-.campo-valor {
+.radio-label,
+.radio-valor {
+	padding: 0px;
+	width: 30px;
+}
+
+.integrantes-label {
+	padding: 0px;
+	width: 80px;
+}
+.campo-valor,
+.integrantes-valor,
+.prazo-valor {
+	background-color: $cor-fundo;
 	border-radius: 5px;
+	box-sizing: border-box;
+	color: $cor-fonte;
 	display: inline-block;
+	font-family: inherit;
+	font-size: medium;
 	line-height: 30px;
 	margin-bottom: 20px;
-	padding-inline-start: 10px;
+	padding: 0px 10px;
+	width: 600px;
+}
+
+.integrantes-valor {
+	margin-right: 10px;
+	padding: 0px;
+	width: 50px;
+}
+
+.prazo-valor {
+	padding: 0px;
+	width: 150px;
+}
+
+#tema,
+#temaLabel {
+	display: none;
 }
 
 //Necessário para ocultar, em Criar Atividade, o campo "Tema", até que o usuário clique em "Sim", no campo "Tema Fixo?"
@@ -220,12 +254,16 @@ label,
 	padding: 8px;
 }
 
-.icone-editar-atividade {
-	background-image: url("icones/editar.png");
+.icone-editar-atividade img {
+	cursor: pointer;
+	height: 18px;
+	margin-right: 10px;
+	width: 18px;
 }
-
-.icone-excluir-atividade {
-	background-image: url("icones/excluir.png");
+.icone-deletar-atividade img {
+	cursor: pointer;
+	height: 18px;
+	width: 18px;
 }
 
 /*Importado de main.css/*
