@@ -68,11 +68,11 @@ function confirmaSaida() {
 //Criar Atividade - Início da seção
 //=================================
 
-//Variáveis para leitura e escrita de strings no LocalStorage
+//Métodos para leitura e escrita de strings no LocalStorage
 let getLocalStorage = () => JSON.parse(localStorage.getItem("db_atividade")) ?? [];
 let setLocalStorage = (dataAtividade) => localStorage.setItem("db_atividade", JSON.stringify(dataAtividade));
 
-//Criação, leitura, edição e exclusão de atividades no LocalStorage
+//Métodos par acriação, leitura, edição e exclusão de atividades no LocalStorage
 let createAtividade = (atividade) => {
 	let dataAtividade = getLocalStorage();
 	if (!atividadeVazio(atividade)) {
@@ -81,7 +81,7 @@ let createAtividade = (atividade) => {
 	}
 };
 
-//Variável para evitar a gravação do valor null no LocalStorage.
+//Método para evitar a gravação do valor null no LocalStorage.
 let atividadeVazio = (atividade) => {
 	for (let key in atividade) {
 		if (atividade[key] !== "") {
@@ -127,8 +127,8 @@ let gravaAtividade = () => {
 	const prazo = document.getElementById("prazo");
 
 	if (formulario.checkValidity()) {
-		const dataAtual = new Date();
-		const dataPrazo = new Date(prazo.value);
+		let dataAtual = new Date();
+		let dataPrazo = new Date(prazo.value);
 
 		if (dataPrazo < dataAtual) {
 			alert("O prazo de formação da atividade não pode estar no passado.");
@@ -153,15 +153,63 @@ let gravaAtividade = () => {
 		alert("Atividade salva com sucesso!");
 	}
 };
+if (window.location.pathname.includes("criar-atividade.html")) {
+	if (document.getElementById("formularioAtividade")) {
+		document.getElementById("formularioAtividade").addEventListener("submit", function (event) {
+			event.preventDefault();
+			gravaAtividade();
+		});
+	}
+} else {
+	//===============================
+	// Criar Atividade - Fim da seção
+	//===============================
 
-document.getElementById("formularioAtividade").addEventListener("submit", function (event) {
-	event.preventDefault();
-	gravaAtividade();
-});
+	//======================================
+	//Gerenciar Atividades - Início da seção
+	//======================================
+	document.addEventListener("DOMContentLoaded", function () {
+		gerenciarAtividades();
+	});
 
-//===============================
-// Criar Atividade - Fim da seção
-//===============================
+	function gerenciarAtividades() {
+		let atividades = readAtividade();
+		let tabelaBody = document.querySelector("#tabela-atividades tbody");
+
+		// Limpa o conteúdo atual da tabela
+		if (tabelaBody) {
+			tabelaBody.innerHTML = "";
+
+			// Adiciona as linhas da tabela
+			for (let atividade of atividades) {
+				let row = tabelaBody.insertRow();
+				row.classList.add("tabela-linha");
+
+				let celulaAtividade = row.insertCell();
+				celulaAtividade.textContent = atividade.atividade;
+				celulaAtividade.classList.add("tabela-celula");
+
+				let celulaTema = row.insertCell();
+				celulaTema.textContent = atividade.tema;
+				celulaTema.classList.add("tabela-celula");
+
+				let celulaIntegrantes = row.insertCell();
+				celulaIntegrantes.textContent = atividade.integrantesMin.concat(" a ", atividade.integrantesMax);
+				celulaIntegrantes.classList.add("tabela-celula");
+
+				let celulaPrazo = row.insertCell();
+				celulaPrazo.textContent = atividade.prazo;
+				celulaPrazo.classList.add("tabela-celula");
+			}
+		}
+	}
+
+	// Chama a função para gerenciar as atividades quando necessário
+	gerenciarAtividades();
+}
+//======================================
+//Gerenciar Atividades - Fim da seção
+//======================================
 
 //Metodo para abrir modal
 function novaTurmaModal(modalName) {

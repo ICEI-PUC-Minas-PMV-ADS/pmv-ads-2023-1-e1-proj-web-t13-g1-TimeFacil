@@ -5,11 +5,12 @@
 		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<link rel="stylesheet" href="main.css" />
-		<script defer type="text/javascript" src="script.js"></script>
+
 		<style>
 			@import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap");
 		</style>
-		<title>TimeFácil - Criar Atividade</title>
+
+		<title>TimeFácil - Gerenciar Atividades</title>
 		<link rel="icon" type="image/x-icon" href="icones/favicon.png" />
 	</head>
 	<body>
@@ -59,53 +60,21 @@
 		</nav>
 		<!-- Conteúdo Principal-->
 		<main>
-			<form name="formularioCriaAtividade" id="formularioAtividade" class="formulario" action="">
-				<label for="atividade">Atividade:</label>
-				<input type="text" id="atividade" name="atividade" class="campo-valor" required size="80" spellcheck="true" />
-				<br />
-				<p class="campo-label">Tema Fixo?</p>
-				<label for="temaFixoSim">Sim</label>
-				<input
-					class="campo-valor"
-					type="radio"
-					id="temaFixoSim"
-					onclick="mostraEscondeTema()"
-					name="temaFixoSimNao"
-					required
-					value="sim"
-				/>
-				<label for="temaFixoNao">Não</label>
-				<input
-					class="campo-valor"
-					type="radio"
-					id="temaFixoNao"
-					onclick="mostraEscondeTema()"
-					name="temaFixoSimNao"
-					value="nao"
-					checked="checked"
-				/>
-				<br />
-				<label id="temaLabel" for="tema">Tema:</label>
-				<input type="text" id="tema" name="tema" class="campo-valor" size="80" spellcheck="true" />
-				<br />
-				<p class="campo-label">Integrantes:</p>
-				<label for="integrantesMin">Mínimo:</label>
-				<input class="campo-valor" type="number" id="integrantesMin" name="minimo" size="1" required min="2" />
-				<label for="integrantesMax">Máximo:</label>
-				<input class="campo-valor" type="number" id="integrantesMax" name="maximo" size="1" required min="2" />
-				<br />
-				<label for="prazo">Prazo de Formação:</label>
-				<input class="campo-valor" type="date" id="prazo" name="prazoFormacao" required />
-				<br />
-				<input class="botao-cancelar" type="reset" value="Cancelar" id="cancela" />
-				<input
-					class="botao-confirmar"
-					type="submit"
-					value="Criar Atividade"
-					id="criarAtividade"
-					onclick="createAtividade()"
-				/>
-			</form>
+			<table id="tabela-atividades" class="tabela-atividades">
+				<thead>
+					<tr>
+						<!-- <th class="tabela-cabecalho">Eixo</th>
+						<th class="tabela-cabecalho">Disciplina</th>
+						<th class="tabela-cabecalho">Turma</th> -->
+						<th class="tabela-cabecalho">Atividade</th>
+						<th class="tabela-cabecalho">Tema</th>
+						<th class="tabela-cabecalho">Integrantes</th>
+						<th class="tabela-cabecalho">Prazo</th>
+					</tr>
+				</thead>
+				<tbody></tbody>
+			</table>
 		</main>
+		<script defer type="text/javascript" src="script.js"></script>
 	</body>
 </html>

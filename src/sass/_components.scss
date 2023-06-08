@@ -189,6 +189,37 @@ label,
 	}
 }
 
+/* || Tabelas.*/
+//Gerenciar Atividades
+.tabela-atividades {
+	border-collapse: collapse;
+	width: 100%;
+}
+
+.tabela-cabecalho {
+	background-color: $cor-fundo;
+	border: 1px solid $cor-borda;
+	border-radius: 5px;
+	color: $cor-fonte;
+	font-weight: bold;
+	padding: 8px;
+	text-align: left;
+}
+
+.tabela-linha {
+	background-color: $cor-fundo-variante;
+	border: 1px solid $cor-borda;
+	border-radius: 5px;
+	color: $cor-fonte-variante;
+	line-height: 26px;
+	text-align: left;
+}
+
+.tabela-celula {
+	border-right: 1px solid $cor-borda;
+	padding: 8px;
+}
+
 /*Importado de main.css/*
 
 /* || Conteúdo Principal Turmas*/
