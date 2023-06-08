@@ -73,9 +73,9 @@ input[type="reset"] {
 }
 
 /* || Formulários.*/
-
-label,
-.campo-label {
+.campo-label,
+.radio-label,
+.integrantes-label {
 	display: inline-block;
 	line-height: 40px;
 	font-weight: bold;
@@ -118,12 +118,8 @@ label,
 
 .prazo-valor {
 	padding: 0px;
+	margin-bottom: 40px;
 	width: 150px;
-}
-
-#tema,
-#temaLabel {
-	display: none;
 }
 
 //Necessário para ocultar, em Criar Atividade, o campo "Tema", até que o usuário clique em "Sim", no campo "Tema Fixo?"

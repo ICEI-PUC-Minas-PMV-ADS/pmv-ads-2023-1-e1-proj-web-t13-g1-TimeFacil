@@ -200,8 +200,9 @@ input[type=reset] {
 }
 
 /* || Formulários.*/
-label,
-.campo-label {
+.campo-label,
+.radio-label,
+.integrantes-label {
   display: inline-block;
   line-height: 40px;
   font-weight: bold;
@@ -245,12 +246,8 @@ label,
 
 .prazo-valor {
   padding: 0px;
+  margin-bottom: 40px;
   width: 150px;
-}
-
-#tema,
-#temaLabel {
-  display: none;
 }
 
 #tema,
