@@ -278,35 +278,36 @@ label,
 
 /* Entrar grupo CSS */
 
-.tema{
-    text-align: center;
-    margin-left: 130px; 
-  }
-  .ideia {
-    padding-bottom: 10px;
-    text-align:center;
-    margin-left: 130px;
-  }
   #botao {
     text-align: center;
-    margin-left: 430px;
+    margin-left: 453px;
     padding: 1px 40px;
     background-color: #9732ad;
     text-decoration: none;
     border-radius: 5px;
     color: #fff; 
+	margin-top: 10px;
 }
   #foto-fundo {
     text-align: center;
-    margin-top: 30px;
-    margin-left: 360px;
-    padding-bottom: 10px;
+    margin-top: 10px;
+    margin-left: 370px;
 	width: 300px;
     height: 180px;
+	padding-top: 10px;
   }
-  h5{
-    margin-left: 350px;
-    padding-bottom: 5px;
+  table{
+	padding-top: 10px;
+	margin-left: 225px;
+  }
+
+  table.info-tabela, td{
+	border: 1px solid darkblue;
+	white-space: nowrap;
+	padding-top: 5px;
+	padding-bottom: 4px;
+	padding-right: 4px;
+	padding-left: 5px;
   }
   
   @media screen and (max-width:768px)  {
@@ -596,6 +597,8 @@ div.cards{
 	border-radius: 5px;
 	margin-right: 10px;
 	color: #fff;
+	padding-top: 2px;
+	padding-bottom: 2px;
   }
   div.cards section.card{
 	box-shadow: 15px 15px 40px -30px #1a1a1b ;
@@ -603,10 +606,13 @@ div.cards{
   .title_grupo{
 	display: flex;
 	text-align: center;
-	margin-top: 50px;
+	margin-top:60px;
   }
-  div{
-	width:42% ;
+div.cards{
+	width: 400px;
   }
-  
-  
+img.imagem-fundo{
+	width: 320px;
+	height: 170px;
+}
+ 

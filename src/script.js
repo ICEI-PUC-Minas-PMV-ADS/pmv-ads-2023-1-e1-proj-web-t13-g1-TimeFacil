@@ -69,7 +69,19 @@ function confirmaSaida(){
 	  alert ('Você saiu do grupo!');
 	  meuBotao.innerHTML = "Entrar no grupo";
 	}
+}
+
+
+function mostrarCard() {
+  var meuCard = document.getElementsByClassName("cards");
+  if (meuCard.style.display === "flex") {
+	alert ('Teste');
+    meuCard.style.display = "block";
+  } else {
+	alert ('Teste2');
+    meuCard.style.display = "flex";
   }
+}
 
 //=================================
 //Criar Atividade - Início da seção
@@ -162,9 +174,9 @@ let gravaAtividade = () => {
 };
 
 document.getElementById("formularioAtividade").addEventListener("submit", function (event) {
-	event.preventDefault();
-	gravaAtividade();
-});
+event.preventDefault();
+gravaAtividade();
+ });
 
 //===============================
 // Criar Atividade - Fim da seção
@@ -246,3 +258,5 @@ function deletarTurma(input) {
 		tabela.deleteRow(numLinha);
 	}
 }
+
+ 
