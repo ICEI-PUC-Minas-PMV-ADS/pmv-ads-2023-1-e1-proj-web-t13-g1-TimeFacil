@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Login no Time Fácil</title>
+    <link rel="stylesheet" href="login.css"> 
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script>
+        function validarFormulario() {
+            var username = document.querySelector('input[type="text"]').value;
+            var password = document.querySelector('input[type="password"]').value;
+            
+            if (username === '' || password === '') {
+                alert('Por favor, preencha todos os campos.');
+                return false;
+            }
+        }
+        
+        function redirecionarParaRegistro() {
+            window.location.href = "tela registro.html";
+        }
+        
+        function redirecionarParaRecuperarSenha() {
+            window.location.href = "esqueci a senha.html";
+        }
+    </script>
+</head>
+<body>
+    <div class="wrapper">
+        <h1>Entre no Time Fácil</h1>
+        <form action="#" onsubmit="return validarFormulario()">
+            <input type="text" placeholder="Nome de usuário">
+            <input type="password" placeholder="Senha">
+            <div class="recover">
+                <a href="#" onclick="redirecionarParaRecuperarSenha()">Esqueceu a senha?</a>
+            </div>
+            <button type="submit">Entrar</button>
+        </form>
+        <div class="member">
+            Já possui uma conta? <a href="#" onclick="redirecionarParaRegistro()">Registre-se agora</a>
+        </div>
+    </div>
+</body>
+</html>
