@@ -63,9 +63,6 @@
 			<table id="tabela-atividades" class="tabela-atividades">
 				<thead>
 					<tr>
-						<!-- <th class="tabela-cabecalho">Eixo</th>
-						<th class="tabela-cabecalho">Disciplina</th>
-						<th class="tabela-cabecalho">Turma</th> -->
 						<th class="tabela-cabecalho">Atividade</th>
 						<th class="tabela-cabecalho">Tema</th>
 						<th class="tabela-cabecalho">Integrantes</th>
@@ -76,12 +73,75 @@
 				<tbody></tbody>
 			</table>
 		</main>
-		<div id="modal" class="modal">
-			<div class="modal-conteudo">
-				<span class="fechar">&times;</span>
+		<div id="modal-atividades" class="modal-atividades">
+			<div class="modal-atividades-conteudo">
+				<span class="fechar-modal-atividades">&times;</span>
 				<div>
 					<form name="formularioCriaAtividade" id="formularioAtividade" class="formulario" action="">
-						<!-- Seu formulário de criação de atividade aqui -->
+						<!-- Campo oculto para armazenar o rowIndex. Tentativa de resolver o NaN -->
+						<!-- <input type="hidden" id="indiceLinha" value="" /> -->
+						<label for="atividade" class="campo-label">Atividade:</label>
+						<input
+							type="text"
+							id="atividade"
+							name="atividade"
+							class="campo-valor"
+							required
+							size="80"
+							spellcheck="true"
+						/>
+						<br />
+						<p class="campo-label">Tema Fixo?</p>
+						<label for="temaFixoSim" class="radio-label">Sim</label>
+						<input
+							class="radio-valor"
+							type="radio"
+							id="temaFixoSim"
+							onclick="mostraEscondeTema()"
+							name="temaFixoSimNao"
+							required
+							value="sim"
+						/>
+						<label for="temaFixoNao" class="radio-label">Não</label>
+						<input
+							class="radio-valor"
+							type="radio"
+							id="temaFixoNao"
+							onclick="mostraEscondeTema()"
+							name="temaFixoSimNao"
+							value="nao"
+							checked="checked"
+						/>
+						<br />
+						<label id="temaLabel" for="tema" class="campo-label">Tema:</label>
+						<input type="text" id="tema" name="tema" class="campo-valor" size="80" spellcheck="true" />
+						<br />
+						<p class="campo-label">Integrantes:</p>
+						<label for="integrantesMin" class="integrantes-label">Mínimo:</label>
+						<input
+							class="integrantes-valor"
+							type="number"
+							id="integrantesMin"
+							name="minimo"
+							size="2"
+							required
+							min="2"
+						/>
+						<label for="integrantesMax" class="integrantes-label">Máximo:</label>
+						<input
+							class="integrantes-valor"
+							type="number"
+							id="integrantesMax"
+							name="maximo"
+							size="2"
+							required
+							min="2"
+						/>
+						<br />
+						<label for="prazo" class="campo-label">Prazo de Formação:</label>
+						<input class="prazo-valor" type="date" id="prazo" name="prazoFormacao" required />
+						<br />
+						<input type="submit" id="salvarBotao" class="botao-confirmar" value="Salvar" />
 					</form>
 				</div>
 			</div>

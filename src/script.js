@@ -218,25 +218,33 @@ if (window.location.pathname.includes("criar-atividade.html")) {
 				let editarImg = document.createElement("img");
 				editarImg.src = "icones/editar.png";
 				iconeEditarAtividade.appendChild(editarImg);
+
+				//Método para abrir o modal a partir do ícone editar
 				iconeEditarAtividade.addEventListener("click", function () {
 					let rowIndex = this.parentNode.parentNode.rowIndex - 1;
+					// document.getElementById("indiceLinha").value = rowIndex; //Tentativa de resolver o NaN
 					let atividade = readAtividade()[rowIndex];
-					preencherFormulario(atividade);
-
 					document.getElementById("atividade").value = atividade.atividade;
-					document.getElementById("temaFixoSim").checked = atividade.temaFixo === "Sim";
-					document.getElementById("temaFixoNao").checked = atividade.temaFixo === "Não";
-					document.getElementById("tema").value = atividade.tema;
+					document.getElementById("temaFixoSim").checked = atividade.temaFixo === "sim";
+					document.getElementById("temaFixoNao").checked = atividade.temaFixo === "nao";
+					let campoTema = document.getElementById("tema");
+					campoTema.value = atividade.tema;
+
+					//Exibe ou oculta o campo tema, de acordo com o valor gravado no LocalStorage
+					if (atividade.temaFixo === "sim") {
+						campoTema.style.display = "inline-block";
+						document.getElementById("temaLabel").style.display = "inline-block";
+					} else {
+						campoTema.style.display = "none";
+						document.getElementById("temaLabel").style.display = "none";
+					}
 					document.getElementById("integrantesMin").value = atividade.integrantesMin;
 					document.getElementById("integrantesMax").value = atividade.integrantesMax;
 					document.getElementById("prazo").value = atividade.prazo;
 
-					// Chama o método updateAtividade para salvar a atividade atualizada
-					updateAtividade(rowIndex, atividade);
-
-					// Atualiza a tabela após a edição
-					gerenciarAtividades();
-					alert("Atividade editada com sucesso!");
+					// Método para exibir o modal
+					let modal = document.getElementById("modal-atividades");
+					modal.style.display = "block";
 				});
 				celulaAcoes.appendChild(iconeEditarAtividade);
 
@@ -258,6 +266,59 @@ if (window.location.pathname.includes("criar-atividade.html")) {
 				});
 				celulaAcoes.appendChild(iconeDeletarAtividade);
 			}
+
+			// Adiciona evento de envio do formulário
+			let form = document.getElementById("formularioAtividade");
+			form.addEventListener("submit", function (event) {
+				// Obtenha os valores dos campos no modal
+
+				let atividade = document.getElementById("atividade").value;
+				let temaFixo = document.querySelector('input[name="temaFixoSimNao"]:checked').value;
+				let tema = document.getElementById("tema").value;
+				let integrantesMin = document.getElementById("integrantesMin").value;
+				let integrantesMax = document.getElementById("integrantesMax").value;
+				let prazo = document.getElementById("prazo").value;
+
+				console.log("Valores obtidos:");
+				console.log("Atividade:", atividade);
+				console.log("Tema Fixo:", temaFixo);
+				console.log("Tema:", tema);
+				console.log("Integrantes Mínimo:", integrantesMin);
+				console.log("Integrantes Máximo:", integrantesMax);
+				console.log("Prazo:", prazo);
+
+				//Atualize a atividade no LocalStorage
+				let rowIndex = this.parentNode.parentNode.rowIndex - 1; //O PROBLEMA ESTÁ AQUI!
+				// document.getElementById("indiceLinha").value = rowIndex; //Tentativa de resolver o NaN
+				console.log("Índice da atividade:", rowIndex);
+				updateAtividade(rowIndex, atividade, temaFixo, tema, integrantesMin, integrantesMax, prazo);
+				// Feche o modal
+				let modal = document.getElementById("modal-atividades");
+				modal.style.display = "none";
+
+				// Atualize a tabela com as alterações
+				gerenciarAtividades();
+
+				// Exiba uma mensagem de sucesso (opcional)
+				alert("Alterações salvas com sucesso!");
+			});
+
+			// Métodos para fechar o modal
+			let modal = document.getElementById("modal-atividades");
+			let fecharModal = document.querySelector(".fechar-modal-atividades");
+			let modalConteudo = document.querySelector(".modal-atividades-conteudo");
+
+			// Fecha o modal quando o usuário clica no botão de fechar
+			fecharModal.addEventListener("click", function () {
+				modal.style.display = "none";
+			});
+
+			// Fecha o modal quando o usuário clica fora do modal
+			window.addEventListener("click", function (event) {
+				if (event.target === modalConteudo) {
+					modal.style.display = "none";
+				}
+			});
 		}
 	}
 }

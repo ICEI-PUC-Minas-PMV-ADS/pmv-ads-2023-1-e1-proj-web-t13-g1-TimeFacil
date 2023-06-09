@@ -387,6 +387,44 @@ input[type=reset] {
   width: 18px;
 }
 
+/* || Modais.*/
+.modal-atividades {
+  background-color: rgba(71, 82, 94, 0.5);
+  display: none;
+  height: 100%;
+  left: 0;
+  overflow: auto;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1;
+}
+
+.modal-atividades-conteudo {
+  background-color: #f9fafc;
+  border: 1px solid #d3dce6;
+  border-radius: 6px;
+  margin: 10% auto;
+  max-width: 880px;
+  padding: 20px;
+  width: 100%;
+}
+
+.fechar-modal-atividades {
+  color: #8492a6;
+  cursor: pointer;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.fechar-modal-atividades:hover,
+.fechar-modal-atividades:focus {
+  color: #47525e;
+  cursor: pointer;
+  text-decoration: none;
+}
+
 /*Importado de main.css/*
 
 /* || Conteúdo Principal Turmas*/
