@@ -327,242 +327,469 @@ label,
 /* || Conteúdo Principal Turmas*/
 /*  SESSÃO ARTHUR - COMEÇO*/
 main {
-	display: flex;
-	font-size: large;
-	height: 100%;
-	width: 100%;
-	padding: 60px 10px 10px 260px;
+  display: flex;
+  font-size: large;
+  height: 100%;
+  width: 100%;
+  padding: 60px 10px 10px 260px;
 }
 
 #conteudo {
-	color: red;
-	flex-grow: 1;
-	height: 100%;
-	display: inline-block;
-	color: #47525e;
-	margin: auto 20px;
+  color: red;
+  flex-grow: 1;
+  height: 100%;
+  display: inline-block;
+  color: #47525e;
+  margin: auto 20px;
+
+
 }
 
 #divlogocontect {
-	margin-top: 10px;
-	text-align: center;
+  margin-top: 10px;
+  text-align: center;
 }
 
 #img-logo-conteudo {
-	max-width: 150px;
-	width: auto;
+  max-width: 150px;
+  width: auto;
 }
 
 #barraPesquisa {
-	width: 100%;
-	margin-top: 10px;
-	display: flex;
+  width: 100%;
+  margin-top: 10px;
+  display: flex;
+
 }
 
 #campo-pesquisa {
-	width: 70%;
-	height: 40px;
-	font: 23px "Lato";
-	border: solid #d3dce6 1px;
-	border-radius: 5px;
-	padding-left: 20px;
-	box-shadow: 2px 2px 5px #119ad9;
-	font-style: italic;
-	margin-top: 4px;
-	margin-left: 10%;
+  width: 70%;
+  height: 40px;
+  font: 23px 'Lato';
+  border: solid #d3dce6 1px;
+  border-radius: 5px;
+  padding-left: 20px;
+  box-shadow: 2px 2px 5px #119ad9;
+  font-style: italic;
+  margin-top: 4px;
+  margin-left: 10%;
+
 }
 
 #campo-pesquisa:focus {
-	outline: 0;
-	font-style: normal;
+  outline: 0;
+  font-style: normal;
 }
 
 /* || Tabela c/ Turmas */
-#div-tabela {
-	margin-top: 20px;
-	width: 82vw;
-	border: solid 1px #8492a6;
-	border-radius: 5px;
-	height: 65vh;
-	overflow-y: auto;
+
+#div-tabela{
+
+  margin-top: 20px;
+  border: solid 1px #8492A6;
+  border-radius: 5px;
+  height: 65vh;
+  overflow-y: auto;
 }
 
-#tabela-turmas {
-	width: 100%;
-	text-align: center;
+#tabela-turmas, #tab-alunos{
+  width: 100%;
+  text-align: center;
+}
+#tab-alunos{
+ margin-top: 15px;
 }
 
-table#tabela-turmas {
-	border-collapse: collapse;
+table#tabela-turmas, table#tab-alunos {
+  border-collapse: collapse;
+
 }
 
 thead#head-table {
-	background-color: #e0e0e0;
-	height: 50px;
-	position: sticky;
-	top: 0;
-	font-size: 1.2em;
+  background-color: #E0E0E0;
+  height: 50px;
+  top: 0;
+  font-size: 1.2em;
+}
+thead#head-tb-adc-aluno{
+  background-color: #E0E0E0;
+  font-size: 80%;
+  height: 30px;
 }
 
 table#tabela-turmas tr {
-	height: 50px;
+  height: 50px;
+}
+
+#tbody-tab-alunos td, #tbody-tab-alunos th {
+ padding: 10px;
+}
+
+td#col-nome,
+th#col-nome{
+  width: 43%;
+}
+th#col-email,
+td#col-email{
+  width: 43%;
+}
+th#col-status,
+td#col-status{
+  width: 14%;
 }
 
 th#coluna-eixo,
 td#coluna-eixo {
-	width: 10%;
+  width: 10%;
 }
 
 th#coluna-disc,
 td#coluna-disc {
-	width: 55%;
+  width: 55%;
 }
 
 th#coluna-turma,
 td#coluna-turma {
-	width: 10%;
+  width: 10%;
 }
 
 th#coluna-alunos,
 td#coluna-alunos {
-	width: 5%;
+  width: 5%;
 }
 
 th#coluna-acoes,
 td#coluna-acoes {
-	width: 10%;
+  width: 10%;
 }
 
-#icones-coluna {
-	margin: 0 5px;
-	max-width: 23px;
+th#coluna-icones,
+td#coluna-icones {
+  width: 10%;
+  padding: 4px;
 }
 
+.btn-qtd-aluno:hover{
+
+font-size: 110%;
+cursor: pointer;
+color:#8492A6;
+
+}
+
+.icones-coluna {
+  margin: 0 5px;
+  max-width: 23px;
+  align-content: center;
+
+}
+
+.icones-coluna:hover {
+  transform: scale(1.3);
+
+}
+
+.icones-coluna:active {
+  transform: scale(1.1);
+
+}
+
+/* || Modal Alunos */
+
+dialog::backdrop {
+background-color: transparent;
+
+}
+
+.modal-aluno{
+  border: 2px solid #8492A6;
+  margin: 8% auto;
+  width: 35%;
+  height: 700px;
+  border-radius: 0.5em;
+  padding: 5px;
+  box-shadow: 0 0 1em rgb(0 0 0 / .3);
+}
+
+#col-nome{
+  width: 30%;
+}
+
+/* || Modal Convidar Alunos */
+
+#modal-conv-aluno{
+  border: 2px solid #8492A6;
+  box-shadow: 0 0 1em rgb(0 0 0 / .3);
+  padding: 5px 20px;
+  margin:auto;
+  width: 35%;
+  border-radius: 0.5em;
+  height: 300px;
+
+}
+#titulo-conv-aluno{
+  text-align: center;
+  font-size: 2.3em;
+  font-family: 'Grand Hotel', cursive;
+}
+#div-head-conv-aluno{
+  display: flex;
+  justify-content: space-between;
+}
+#div-head-conv-aluno #eixo{
+  margin-right: auto;
+}
+#modal-conv-aluno #disciplina{
+  margin-bottom: 5px;
+}
+
+#input-nome-aluno, #input-email-aluno{
+  width: 80%;
+  max-width: 650px;
+  height: 40px;
+  margin: 10px 0px 10px 10px;
+  border: 0.5px solid;
+  border-radius: 5px;
+  padding-left: 10px;
+  font-size: 1.1em;
+}
+#eixo, #turma, #disciplina {
+  margin-left: 10px;
+}
+#div-head-turma{
+  margin-top: -20px;
+  text-align: center;
+  
+}
 /* || Modal Criar Turma */
+
 .modal {
-	background-color: rgba(206, 214, 209, 0.64);
-	align-items: center;
-	justify-content: center;
-	position: fixed;
-	top: 0;
-	left: 0;
-	width: 100vw;
-	height: 100vh;
-	display: none;
+  background-color: rgba(206, 214, 209, 0.64);
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  display: none;
+  transition: opacity 3s ease-out;
+
 }
 
 #conteudo-modal {
-	background-color: #ffffff;
-	border: 2px solid #8492a6;
-	border-radius: 5px;
-	width: 850px;
-	height: 350px;
-	font-size: 1.2em;
-	margin: 15% auto;
+  background-color: #ffffff;
+  border: 2px solid #8492A6;
+  border-radius: 5px;
+  width: 850px;
+  height: 350px;
+  font-size: 1.2em;
+  margin: 15% auto;
+
+
 }
 
 #cont-modal-header {
-	text-align: center;
-	padding-top: 10px;
-	font-size: 2.3em;
-	font-family: "Grand Hotel", cursive;
+  text-align: center;
+  padding-top: 10px;
+  font-size: 2.3em;
+  font-family: 'Grand Hotel', cursive;
+  position: relative;
 }
+
 
 #cont-modal-corpo {
-	text-align: center;
+  text-align: center;
 }
 
+
+
 #div-eixo-periodo {
-	position: absolute;
-	text-align: left;
-	margin-left: 45px;
+  position: absolute;
+  text-align: left;
+  margin-left: 45px;
 }
 
 #div-turma {
-	text-align: right;
-	margin-right: 50px;
+  text-align: right;
+  margin-right: 50px;
 }
 
 #input-eixo-periodo,
 #input-turma {
-	width: 200px;
-	height: 40px;
-	margin: 30px 0px 20px 10px;
-	border: 0.5px solid;
-	border-radius: 5px;
-	padding-left: 10px;
-	font-size: 1.1em;
+  width: 200px;
+  height: 40px;
+  margin: 30px 0px 20px 10px;
+  border: .5px solid;
+  border-radius: 5px;
+  padding-left: 10px;
+  font-size: 1.1em;
 }
 
 #input-disciplina {
-	width: 80%;
-	max-width: 650px;
-	height: 40px;
-	margin: 30px 0px 50px 10px;
-	border: 0.5px solid;
-	border-radius: 5px;
-	padding-left: 10px;
-	font-size: 1.1em;
+  width: 80%;
+  max-width: 650px;
+  height: 40px;
+  margin: 30px 0px 50px 10px;
+  border: .5px solid;
+  border-radius: 5px;
+  padding-left: 10px;
+  font-size: 1.1em;
 }
 
 #cont-modal-rodape {
-	float: right;
+  float: right;
+
 }
 
-/* || Botões - Arthur */
+/* || Botões.*/
+input[type=submit] {
+  border: 0;
+  border-radius: 6px;
+  color: #ffffff;
+  cursor: pointer;
+  font-family: Lato, sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  height: 40px;
+  line-height: 40px;
+  padding: 0px 16px 0px 16px;
+  text-align: center;
+  vertical-align: middle;
+}
+
+.botao-confirmar {
+  background-color: #9732ad;
+}
+
+.botao-cancelar {
+  background-color: #fd7e14;
+}
+
+.botao-excluir {
+  background-color: #dc3545;
+}
+
+.botao-confirmar:hover {
+  background-color: #ca65e0;
+}
+
+.botao-cancelar:hover {
+  background-color: #ffb147;
+}
+
+.botao-excluir:hover {
+  background-color: #ff6878;
+}
+
+.botao-confirmar:active,
+.botao-cancelar:active,
+.botao-excluir:active {
+  transform: translateY(1px);
+}
+
 #botao-atualizar {
-	height: 50px;
+  height: 50px;
+ 
 }
 
 #botao-pesquisa {
-	margin-top: 4px;
-	height: 40px;
-	margin-left: 10px;
+  margin-top: 4px;
+  height: 40px;
+  margin-left: 10px;
+
 }
 
 #botao-nova-turma {
-	background-color: #cee4f0;
-	width: 152px;
-	height: 45px;
-	font-size: 20px;
-	color: black;
-	margin-top: 1px;
-	border: solid #d3dce6 2px;
-	text-align: center;
-	vertical-align: middle;
-	transition: 0.5s;
+  background-color: #cee4f0;
+  width: 152px;
+  height: 45px;
+  font-size: 20px;
+  color: black;
+  margin-top: 1px;
+  border: solid #d3dce6 2px;
+  text-align: center;
+  vertical-align: middle;
+  transition: .5s;
 }
 
 #botao-nova-turma:hover {
-	background-color: #91cdec;
-	transition: 0.1s;
+  background-color: #91cdec;
+  transition: .1s;
 }
 
 #botao-nova-turma:active {
-	background-color: #c5cfda;
+  background-color: #c5cfda;
 }
 
-#botao-cancelar {
-	font-size: 25px;
-	width: 150px;
-	color: black;
-	margin-right: 40px;
+
+.botao-salvar {
+  font-size: 25px;
+  padding: 3px;
+  padding-top: 6px;
+  width: 150px;
+  color: black;
+  margin-right: 40px;
+  border-radius: 5px;
+  background: linear-gradient(to top, #a9dba2, #fff);
+
 }
 
-#botao-adicionar-turma {
-	font-size: 25px;
-	width: 150px;
-	background-color: #cee4f0;
-	color: black;
-	margin-right: 50px;
+.botao-salvar:hover {
+  background: linear-gradient(to top, #7be46d, #fff);
 }
 
-#botao-adicionar-turma:hover {
-	background-color: #91cdec;
+.botao-adicionar{
+  padding: 3px;
+  padding-top: 6px;
+  font-size: 25px;
+  width: 150px;
+  background-color: #cee4f0;
+  color: black;
+  margin-right: 50px;
+  border-radius: 5px;
+  background: linear-gradient(to top, #cee4f0, #fff);
+}
+#modal-conv-aluno .botao-adicionar{
+  margin-top: 10px;
+  margin-right: 10px;
+  width: 150px;
+  font-size: 19px;
 }
 
-#botao-adicionar-turma:active {
-	transform: translateY(1px);
+.botao-adicionar:hover {
+  background-color: #91cdec;
+  background: linear-gradient(to top, #8bcbee, #fff);
+}
+
+.botao-adicionar:active,
+.botao-salvar:active {
+  transform: translateY(1.5px);
+}
+
+
+
+#botao-close {
+  font-family: Arial, Helvetica, sans-serif;
+  position: absolute;
+  top: 0;
+  right: 0;
+  margin-right: 20px;
+  margin-top: 10px;
+  font-size: 20px;
+  transition: transform 0.2s ease-in-out;
+  cursor: pointer;
+}
+dialog #botao-close{
+  margin-right: 10px;
+  margin-top: 1px;
+  font-size: 15px;
+}
+
+p#botao-close:hover {
+  transform: scale(1.3);
+  color: red;
+
 }
 
 /*  SESSÃO ARTHUR - FINAL*/ /*# sourceMappingURL=main.css.map */

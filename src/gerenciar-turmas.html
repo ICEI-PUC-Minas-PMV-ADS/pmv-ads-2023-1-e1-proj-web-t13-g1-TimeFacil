@@ -5,6 +5,7 @@
 	<meta charset="UTF-8" />
 	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<meta name="author" content="Arthur Valles Coelli">
 	<link rel="stylesheet" href="main.css" />
 	<script defer type="text/javascript" src="script.js"></script>
 	<style>
@@ -15,7 +16,7 @@
 	<link rel="icon" type="image/x-icon" href="icones/favicon.png" />
 </head>
 
-<body>
+<body onload="carregarTabelaLocalStorage()">
 	<!-- Barra Superior -->
 	<header class="navbar">
 		<a href="/index.html"><img class="navbar-logo" src="imagens/brasao-menufixo.png" alt="" /></a>
@@ -27,44 +28,41 @@
 	</header>
 	<!-- Barra Lateral -->
 	<nav class="sidebar">
-			<ul>
-				<li class="sidebar-item">
-					<span class="sidebar-icon"><img src="icones/turmas.png" /></span>
-					<span>Turmas</span>
-					<ul class="sidebar-subitem">
-						<li><a href="">Criar turma</a></li>
-						<li><a href="gerenciar-turmas.html">Gerenciar turmas</a></li>
-						<li><a href="">Editar turma</a></li>
-					</ul>
-				</li>
-				<li class="sidebar-item">
-					<span class="sidebar-icon"><img src="icones/atividades.png" /></span>
-					<span>Atividades</span>
-					<ul class="sidebar-subitem">
-						<li><a href="">Atividades abertas</a></li>
-						<li><a href="criar-atividade.html">Criar atividade</a></li>
-						<li><a href="">Editar atividade</a></li>
-						<li><a href="">Atividades fechadas</a></li>
-					</ul>
-				</li>
-				<li class="sidebar-item">
-					<span class="sidebar-icon"><img src="icones/grupos.png" /></span>
-					<span>Grupos</span>
-					<ul class="sidebar-subitem">
-						<li><a href="">Grupos abertos</a></li>
-						<li><a href="entrar_grupo.html">Entrar em grupo</a></li>
-						<li><a href="create_group.html">Criar grupo</a></li>
-						<li><a href="">Editar grupo</a></li>
-					</ul>
-				</li>
-				<li class="sidebar-item">
-					<a href="">
-						<span class="sidebar-icon"><img src="icones/alunos.png" /></span>
-						<span>Alunos</span>
-					</a>
-				</li>
-			</ul>
-		</nav>
+		<ul>
+			<li class="sidebar-item">
+				<span class="sidebar-icon"><img src="icones/turmas.png" /></span>
+				<span>Turmas</span>
+				<ul class="sidebar-subitem">
+					<li><a href="paginas/gerenciar-turmas.html">Gerenciar Turmas</a></li>
+				</ul>
+			</li>
+			<li class="sidebar-item">
+				<span class="sidebar-icon"><img src="icones/atividades.png" /></span>
+				<span>Atividades</span>
+				<ul class="sidebar-subitem">
+					<li><a href="paginas/atividades-abertas.html">Atividades abertas</a></li>
+					<li><a href="paginas/criar-atividade.html">Criar atividade</a></li>
+					<li><a href="paginas/editar-atividade.html">Editar atividade</a></li>
+					<li><a href="paginas/atividades-fechadas.html">Atividades fechadas</a></li>
+				</ul>
+			</li>
+			<li class="sidebar-item">
+				<span class="sidebar-icon"><img src="icones/grupos.png" /></span>
+				<span>Grupos</span>
+				<ul class="sidebar-subitem">
+					<li><a href="paginas/grupos-abertos.html">Grupos abertos</a></li>
+					<li><a href="paginas/criar-grupo.html">Criar grupo</a></li>
+					<li><a href="paginas/editar-grupo.html">Editar grupo</a></li>
+				</ul>
+			</li>
+			<li class="sidebar-item">
+				<a href="paginas/alunos.html">
+					<span class="sidebar-icon"><img src="icones/alunos.png" /></span>
+					<span>Alunos</span>
+				</a>
+			</li>
+		</ul>
+	</nav>
 	<!-- Conteúdo Principal-->
 	<main id="conteudo">
 		<div id="divlogocontect">
@@ -76,7 +74,7 @@
 			<input type="image" src="icones/botao-pesquisa.png" id="botao-pesquisa" alt="Pesquisar">
 			<input type="image" src="icones/botao-atualizar.png" id="botao-atualizar" alt="Atualizar">
 			<input type="submit" value="Nova Turma" id="botao-nova-turma" alt="botao-nova-turma"
-				onclick="novaTurmaModal('modal-nova-turma')">
+				onclick="abrirModal('modal-nova-turma')">
 		</div>
 		<!-- Tabela -->
 		<div id="div-tabela">
@@ -91,29 +89,19 @@
 					</tr>
 				</thead>
 				<tbody id="body-table">
-					<tr>
-						<td>Eixo 4</td>
-						<td>Desenvolvimento Aplicação Web Front-End</td>
-						<td>Turma 13</td>
-						<td><a href="">20</a></td>
-						<td id="coluna-icones">
-							<input type="image" src="icones/editar.png" id="icones-coluna">
-							<input type="image" src="icones/excluir.png" id="icones-coluna" onclick="deletarTurma(this)">
-							<input type="image" src="icones/adicionar-aluno.png" id="icones-coluna">
-						</td>
-					</tr>
+
 				</tbody>
 			</table>
 		</div>
-		<!-- Modal-->
+		<!-- Modal Adicionar e Salvar Turma-->
 		<div id="modal-nova-turma" class="modal">
 
 			<div id="conteudo-modal">
 				<form id="cad-turma">
 					<div id="cont-modal-header">
 						<p>Nova Turma</p>
+						<p id="botao-close" onclick="fecharModal('modal-nova-turma')">x</p>
 					</div>
-
 					<div id="cont-modal-corpo">
 						<div id="div-eixo-periodo">
 							<label for="input-eixo-periodo">Eixo/Periodo</label>
@@ -131,17 +119,58 @@
 					</div>
 
 					<div id="cont-modal-rodape">
-						<input type="button" Value="Cancelar" id="botao-cancelar" class="botao-cancelar"
-							onclick="cancelarNovaTurma('modal-nova-turma')">
-						<input type="button" Value="Adicionar" id="botao-adicionar-turma"
-							onclick="adicionarTurma (eixoPeriodo.value, codTurma.value, disciplina.value)">
+						<input type="button" Value="Adicionar" id="botao-salvar-adicionar"
+							onclick="salvarTurmaLocalStoage()">
 					</div>
 				</form>
 			</div>
 
 		</div>
+		<!-- Modal Alunos-->
+		<dialog id="modal-aluno" class="modal-aluno">
+			<p id="botao-close" onclick="fecharModalAluno()">x</p>
+			<div>
+				<table id="tab-alunos">
+					<thead id="head-tb-adc-aluno">
+						<tr>
+							<th id="col-nome">Nome</th>
+							<th id="col-email">E-Mail</th>
+							<th id="col-status">Status</th>
+						</tr>
+					</thead>
+					<tbody id="tbody-tab-alunos">
 
-		</div>
+					</tbody>
+				</table>
+			</div>
+		</dialog>
+		<!-- Modal Convidar Alunos-->
+		<dialog id="modal-conv-aluno">
+			<p id="botao-close" onclick="fecharModalConvAluno()">x</p>
+			<p id="titulo-conv-aluno">Adicionar Aluno</p>
+			<div id="div-head-conv-aluno">
+				<strong>Eixo: </strong><p id="eixo"> Eixo 5</p>
+				<strong>Turma: </strong><p id="turma">Turma: Turma 10</p>
+			</div>
+			<div id="div-head-turma">
+				<strong>Disciplina:</strong><p id="disciplina">Disciplina: Desenvolvimento Web Front-End</p>
+			</div>
+			
+			<div id="div-nome-aluno">
+				<label for="input-eixo-periodo">Nome: </label>
+				<input type="text" id="input-nome-aluno" name="nomeAluno">
+			</div>
+			<div id="div-nome-aluno">
+				<label for="input-eixo-periodo">E-mail:</label>
+				<input type="text" id="input-email-aluno" name="emailAluno">
+			</div>
+			
+			<div id="cont-modal-rodape">
+				<input type="button" Value="Adicionar" class="botao-adicionar" onclick="adicionarAluno()">
+			</div>
+			
+		</dialog>
+
 
 	</main>
 
