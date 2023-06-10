@@ -70,19 +70,6 @@ function confirmaSaida(){
 	  meuBotao.innerHTML = "Entrar no grupo";
 	}
 }
-
-
-function mostrarCard() {
-  var meuCard = document.getElementsByClassName("cards");
-  if (meuCard.style.display === "flex") {
-	alert ('Teste');
-    meuCard.style.display = "block";
-  } else {
-	alert ('Teste2');
-    meuCard.style.display = "flex";
-  }
-}
-
 //=================================
 //Criar Atividade - Início da seção
 //=================================
