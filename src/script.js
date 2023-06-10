@@ -239,3 +239,16 @@ function deletarTurma(input) {
 		tabela.deleteRow(numLinha);
 	}
 }
+
+
+//===============================
+// Gerenciar Turmas - Inicio da seção
+// Autor: Arthur Valles Coelli
+//===============================
+
+
+
+//===============================
+// Gerenciar Turmas - Fim da seção
+
+//===============================
