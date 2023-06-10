@@ -246,7 +246,353 @@ function deletarTurma(input) {
 // Autor: Arthur Valles Coelli
 //===============================
 
+function abrirModal(modalName) {
 
+    //Metodo para abrir modal
+    let modal = document.getElementById(modalName);
+    modal.style.display = 'Block';
+
+    var mudarBotao = document.getElementById("botao-salvar-adicionar");
+    mudarBotao.value = 'Adicionar';
+    mudarBotao.className = 'botao-adicionar';
+    mudarBotao.onclick = function () {
+        salvarTurmaLocalStorage()
+    }
+}
+
+function fecharModal(modalName) {
+    // Metodo para fechar modal
+
+    let modal = document.getElementById(modalName);
+    modal.style.display = 'None';
+    limpInputModalAdcTurma();
+
+}
+
+function carregarTabelaLocalStorage() {
+
+    removerLinhasTabel('tabela-turmas');
+
+    var tabelaTurma = document.getElementById('tabela-turmas').getElementsByTagName('tbody')[0];
+
+    var bdLocal = Object.keys(localStorage);
+
+    for (var i = 0; i < bdLocal.length; i++) {
+
+        var chave = bdLocal[i];
+
+        if (chave.startsWith('turma')) {
+
+
+
+            var dados = localStorage.getItem(chave);
+
+            var objeto = JSON.parse(dados);
+
+            var linhaTabela = tabelaTurma.insertRow();
+
+            var colEixo = linhaTabela.insertCell();
+            colEixo.textContent = objeto.eixo;
+
+            var colDiscp = linhaTabela.insertCell();
+            colDiscp.textContent = objeto.disciplina;
+
+            var colTurma = linhaTabela.insertCell();
+            colTurma.textContent = objeto.turma;
+
+            var chave2 = chave;
+            var dadosJSoN = JSON.parse(localStorage.getItem(chave2));
+
+            var tamanho = dadosJSoN.aluno.length;
+
+
+            var colQtdAlunos = linhaTabela.insertCell();
+            var qtdAlunos = document.createElement('p');
+            var textQtdAluno = document.createTextNode(tamanho);
+            qtdAlunos.appendChild(textQtdAluno);
+            qtdAlunos.className = 'btn-qtd-aluno'
+            qtdAlunos.href = '#';
+            qtdAlunos.onclick = function () {
+                abrirModalAluno(this);
+            }
+            colQtdAlunos.appendChild(qtdAlunos);
+
+            var colIcone = linhaTabela.insertCell();
+            var iconeEditar = document.createElement('input');
+            iconeEditar.type = 'image';
+            iconeEditar.src = 'icones/editar.png';
+            iconeEditar.className = 'icones-coluna';
+            iconeEditar.onclick = function () {
+                editarLinha(this);
+            }
+
+            var iconeExcluir = document.createElement('input');
+            iconeExcluir.type = 'image';
+            iconeExcluir.src = 'icones/excluir.png';
+            iconeExcluir.className = 'icones-coluna';
+            iconeExcluir.onclick = function () {
+                deletarTurma(this);
+            }
+            var iconeAdcALuno = document.createElement('input');
+            iconeAdcALuno.type = 'image';
+            iconeAdcALuno.src = 'icones/adicionar-aluno.png';
+            iconeAdcALuno.className = 'icones-coluna';
+            iconeAdcALuno.onclick = function () {
+                abrirModalConvAluno(this)
+            }
+
+            colIcone.appendChild(iconeEditar);
+            colIcone.appendChild(iconeExcluir);
+            colIcone.appendChild(iconeAdcALuno);
+
+
+        }
+
+
+    }
+
+
+}
+
+function salvarTurmaLocalStorage() {
+
+    var nomeEixo = document.getElementById('input-eixo-periodo').value;
+    var codTurma = document.getElementById('input-turma').value;
+    var nomeDisciplina = document.getElementById('input-disciplina').value;
+
+    var dadosDisciplina = {
+        tipo: 'turma',
+        eixo: nomeEixo,
+        turma: codTurma,
+        disciplina: nomeDisciplina,
+        aluno: {
+
+        }
+    };
+
+    var chave = 'turma_' + new Date().getTime();
+
+    localStorage.setItem(chave, JSON.stringify(dadosDisciplina));
+
+    carregarTabelaLocalStorage();
+    fecharModal('modal-nova-turma');
+
+
+}
+
+function percorrerLocalStorageTurma(eixo, disciplina, turma) {
+
+    var bdLocal = Object.keys(localStorage);
+
+    for (i = 0; i < bdLocal.length; i++) {
+
+        var chave = bdLocal[i];
+        var objetoTurma = localStorage.getItem(chave);
+
+        var obtTurma = JSON.parse(objetoTurma);
+
+        var turmaObj = obtTurma.turma;
+        var eixoObj = obtTurma.eixo;
+        var discObj = obtTurma.disciplina;
+
+        if (turmaObj == turma && eixoObj == eixo && discObj == disciplina) {
+            return chave;
+        }
+
+
+    }
+
+}
+
+function editarLinha(botao) {
+
+    abrirModal('modal-nova-turma');
+    var mudarBotao = document.getElementById("botao-salvar-adicionar");
+    mudarBotao.value = 'Salvar';
+    mudarBotao.className = 'botao-salvar';
+    mudarBotao.onclick = function () {
+        editarDadoLocalStorage()
+    }
+
+    var linha = botao.parentNode.parentNode;
+    var eixo = linha.cells[0].textContent;
+    var disciplina = linha.cells[1].textContent;
+    var turma = linha.cells[2].textContent;
+
+    document.getElementById('input-eixo-periodo').value = eixo;
+    document.getElementById('input-turma').value = turma;
+    document.getElementById('input-disciplina').value = disciplina;
+
+    var chave = percorrerLocalStorageTurma(eixo, disciplina, turma);
+    sessionStorage.setItem('chave', chave);
+    console.log(chave);
+}
+
+function editarDadoLocalStorage() {
+
+    var chaveLS = sessionStorage.getItem('chave');
+    console.log(chaveLS);
+
+    var eixo = document.getElementById('input-eixo-periodo').value;
+    var turma = document.getElementById('input-turma').value;
+    var disciplina = document.getElementById('input-disciplina').value;
+
+    var dadosDisciplina = {
+        tipo: 'turma',
+        eixo: eixo,
+        turma: turma,
+        disciplina: disciplina
+    };
+
+
+    localStorage.setItem(chaveLS, JSON.stringify(dadosDisciplina));
+    fecharModal('modal-nova-turma');
+    limpInputModalAdcTurma();
+    carregarTabelaLocalStorage();
+
+
+}
+
+function deletarTurma(botao) {
+    var confirmacao = confirm('Deseja Realmente Excluir Está Turma?')
+
+    if (confirmacao) {
+
+        var linha = botao.parentNode.parentNode;
+        var eixo = linha.cells[0].textContent;
+        var disciplina = linha.cells[1].textContent;
+        var turma = linha.cells[2].textContent;
+
+        var chave = percorrerLocalStorageTurma(eixo, disciplina, turma);
+        console.log(chave);
+
+        localStorage.removeItem(chave);
+
+        carregarTabelaLocalStorage();
+
+    }
+
+}
+
+function limpInputModalAdcTurma() {
+    document.getElementById('input-disciplina').value = "";
+    document.getElementById('input-turma').value = "";
+    document.getElementById('input-eixo-periodo').value = "";
+
+}
+
+function removerLinhasTabel(nomeTab) {
+    var body = document.getElementById(nomeTab).getElementsByTagName('tbody')[0];
+
+    while (body.firstChild) {
+        body.removeChild(body.firstChild);
+    }
+
+}
+
+function abrirModalAluno(elemento) {
+    var modalAdc = document.getElementById('modal-aluno');
+    modalAdc.showModal();
+
+    var linha = elemento.parentNode.parentNode;
+    var eixo = linha.cells[0].textContent;
+    var disciplina = linha.cells[1].textContent;
+    var turma = linha.cells[2].textContent;
+    var chave = percorrerLocalStorageTurma(eixo, disciplina, turma);
+
+    var objetoLS = JSON.parse(localStorage.getItem(chave));
+
+    removerLinhasTabel('tab-alunos');
+
+    var tabela = document.getElementById('tab-alunos').getElementsByTagName('tbody')[0];
+    
+    for( i= 0 ; i < objetoLS.aluno.length; i++){
+        
+        var novaLinha = tabela.insertRow();
+        var celNome =   novaLinha.insertCell();
+        celNome.textContent = objetoLS.aluno[i].nome;
+        var celEmail =   novaLinha.insertCell();
+        celEmail.textContent = objetoLS.aluno[i].email;
+        var celStatus =   novaLinha.insertCell();
+        celStatus.textContent = objetoLS.aluno[i].statusConv;
+
+
+    }
+
+
+}
+
+
+function abrirModalConvAluno(botao) {
+    var modalAdc = document.getElementById('modal-conv-aluno');
+    modalAdc.showModal();
+
+    var linha = botao.parentNode.parentNode;
+    var eixo = linha.cells[0].textContent;
+    var disciplina = linha.cells[1].textContent;
+    var turma = linha.cells[2].textContent;
+
+    var dadosLinha = {
+        eixo: eixo,
+        turma: turma,
+        disc: disciplina
+    }
+
+    sessionStorage.setItem('linha', JSON.stringify(dadosLinha));
+
+    console.log(eixo, disciplina, turma)
+
+    var textoEixo = document.getElementById('eixo');
+    textoEixo.textContent = ' ' + eixo;
+    var textoTurma = document.getElementById('turma');
+    textoTurma.textContent = ' ' + turma;
+    var textoDisc = document.getElementById('disciplina');
+    textoDisc.textContent = ' ' + disciplina;
+
+
+}
+
+function adicionarAluno() {
+    var dados = sessionStorage.getItem('linha');
+    var dadosLS = JSON.parse(dados);
+    var chave = percorrerLocalStorageTurma(dadosLS.eixo, dadosLS.disc, dadosLS.turma);
+
+    var cadTurma = JSON.parse(localStorage.getItem(chave));
+
+    var campoNome = document.getElementById('input-nome-aluno').value;
+    var campoEmail = document.getElementById('input-email-aluno').value;
+
+    var aluno = {
+        nome: campoNome,
+        email: campoEmail,
+        statusConv: 'Pend.'
+    }
+
+    if (!cadTurma.aluno || !Array.isArray(cadTurma.aluno)) {
+        cadTurma.aluno = [];
+    }
+
+    cadTurma.aluno.unshift(aluno);
+
+    localStorage.setItem(chave, JSON.stringify(cadTurma));
+    alert('Convite Enviado para ' + campoNome + ' com Sucesso!');
+
+    document.getElementById('input-nome-aluno').value = '';
+    document.getElementById('input-email-aluno').value = '';
+
+    fecharModalConvAluno();
+    carregarTabelaLocalStorage();
+
+}
+
+function fecharModalAluno() {
+    var modalAdc = document.getElementById('modal-aluno');
+    modalAdc.close();
+}
+function fecharModalConvAluno() {
+    var modalAdc = document.getElementById('modal-conv-aluno');
+    modalAdc.close();
+}
 
 //===============================
 // Gerenciar Turmas - Fim da seção
