@@ -280,7 +280,7 @@ label,
 
   #botao {
     text-align: center;
-    margin-left: 453px;
+    margin-left: 448px;
     padding: 1px 40px;
     background-color: #9732ad;
     text-decoration: none;
@@ -291,14 +291,14 @@ label,
   #foto-fundo {
     text-align: center;
     margin-top: 10px;
-    margin-left: 370px;
+    margin-left: 395px;
 	width: 300px;
     height: 180px;
 	padding-top: 10px;
   }
   table{
 	padding-top: 10px;
-	margin-left: 225px;
+	margin-left: 255px;
   }
 
   table.info-tabela, td{
