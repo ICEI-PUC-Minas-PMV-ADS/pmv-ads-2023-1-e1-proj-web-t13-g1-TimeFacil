@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="esqueci a senha.css">
+    <title>Esqueci a Senha</title>
+</head>
+<body>
+    <div id="form">
+        <h1 class="title">Esqueceu a senha?</h1>
+        <form onsubmit="return validarFormulario(event)">
+            <div>
+                <input class="input" type="password" placeholder="Nova senha" required>
+            </div>
+            <div>
+                <input class="input" type="password" placeholder="Repita a nova senha" required>
+            </div>
+            <div id="btn">
+                <button type="submit">Continuar</button>
+            </div>
+        </form>
+    </div>
+
+    <script>
+        function validarFormulario(event) {
+            event.preventDefault(); // Impede o envio do formulário
+
+            var novaSenha = document.querySelector('input[type="password"]').value;
+            var repetirSenha = document.querySelectorAll('input[type="password"]')[1].value;
+
+            if (novaSenha === '' || repetirSenha === '') {
+                alert('Por favor, preencha todos os campos.');
+                return false;
+            }
+
+            if (novaSenha !== repetirSenha) {
+                alert('As senhas não coincidem.');
+                return false;
+            }
+
+           
+            window.location.href = "login tela.html";
+        }
+    </script>
+</body>
+</html>
+
