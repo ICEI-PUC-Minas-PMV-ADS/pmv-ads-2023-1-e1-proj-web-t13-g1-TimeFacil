@@ -53,6 +53,55 @@ function generateJSON() {
 	document.body.removeChild(downloadLink);
 	window.location.href = "index.html";
 }
+
+//Editar Grupo
+
+document.addEventListener("DOMContentLoaded", () => {
+    if (document.body.id === "edit-group") {
+      loadDefaultValues();
+    }
+});
+
+function loadDefaultValues() {
+fetch("group_edit_mockup.json")
+    .then((response) => response.json())
+    .then((data) => {
+    document.querySelector("#disciplina").textContent = data.disciplina;
+    document.querySelector("#atividade").textContent = data.atividade;
+    document.querySelector("#prazo").textContent = data.prazo;
+    document.querySelector("#integrantesMin").textContent = data.integrantesMin;
+    document.querySelector("#integrantesMax").textContent = data.integrantesMax;
+    document.querySelector("#tema").value = data.tema;
+    document.querySelector("#hora").value = data.hora;
+    document.querySelector("#comentario").value = data.comentario;
+
+    if (data.domingo) {
+        document.querySelector("#dia_dom").classList.add("clicked");
+    }
+    if (data.segunda) {
+        document.querySelector("#dia_seg").classList.add("clicked");
+    }
+    if (data.terca) {
+        document.querySelector("#dia_ter").classList.add("clicked");
+    }
+    if (data.quarta) {
+        document.querySelector("#dia_qua").classList.add("clicked");
+    }
+    if (data.quinta) {
+        document.querySelector("#dia_qui").classList.add("clicked");
+    }
+    if (data.sexta) {
+        document.querySelector("#dia_sex").classList.add("clicked");
+    }
+    if (data.sabado) {
+        document.querySelector("#dia_sab").classList.add("clicked");
+    }
+    })
+    .catch((error) => {
+    console.error("Nenhum arquivo default_values.json encontrado:", error);
+    });
+}
+
 //Entrar em Grupo.
 function confirmaSaida() {
 	var confirmado = confirm("Você deseja mesmo entrar no grupo?");
