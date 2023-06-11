@@ -63,7 +63,7 @@ http://127.0.0.1:5500/src/entrar_grupo.html
 
 Após o aluno entrar no grupo, a tela permite que ele saia ao clicar no botão.
 
-![sair_grupo tela](img/sair_grupo.png)
+![sair_grupo tela](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-1-e1-proj-web-t13-g1-TimeFacil/blob/main/docs/img/sair_gupo.png)
 
 Artefatos da funcionalidade
 - entrar_grupo.html
