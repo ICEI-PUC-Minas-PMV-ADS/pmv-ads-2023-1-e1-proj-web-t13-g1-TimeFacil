@@ -22,12 +22,12 @@ Comente sobre as ferramentas de testes utilizadas.
 |---------------------|--------------------------------------------------------------------|
 |	Requisito Associado | [RF-13] O site deve permitir o cadastro de professores e alunos. |
 | Objetivo do Teste 	 | Verificar se o cadastro dos usuários está sendo efetuado com sucesso.|
-| Passos 	            | - Acessar a página Cadastro (tela registro.html) <br> - Preencher os campos "Nome de usuário", "E-mail", "Matrícula" e "Senha" <br> - Clicar no botão "Cadastrar-se" |
+| Passos 	            | - Acessar a página Cadastro (tela registro.html); <br> - Preencher os campos "Nome de usuário", "E-mail", "Matrícula" e "Senha"; <br> - Clicar no botão "Cadastrar-se". |
 | Critério de Êxito   | Os dados informados por meio do formulário deverão ter sido armazenados com sucesso (em um arquivo JSON ou no LocalStorage). |
 
 |Caso de Teste        | [CT-14] O site deve permitir o login dos usuários cadastrados.|
 |---------------------|--------------------------------------------------------------------|
 |	Requisito Associado | [RF-14] O site deve permitir o login dos usuários cadastrados. |
 | Objetivo do Teste 	 | Verificar se o login dos usuários está sendo realizado com sucesso.|
-| Passos 	            | - Acessar a página Entre no Time Fácil (login tela.html) <br> - Preencher os campos "Nome de usuário" e "Senha" <br> - Clicar no botão "Entrar" |
+| Passos 	            | - Acessar a página Entre no Time Fácil (login tela.html); <br> - Preencher os campos "Nome de usuário" e "Senha"; <br> - Clicar no botão "Entrar". |
 | Critério de Êxito   | O usuário deverá ter conseguido entrar no sistema. |
