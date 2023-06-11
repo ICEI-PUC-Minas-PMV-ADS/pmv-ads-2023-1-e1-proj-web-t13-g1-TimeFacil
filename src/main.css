@@ -320,39 +320,26 @@ input[type="reset"] {
 	margin-top: 10px;
 }
 #foto-fundo {
-	text-align: center;
-	margin-top: 10px;
-	margin-left: 395px;
-	width: 300px;
-	height: 180px;
-	padding-top: 10px;
-}
-/*=============================
-INÍCIO DO TRECHO A SER AJUSTADO
-=========================*/
-/* table {
-	padding-top: 10px;
-	margin-left: 255px;
-} */
-/*=============================
-FIM DO TRECHO A SER AJUSTADO
-=========================*/
+  text-align: center; margin-top: 10px; margin-left: 395px;
+  width: 300px; height: 180px;
+  padding-top: 10px; }
+.tabela-conteudo{
+padding-top: 10px;
+margin-left: 255px;}
+.tabela-conteudo, .line{
+border: 1px solid darkblue;
+white-space: nowrap;
+padding-top: 5px;
+padding-bottom: 4px; padding-right: 4px; 
+padding-left: 5px;}
 
-table.info-tabela,
-/*=============================
-INÍCIO DO TRECHO A SER AJUSTADO
-=========================*/
-/* td {
-	border: 1px solid darkblue;
-	white-space: nowrap;
-	padding-top: 5px;
-	padding-bottom: 4px;
-	padding-right: 4px;
-	padding-left: 5px;
-} */
-/*=============================
-FIM DO TRECHO A SER AJUSTADO
-=========================*/
+  @media screen and (max-width: 768px) {
+  .navbar,
+  .tema,
+  .ideia {
+    width: 760px;
+  }
+}
 
 @media screen and (max-width: 768px) {
 	.navbar,
@@ -360,6 +347,7 @@ FIM DO TRECHO A SER AJUSTADO
 	.ideia {
 		width: 760px;
 	}
+
 }
 @media screen and (max-width: 1200px) {
 	.navbar,
