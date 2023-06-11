@@ -55,7 +55,7 @@ function generateJSON() {
 }
 //Entrar em Grupo.
 function confirmaSaida(){
-	var meuBotao = document.getElementById("botao");
+var meuBotao = document.getElementById("botao");
 	if (meuBotao.innerHTML == "Entrar no grupo") {
 	 var confirmado = confirm ('Você deseja mesmo entrar no grupo?');
 	  if(confirmado == true){
@@ -246,4 +246,3 @@ function deletarTurma(input) {
 	}
 }
 
- 
