@@ -46,4 +46,10 @@ Comente sobre as ferramentas de testes utilizadas.
 | Passos 	            | - Acessar a página Entre no Time Fácil (login tela.html); <br> - Preencher os campos "Nome de usuário" e "Senha"; <br> - Clicar no botão "Entrar". |
 | Critério de Êxito   | O usuário deverá ter conseguido entrar no sistema. |
 
+|Caso de Teste        | [CT-16] O site deve permitir o gerenciamento de turmas.      |
+|---------------------|-----------------------------------------------------------------------|
+|	Requisito Associado | [RF-16] - O site deve permitir que o professor exclua as páginas criadas. |
+| Objetivo do Teste 	 | Verificar se o usuário consegue excluir a página criada. |
+| Passos 	            |  1)Clicar no ícone de uma lixeira que indica a exclusão da página, 2)Clicar em “Ok” na mensagem de confirmação para excluir a página. |
+| Critério de Êxito   | A Turma criada deve ser excluída. |
 
