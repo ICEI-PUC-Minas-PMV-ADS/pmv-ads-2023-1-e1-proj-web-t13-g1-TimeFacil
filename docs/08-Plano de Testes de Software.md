@@ -6,7 +6,7 @@ Apresente os cenários de testes utilizados na realização dos testes da sua ap
 
 Enumere quais cenários de testes foram selecionados para teste. Neste tópico o grupo deve detalhar quais funcionalidades avaliadas, o grupo de usuários que foi escolhido para participar do teste e as ferramentas utilizadas.
  
-## Ferramentas de Testes (Opcional)
+<!-- ## Ferramentas de Testes (Opcional)
 
 Comente sobre as ferramentas de testes utilizadas.
  
@@ -16,4 +16,18 @@ Comente sobre as ferramentas de testes utilizadas.
 > -  [Teste de Software: Conceitos e tipos de testes](https://blog.onedaytesting.com.br/teste-de-software/)
 > - [Criação e Geração de Planos de Teste de Software](https://www.ibm.com/developerworks/br/local/rational/criacao_geracao_planos_testes_software/index.html)
 > - [Ferramentas de Test para Java Script](https://geekflare.com/javascript-unit-testing/)
-> - [UX Tools](https://uxdesign.cc/ux-user-research-and-user-testing-tools-2d339d379dc7)
+> - [UX Tools](https://uxdesign.cc/ux-user-research-and-user-testing-tools-2d339d379dc7) -->
+
+|Caso de Teste        | [CT-13] O site deve permitir o cadastro de professores e alunos. |
+|---------------------|--------------------------------------------------------------------|
+|	Requisito Associado | [RF-13] O site deve permitir o cadastro de professores e alunos. |
+| Objetivo do Teste 	 | Verificar se o cadastro dos usuários está sendo efetuado com sucesso.|
+| Passos 	            | - Acessar a página Cadastro (tela registro.html) <br> - Preencher os campos "Nome de usuário", "E-mail", "Matrícula" e "Senha" <br> - Clicar no botão "Cadastrar-se" |
+| Critério de Êxito   | Os dados informados por meio do formulário deverão ter sido armazenados com sucesso (em um arquivo JSON ou no LocalStorage). |
+
+|Caso de Teste        | [CT-14] O site deve permitir o login dos usuários cadastrados.|
+|---------------------|--------------------------------------------------------------------|
+|	Requisito Associado | [RF-14] O site deve permitir o login dos usuários cadastrados. |
+| Objetivo do Teste 	 | Verificar se o login dos usuários está sendo realizado com sucesso.|
+| Passos 	            | - Acessar a página Entre no Time Fácil (login tela.html) <br> - Preencher os campos "Nome de usuário" e "Senha" <br> - Clicar no botão "Entrar" |
+| Critério de Êxito   | O usuário deverá ter conseguido entrar no sistema. |
