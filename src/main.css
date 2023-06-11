@@ -4,425 +4,449 @@
 *,
 *:after,
 *:before {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
 }
 
 *:focus {
-  outline: none;
+	outline: none;
 }
 
 /* || Página.*/
 html,
 body {
-  background-color: #ffffff;
-  font-family: Lato, sans-serif;
-  font-size: 16px;
-  height: auto;
-  width: auto;
+	background-color: #ffffff;
+	font-family: Lato, sans-serif;
+	font-size: 16px;
+	height: auto;
+	width: auto;
 }
 
 /* || Barra Superior.*/
 .navbar {
-  background-color: #00547a;
-  border: 0;
-  height: 50px;
-  margin: 0;
-  padding: 0;
-  position: fixed;
-  width: 100%;
+	background-color: #00547a;
+	border: 0;
+	height: 50px;
+	margin: 0;
+	padding: 0;
+	position: fixed;
+	width: 100%;
 }
 
 .navbar-logo {
-  float: left;
-  height: 40px;
-  margin-left: 10px;
-  margin-top: 5px;
+	float: left;
+	height: 40px;
+	margin-left: 10px;
+	margin-top: 5px;
 }
 
 .avatar {
-  border-radius: 50%;
-  float: right;
-  height: 40px;
-  overflow: hidden;
-  margin-right: 10px;
-  margin-top: 5px;
-  width: 40px;
+	border-radius: 50%;
+	float: right;
+	height: 40px;
+	overflow: hidden;
+	margin-right: 10px;
+	margin-top: 5px;
+	width: 40px;
 }
 
 /* || Barra Lateral.*/
 .sidebar {
-  background-color: #f9fafc;
-  border-right: 1px solid #d3dce6;
-  color: #47525e;
-  display: block;
-  font-size: large;
-  height: 100%;
-  position: fixed;
-  top: 50px;
-  width: 250px;
+	background-color: #f9fafc;
+	border-right: 1px solid #d3dce6;
+	color: #47525e;
+	display: block;
+	font-size: large;
+	height: 100%;
+	position: fixed;
+	top: 50px;
+	width: 250px;
 }
 
 .sidebar-icon {
-  display: inline-block;
-  padding: 10px 0px 0px 10px;
-  vertical-align: middle;
+	display: inline-block;
+	padding: 10px 0px 0px 10px;
+	vertical-align: middle;
 }
 
 .sidebar-item,
 .sidebar-item a:link,
 .sidebar-item a:visited {
-  background-color: #ffffff;
-  color: #47525e;
-  display: block;
-  line-height: 40px;
-  list-style-type: none;
-  text-decoration: none;
+	background-color: #ffffff;
+	color: #47525e;
+	display: block;
+	line-height: 40px;
+	list-style-type: none;
+	text-decoration: none;
 }
 
 .sidebar-item:first-of-type,
 .sidebar-subitem:first-of-type {
-  border-top: solid 1px #d3dce6;
+	border-top: solid 1px #d3dce6;
 }
 
 .sidebar-item:last-child,
 .sidebar-subitem:last-child {
-  border-bottom: solid 1px #d3dce6;
+	border-bottom: solid 1px #d3dce6;
 }
 
 .sidebar-subitem,
 .sidebar-subitem a:link,
 .sidebar-subitem a:visited {
-  background-color: #f9fafc;
-  color: #8492a6;
-  display: block;
-  font-size: medium;
-  line-height: 35px;
-  list-style-type: none;
-  text-indent: 60px;
-  text-decoration: none;
-  box-sizing: border-box;
+	background-color: #f9fafc;
+	color: #8492a6;
+	display: block;
+	font-size: medium;
+	line-height: 35px;
+	list-style-type: none;
+	text-indent: 60px;
+	text-decoration: none;
+	box-sizing: border-box;
 }
 
 .sidebar-item a:hover,
 .sidebar-subitem a:hover {
-  background-color: #e0e1e3;
+	background-color: #e0e1e3;
 }
 
 .sidebar-item a:active,
 .sidebar-subitem a:active {
-  background-color: #ffffff;
-  border: solid 1px;
-  border-left: solid 3px;
-  border-color: #00547a;
+	background-color: #ffffff;
+	border: solid 1px;
+	border-left: solid 3px;
+	border-color: #00547a;
 }
 
 /* || Conteúdo Principal.*/
 main {
-  display: flex;
-  font-size: large;
-  height: 100%;
-  width: 100%;
-  padding: 60px 10px 10px 260px;
+	display: flex;
+	font-size: large;
+	height: 100%;
+	width: 100%;
+	padding: 60px 10px 10px 260px;
 }
 
 /* || Botões.*/
-input[type=submit],
-input[type=reset] {
-  border: 0;
-  border-radius: 6px;
-  color: #ffffff;
-  cursor: pointer;
-  font-family: Lato, sans-serif;
-  font-size: 16px;
-  font-weight: 400;
-  height: 40px;
-  line-height: 40px;
-  padding: 0px 16px 0px 16px;
-  text-align: center;
-  vertical-align: middle;
+input[type="submit"],
+input[type="reset"] {
+	border: 0;
+	border-radius: 6px;
+	color: #ffffff;
+	cursor: pointer;
+	font-family: Lato, sans-serif;
+	font-size: 16px;
+	font-weight: 400;
+	height: 40px;
+	line-height: 40px;
+	padding: 0px 16px 0px 16px;
+	text-align: center;
+	vertical-align: middle;
 }
 
 .botao-confirmar {
-  background-color: #9732ad;
+	background-color: #9732ad;
 }
 
 .botao-cancelar {
-  background-color: #fd7e14;
-  margin-left: 20px;
+	background-color: #fd7e14;
+	margin-left: 20px;
 }
 
 .button-container a.button-confirmar {
-  display: inline-block;
-  padding: 10px 20px;
-  background-color: #9732ad;
-  text-decoration: none;
-  border-radius: 5px;
-  margin-right: 10px;
-  color: #fff;
+	display: inline-block;
+	padding: 10px 20px;
+	background-color: #9732ad;
+	text-decoration: none;
+	border-radius: 5px;
+	margin-right: 10px;
+	color: #fff;
 }
 
 .button-container a.button-cancelar {
-  display: inline-block;
-  padding: 10px 20px;
-  background-color: #fd7e14;
-  text-decoration: none;
-  border-radius: 5px;
-  margin-right: 10px;
-  color: #fff;
+	display: inline-block;
+	padding: 10px 20px;
+	background-color: #fd7e14;
+	text-decoration: none;
+	border-radius: 5px;
+	margin-right: 10px;
+	color: #fff;
 }
 
 .botao-excluir {
-  background-color: #dc3545;
+	background-color: #dc3545;
 }
 
 .botao-confirmar:hover {
-  background-color: #ca65e0;
+	background-color: #ca65e0;
 }
 
 .botao-cancelar:hover {
-  background-color: #ffb147;
+	background-color: #ffb147;
 }
 
 .botao-excluir:hover {
-  background-color: #ff6878;
+	background-color: #ff6878;
 }
 
 .botao-confirmar:active,
 .botao-cancelar:active,
 .botao-excluir:active {
-  transform: translateY(1px);
-  -webkit-transform: translateY(1px);
-  -moz-transform: translateY(1px);
-  -ms-transform: translateY(1px);
-  -o-transform: translateY(1px);
+	transform: translateY(1px);
+	-webkit-transform: translateY(1px);
+	-moz-transform: translateY(1px);
+	-ms-transform: translateY(1px);
+	-o-transform: translateY(1px);
 }
 
 /* || Formulários.*/
 .campo-label,
 .radio-label,
 .integrantes-label {
-  display: inline-block;
-  line-height: 40px;
-  font-weight: bold;
-  color: #47525e;
-  padding: 10px 20px;
-  width: 200px;
+	display: inline-block;
+	line-height: 40px;
+	font-weight: bold;
+	color: #47525e;
+	padding: 10px 20px;
+	width: 200px;
 }
 
 .radio-label,
 .radio-valor {
-  padding: 0px;
-  width: 30px;
+	padding: 0px;
+	width: 30px;
 }
 
 .integrantes-label {
-  padding: 0px;
-  width: 80px;
+	padding: 0px;
+	width: 80px;
 }
 
 .campo-valor,
 .integrantes-valor,
 .prazo-valor {
-  background-color: #f9fafc;
-  border-radius: 5px;
-  box-sizing: border-box;
-  color: #47525e;
-  display: inline-block;
-  font-family: inherit;
-  font-size: medium;
-  line-height: 30px;
-  margin-bottom: 20px;
-  padding: 0px 10px;
-  width: 600px;
+	background-color: #f9fafc;
+	border-radius: 5px;
+	box-sizing: border-box;
+	color: #47525e;
+	display: inline-block;
+	font-family: inherit;
+	font-size: medium;
+	line-height: 30px;
+	margin-bottom: 20px;
+	padding: 0px 10px;
+	width: 600px;
 }
 
 .integrantes-valor {
-  margin-right: 10px;
-  padding: 0px;
-  width: 50px;
+	margin-right: 10px;
+	padding: 0px;
+	width: 50px;
 }
 
 .prazo-valor {
-  padding: 0px;
-  margin-bottom: 40px;
-  width: 150px;
+	padding: 0px;
+	margin-bottom: 40px;
+	width: 150px;
 }
 
 #tema,
 #temaLabel {
-  display: none;
+	display: none;
 }
 
 /* || Dias da Semana.*/
 .clickable-box {
-  align-items: center;
-  background-color: lightgray;
-  color: #47525e;
-  cursor: pointer;
-  display: flex;
-  height: 25px;
-  justify-content: center;
-  margin-right: 10px;
-  transition: background-color 0.3s;
-  width: 50px;
+	align-items: center;
+	background-color: lightgray;
+	color: #47525e;
+	cursor: pointer;
+	display: flex;
+	height: 25px;
+	justify-content: center;
+	margin-right: 10px;
+	transition: background-color 0.3s;
+	width: 50px;
 }
 
 .clickable-box.clicked {
-  background-color: #0b478d;
-  color: white;
-  font-weight: bold;
+	background-color: #0b478d;
+	color: white;
+	font-weight: bold;
 }
 
 .clickable-box:hover {
-  background-color: #4f86c6;
+	background-color: #4f86c6;
 }
 
 /* || Outros campos.*/
 .container {
-  max-width: 800px;
-  margin: 0 auto;
-  padding: 20px;
+	max-width: 800px;
+	margin: 0 auto;
+	padding: 20px;
 }
 
 .row {
-  display: flex;
-  align-items: center;
-  margin-bottom: 30px;
+	display: flex;
+	align-items: center;
+	margin-bottom: 30px;
 }
 
 .label {
-  font-weight: bold;
-  width: 150px;
-  color: #8190a5;
+	font-weight: bold;
+	width: 150px;
+	color: #8190a5;
 }
 
 .value {
-  color: #8190a5;
+	color: #8190a5;
 }
 
 .input {
-  width: 200px;
-  line-height: normal;
-  vertical-align: top;
+	width: 200px;
+	line-height: normal;
+	vertical-align: top;
 }
 
 /* Entrar grupo CSS */
 #botao {
-  text-align: center; margin-left: 448px;
-  padding: 1px 40px;
-  background-color: #9732ad;
-  text-decoration: none;
-  border-radius: 5px;
-  color: #fff; margin-top: 10px;}
+	text-align: center;
+	margin-left: 448px;
+	padding: 1px 40px;
+	background-color: #9732ad;
+	text-decoration: none;
+	border-radius: 5px;
+	color: #fff;
+	margin-top: 10px;
+}
 #foto-fundo {
-  text-align: center; margin-top: 10px; margin-left: 395px;
-  width: 300px; height: 180px;
-  padding-top: 10px;}
-table{
-padding-top: 10px;
-margin-left: 255px;}
-table.info-tabela, td{
-border: 1px solid darkblue;
-white-space: nowrap;
-padding-top: 5px;
-padding-bottom: 4px; padding-right: 4px; 
-padding-left: 5px;}
+	text-align: center;
+	margin-top: 10px;
+	margin-left: 395px;
+	width: 300px;
+	height: 180px;
+	padding-top: 10px;
+}
+/*=============================
+INÍCIO DO TRECHO A SER AJUSTADO
+=========================*/
+/* table {
+	padding-top: 10px;
+	margin-left: 255px;
+} */
+/*=============================
+FIM DO TRECHO A SER AJUSTADO
+=========================*/
 
-  @media screen and (max-width: 768px) {
-  .navbar,
-  .tema,
-  .ideia {
-    width: 760px;
-  }
+table.info-tabela,
+/*=============================
+INÍCIO DO TRECHO A SER AJUSTADO
+=========================*/
+/* td {
+	border: 1px solid darkblue;
+	white-space: nowrap;
+	padding-top: 5px;
+	padding-bottom: 4px;
+	padding-right: 4px;
+	padding-left: 5px;
+} */
+/*=============================
+FIM DO TRECHO A SER AJUSTADO
+=========================*/
+
+@media screen and (max-width: 768px) {
+	.navbar,
+	.tema,
+	.ideia {
+		width: 760px;
+	}
 }
 @media screen and (max-width: 1200px) {
-  .navbar,
-  .tema,
-  .ideia {
-    width: 900px;
-  }
+	.navbar,
+	.tema,
+	.ideia {
+		width: 900px;
+	}
 }
 /* || Tabelas.*/
 .tabela-atividades {
-  border-collapse: collapse;
-  width: 100%;
+	border-collapse: collapse;
+	width: 100%;
 }
 
 .tabela-cabecalho {
-  background-color: #f9fafc;
-  border: 1px solid #d3dce6;
-  border-radius: 5px;
-  color: #47525e;
-  font-weight: bold;
-  padding: 8px;
-  text-align: left;
+	background-color: #f9fafc;
+	border: 1px solid #d3dce6;
+	border-radius: 5px;
+	color: #47525e;
+	font-weight: bold;
+	padding: 8px;
+	text-align: left;
 }
 
 .tabela-linha {
-  background-color: #ffffff;
-  border: 1px solid #d3dce6;
-  border-radius: 5px;
-  color: #8492a6;
-  line-height: 26px;
-  text-align: left;
+	background-color: #ffffff;
+	border: 1px solid #d3dce6;
+	border-radius: 5px;
+	color: #8492a6;
+	line-height: 26px;
+	text-align: left;
 }
 
 .tabela-celula {
-  border-right: 1px solid #d3dce6;
-  padding: 8px;
+	border-right: 1px solid #d3dce6;
+	padding: 8px;
 }
 
 .icone-editar-atividade img {
-  cursor: pointer;
-  height: 18px;
-  margin-right: 10px;
-  width: 18px;
+	cursor: pointer;
+	height: 18px;
+	margin-right: 10px;
+	width: 18px;
 }
 
 .icone-deletar-atividade img {
-  cursor: pointer;
-  height: 18px;
-  width: 18px;
+	cursor: pointer;
+	height: 18px;
+	width: 18px;
 }
 
 /* || Modais.*/
 .modal-atividades {
-  background-color: rgba(71, 82, 94, 0.5);
-  display: none;
-  height: 100%;
-  left: 0;
-  overflow: auto;
-  position: fixed;
-  top: 0;
-  width: 100%;
-  z-index: 1;
+	background-color: rgba(71, 82, 94, 0.5);
+	display: none;
+	height: 100%;
+	left: 0;
+	overflow: auto;
+	position: fixed;
+	top: 0;
+	width: 100%;
+	z-index: 1;
 }
 
 .modal-atividades-conteudo {
-  background-color: #f9fafc;
-  border: 1px solid #d3dce6;
-  border-radius: 6px;
-  margin: 10% auto;
-  max-width: 880px;
-  padding: 20px;
-  width: 100%;
+	background-color: #f9fafc;
+	border: 1px solid #d3dce6;
+	border-radius: 6px;
+	margin: 10% auto;
+	max-width: 880px;
+	padding: 20px;
+	width: 100%;
 }
 
 .fechar-modal-atividades {
-  color: #8492a6;
-  cursor: pointer;
-  float: right;
-  font-size: 28px;
-  font-weight: bold;
+	color: #8492a6;
+	cursor: pointer;
+	float: right;
+	font-size: 28px;
+	font-weight: bold;
 }
 
 .fechar-modal-atividades:hover,
 .fechar-modal-atividades:focus {
-  color: #47525e;
-  cursor: pointer;
-  text-decoration: none;
+	color: #47525e;
+	cursor: pointer;
+	text-decoration: none;
 }
 
 /*Importado de main.css/*
@@ -430,563 +454,555 @@ padding-left: 5px;}
 /* || Conteúdo Principal Turmas*/
 /*  SESSÃO ARTHUR - COMEÇO*/
 main {
-  display: flex;
-  font-size: large;
-  height: 100%;
-  width: 100%;
-  padding: 60px 10px 10px 260px;
+	display: flex;
+	font-size: large;
+	height: 100%;
+	width: 100%;
+	padding: 60px 10px 10px 260px;
 }
 
 #conteudo {
-  color: red;
-  flex-grow: 1;
-  height: 100%;
-  display: inline-block;
-  color: #47525e;
-  margin: auto 20px;
+	color: red;
+	flex-grow: 1;
+	height: 100%;
+	display: inline-block;
+	color: #47525e;
+	margin: auto 20px;
 }
 
 #divlogocontect {
-  margin-top: 10px;
-  text-align: center;
+	margin-top: 10px;
+	text-align: center;
 }
 
 #img-logo-conteudo {
-  max-width: 150px;
-  width: auto;
+	max-width: 150px;
+	width: auto;
 }
 
 #barraPesquisa {
-  width: 100%;
-  margin-top: 10px;
-  display: flex;
+	width: 100%;
+	margin-top: 10px;
+	display: flex;
 }
 
 #campo-pesquisa {
-  width: 70%;
-  height: 40px;
-  font: 23px 'Lato';
-  border: solid #d3dce6 1px;
-  border-radius: 5px;
-  padding-left: 20px;
-  box-shadow: 2px 2px 5px #119ad9;
-  font-style: italic;
-  margin-top: 4px;
-  margin-left: 10%;
+	width: 70%;
+	height: 40px;
+	font: 23px "Lato";
+	border: solid #d3dce6 1px;
+	border-radius: 5px;
+	padding-left: 20px;
+	box-shadow: 2px 2px 5px #119ad9;
+	font-style: italic;
+	margin-top: 4px;
+	margin-left: 10%;
 }
 
 #campo-pesquisa:focus {
-  outline: 0;
-  font-style: normal;
+	outline: 0;
+	font-style: normal;
 }
 
 /* || Tabela c/ Turmas */
 #div-tabela {
-  margin-top: 20px;
-  border: solid 1px #8492a6;
-  border-radius: 5px;
-  height: 65vh;
-  overflow-y: auto;
+	margin-top: 20px;
+	border: solid 1px #8492a6;
+	border-radius: 5px;
+	height: 65vh;
+	overflow-y: auto;
 }
 
 #tabela-turmas,
 #tab-alunos {
-  width: 100%;
-  text-align: center;
+	width: 100%;
+	text-align: center;
 }
 
 #tab-alunos {
-  margin-top: 15px;
+	margin-top: 15px;
 }
 
 table#tabela-turmas,
 table#tab-alunos {
-  border-collapse: collapse;
+	border-collapse: collapse;
 }
 
 thead#head-table {
-  background-color: #e0e0e0;
-  height: 50px;
-  top: 0;
-  font-size: 1.2em;
+	background-color: #e0e0e0;
+	height: 50px;
+	top: 0;
+	font-size: 1.2em;
 }
 
 thead#head-tb-adc-aluno {
-  background-color: #e0e0e0;
-  font-size: 80%;
-  height: 30px;
+	background-color: #e0e0e0;
+	font-size: 80%;
+	height: 30px;
 }
 
 table#tabela-turmas tr {
-  height: 50px;
+	height: 50px;
 }
 
 #tbody-tab-alunos td,
 #tbody-tab-alunos th {
-  padding: 10px;
+	padding: 10px;
 }
 
 td#col-nome,
 th#col-nome {
-  width: 43%;
+	width: 43%;
 }
 
 th#col-email,
 td#col-email {
-  width: 43%;
+	width: 43%;
 }
 
 th#col-status,
 td#col-status {
-  width: 14%;
+	width: 14%;
 }
 
 th#coluna-eixo,
 td#coluna-eixo {
-  width: 10%;
+	width: 10%;
 }
 
 th#coluna-disc,
 td#coluna-disc {
-  width: 55%;
+	width: 55%;
 }
 
 th#coluna-turma,
 td#coluna-turma {
-  width: 10%;
+	width: 10%;
 }
 
 th#coluna-alunos,
 td#coluna-alunos {
-  width: 5%;
+	width: 5%;
 }
 
 th#coluna-acoes,
 td#coluna-acoes {
-  width: 10%;
+	width: 10%;
 }
 
 th#coluna-icones,
 td#coluna-icones {
-  width: 10%;
-  padding: 4px;
+	width: 10%;
+	padding: 4px;
 }
 
 .btn-qtd-aluno:hover {
-  font-size: 110%;
-  cursor: pointer;
-  color: #8492a6;
+	font-size: 110%;
+	cursor: pointer;
+	color: #8492a6;
 }
 
 .icones-coluna {
-  margin: 0 5px;
-  max-width: 23px;
-  align-content: center;
+	margin: 0 5px;
+	max-width: 23px;
+	align-content: center;
 }
 
 .icones-coluna:hover {
-  transform: scale(1.3);
+	transform: scale(1.3);
 }
 
 .icones-coluna:active {
-  transform: scale(1.1);
+	transform: scale(1.1);
 }
 
 /* || Modal Alunos */
 dialog::backdrop {
-  background-color: transparent;
+	background-color: transparent;
 }
 
 .modal-aluno {
-  border: 2px solid #8492a6;
-  margin: 8% auto;
-  width: 35%;
-  height: 700px;
-  border-radius: 0.5em;
-  padding: 5px;
-  box-shadow: 0 0 1em rgba(0, 0, 0, 0.3);
+	border: 2px solid #8492a6;
+	margin: 8% auto;
+	width: 35%;
+	height: 700px;
+	border-radius: 0.5em;
+	padding: 5px;
+	box-shadow: 0 0 1em rgba(0, 0, 0, 0.3);
 }
 
 #col-nome {
-  width: 30%;
+	width: 30%;
 }
 
 /* || Modal Convidar Alunos */
 #modal-conv-aluno {
-  border: 2px solid #8492a6;
-  box-shadow: 0 0 1em rgba(0, 0, 0, 0.3);
-  padding: 5px 20px;
-  margin: auto;
-  width: 35%;
-  border-radius: 0.5em;
-  height: 300px;
+	border: 2px solid #8492a6;
+	box-shadow: 0 0 1em rgba(0, 0, 0, 0.3);
+	padding: 5px 20px;
+	margin: auto;
+	width: 35%;
+	border-radius: 0.5em;
+	height: 300px;
 }
 
 #titulo-conv-aluno {
-  text-align: center;
-  font-size: 2.3em;
-  font-family: "Grand Hotel", cursive;
+	text-align: center;
+	font-size: 2.3em;
+	font-family: "Grand Hotel", cursive;
 }
 
 #div-head-conv-aluno {
-  display: flex;
-  justify-content: space-between;
+	display: flex;
+	justify-content: space-between;
 }
 
 #div-head-conv-aluno #eixo {
-  margin-right: auto;
+	margin-right: auto;
 }
 
 #modal-conv-aluno #disciplina {
-  margin-bottom: 5px;
+	margin-bottom: 5px;
 }
 
 #input-nome-aluno,
 #input-email-aluno {
-  width: 80%;
-  max-width: 650px;
-  height: 40px;
-  margin: 10px 0px 10px 10px;
-  border: 0.5px solid;
-  border-radius: 5px;
-  padding-left: 10px;
-  font-size: 1.1em;
+	width: 80%;
+	max-width: 650px;
+	height: 40px;
+	margin: 10px 0px 10px 10px;
+	border: 0.5px solid;
+	border-radius: 5px;
+	padding-left: 10px;
+	font-size: 1.1em;
 }
 
 #eixo,
 #turma,
 #disciplina {
-  margin-left: 10px;
+	margin-left: 10px;
 }
 
 #div-head-turma {
-  margin-top: -20px;
-  text-align: center;
+	margin-top: -20px;
+	text-align: center;
 }
 
-.btn-qtd-aluno:hover{
-
-font-size: 110%;
-cursor: pointer;
-color:#8492A6;
-
+.btn-qtd-aluno:hover {
+	font-size: 110%;
+	cursor: pointer;
+	color: #8492a6;
 }
 
 .icones-coluna {
-  margin: 0 5px;
-  max-width: 23px;
-  align-content: center;
-
+	margin: 0 5px;
+	max-width: 23px;
+	align-content: center;
 }
 
 .icones-coluna:hover {
-  transform: scale(1.3);
-
+	transform: scale(1.3);
 }
 
 .icones-coluna:active {
-  transform: scale(1.1);
-
+	transform: scale(1.1);
 }
 
 /* || Modal Alunos */
 
 dialog::backdrop {
-background-color: transparent;
-
+	background-color: transparent;
 }
 
-.modal-aluno{
-  border: 2px solid #8492A6;
-  margin: 8% auto;
-  width: 35%;
-  height: 700px;
-  border-radius: 0.5em;
-  padding: 5px;
-  box-shadow: 0 0 1em rgb(0 0 0 / .3);
+.modal-aluno {
+	border: 2px solid #8492a6;
+	margin: 8% auto;
+	width: 35%;
+	height: 700px;
+	border-radius: 0.5em;
+	padding: 5px;
+	box-shadow: 0 0 1em rgb(0 0 0 / 0.3);
 }
 
-#col-nome{
-  width: 30%;
+#col-nome {
+	width: 30%;
 }
 
 /* || Modal Convidar Alunos */
 
-#modal-conv-aluno{
-  border: 2px solid #8492A6;
-  box-shadow: 0 0 1em rgb(0 0 0 / .3);
-  padding: 5px 20px;
-  margin:auto;
-  width: 35%;
-  border-radius: 0.5em;
-  height: 300px;
+#modal-conv-aluno {
+	border: 2px solid #8492a6;
+	box-shadow: 0 0 1em rgb(0 0 0 / 0.3);
+	padding: 5px 20px;
+	margin: auto;
+	width: 35%;
+	border-radius: 0.5em;
+	height: 300px;
+}
+#titulo-conv-aluno {
+	text-align: center;
+	font-size: 2.3em;
+	font-family: "Grand Hotel", cursive;
+}
+#div-head-conv-aluno {
+	display: flex;
+	justify-content: space-between;
+}
+#div-head-conv-aluno #eixo {
+	margin-right: auto;
+}
+#modal-conv-aluno #disciplina {
+	margin-bottom: 5px;
+}
 
+#input-nome-aluno,
+#input-email-aluno {
+	width: 80%;
+	max-width: 650px;
+	height: 40px;
+	margin: 10px 0px 10px 10px;
+	border: 0.5px solid;
+	border-radius: 5px;
+	padding-left: 10px;
+	font-size: 1.1em;
 }
-#titulo-conv-aluno{
-  text-align: center;
-  font-size: 2.3em;
-  font-family: 'Grand Hotel', cursive;
+#eixo,
+#turma,
+#disciplina {
+	margin-left: 10px;
 }
-#div-head-conv-aluno{
-  display: flex;
-  justify-content: space-between;
-}
-#div-head-conv-aluno #eixo{
-  margin-right: auto;
-}
-#modal-conv-aluno #disciplina{
-  margin-bottom: 5px;
-}
-
-#input-nome-aluno, #input-email-aluno{
-  width: 80%;
-  max-width: 650px;
-  height: 40px;
-  margin: 10px 0px 10px 10px;
-  border: 0.5px solid;
-  border-radius: 5px;
-  padding-left: 10px;
-  font-size: 1.1em;
-}
-#eixo, #turma, #disciplina {
-  margin-left: 10px;
-}
-#div-head-turma{
-  margin-top: -20px;
-  text-align: center;
-  
+#div-head-turma {
+	margin-top: -20px;
+	text-align: center;
 }
 /* || Modal Criar Turma */
 
 .modal {
-  background-color: rgba(206, 214, 209, 0.64);
-  align-items: center;
-  justify-content: center;
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100vw;
-  height: 100vh;
-  display: none;
-  transition: opacity 3s ease-out;
+	background-color: rgba(206, 214, 209, 0.64);
+	align-items: center;
+	justify-content: center;
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100vw;
+	height: 100vh;
+	display: none;
+	transition: opacity 3s ease-out;
 }
 
 #conteudo-modal {
-  background-color: #ffffff;
-  border: 2px solid #8492a6;
-  border-radius: 5px;
-  width: 850px;
-  height: 350px;
-  font-size: 1.2em;
-  margin: 15% auto;
+	background-color: #ffffff;
+	border: 2px solid #8492a6;
+	border-radius: 5px;
+	width: 850px;
+	height: 350px;
+	font-size: 1.2em;
+	margin: 15% auto;
 }
 
 #cont-modal-header {
-  text-align: center;
-  padding-top: 10px;
-  font-size: 2.3em;
-  font-family: "Grand Hotel", cursive;
-  position: relative;
+	text-align: center;
+	padding-top: 10px;
+	font-size: 2.3em;
+	font-family: "Grand Hotel", cursive;
+	position: relative;
 }
-
 
 #cont-modal-corpo {
-  text-align: center;
+	text-align: center;
 }
 
-
-
 #div-eixo-periodo {
-  position: absolute;
-  text-align: left;
-  margin-left: 45px;
+	position: absolute;
+	text-align: left;
+	margin-left: 45px;
 }
 
 #div-turma {
-  text-align: right;
-  margin-right: 50px;
+	text-align: right;
+	margin-right: 50px;
 }
 
 #input-eixo-periodo,
 #input-turma {
-  width: 200px;
-  height: 40px;
-  margin: 30px 0px 20px 10px;
-  border: 0.5px solid;
-  border-radius: 5px;
-  padding-left: 10px;
-  font-size: 1.1em;
+	width: 200px;
+	height: 40px;
+	margin: 30px 0px 20px 10px;
+	border: 0.5px solid;
+	border-radius: 5px;
+	padding-left: 10px;
+	font-size: 1.1em;
 }
 
 #input-disciplina {
-  width: 80%;
-  max-width: 650px;
-  height: 40px;
-  margin: 30px 0px 50px 10px;
-  border: 0.5px solid;
-  border-radius: 5px;
-  padding-left: 10px;
-  font-size: 1.1em;
+	width: 80%;
+	max-width: 650px;
+	height: 40px;
+	margin: 30px 0px 50px 10px;
+	border: 0.5px solid;
+	border-radius: 5px;
+	padding-left: 10px;
+	font-size: 1.1em;
 }
 
 #cont-modal-rodape {
-  float: right;
+	float: right;
 }
 
 /* || Botões.*/
-input[type=submit] {
-  border: 0;
-  border-radius: 6px;
-  color: #ffffff;
-  cursor: pointer;
-  font-family: Lato, sans-serif;
-  font-size: 16px;
-  font-weight: 400;
-  height: 40px;
-  line-height: 40px;
-  padding: 0px 16px 0px 16px;
-  text-align: center;
-  vertical-align: middle;
+input[type="submit"] {
+	border: 0;
+	border-radius: 6px;
+	color: #ffffff;
+	cursor: pointer;
+	font-family: Lato, sans-serif;
+	font-size: 16px;
+	font-weight: 400;
+	height: 40px;
+	line-height: 40px;
+	padding: 0px 16px 0px 16px;
+	text-align: center;
+	vertical-align: middle;
 }
 
 .botao-confirmar {
-  background-color: #9732ad;
+	background-color: #9732ad;
 }
 
 .botao-cancelar {
-  background-color: #fd7e14;
+	background-color: #fd7e14;
 }
 
 .botao-excluir {
-  background-color: #dc3545;
+	background-color: #dc3545;
 }
 
 .botao-confirmar:hover {
-  background-color: #ca65e0;
+	background-color: #ca65e0;
 }
 
 .botao-cancelar:hover {
-  background-color: #ffb147;
+	background-color: #ffb147;
 }
 
 .botao-excluir:hover {
-  background-color: #ff6878;
+	background-color: #ff6878;
 }
 
 .botao-confirmar:active,
 .botao-cancelar:active,
 .botao-excluir:active {
-  transform: translateY(1px);
+	transform: translateY(1px);
 }
 
 #botao-atualizar {
-  height: 50px;
+	height: 50px;
 }
 
 #botao-pesquisa {
-  margin-top: 4px;
-  height: 40px;
-  margin-left: 10px;
+	margin-top: 4px;
+	height: 40px;
+	margin-left: 10px;
 }
 
 #botao-nova-turma {
-  background-color: #cee4f0;
-  width: 152px;
-  height: 45px;
-  font-size: 20px;
-  color: black;
-  margin-top: 1px;
-  border: solid #d3dce6 2px;
-  text-align: center;
-  vertical-align: middle;
-  transition: 0.5s;
+	background-color: #cee4f0;
+	width: 152px;
+	height: 45px;
+	font-size: 20px;
+	color: black;
+	margin-top: 1px;
+	border: solid #d3dce6 2px;
+	text-align: center;
+	vertical-align: middle;
+	transition: 0.5s;
 }
 
 #botao-nova-turma:hover {
-  background-color: #91cdec;
-  transition: 0.1s;
+	background-color: #91cdec;
+	transition: 0.1s;
 }
 
 #botao-nova-turma:active {
-  background-color: #c5cfda;
+	background-color: #c5cfda;
 }
 
 .botao-salvar {
-  font-size: 25px;
-  padding: 3px;
-  padding-top: 6px;
-  width: 150px;
-  color: black;
-  margin-right: 40px;
-  border-radius: 5px;
-  background: linear-gradient(to top, #a9dba2, #fff);
+	font-size: 25px;
+	padding: 3px;
+	padding-top: 6px;
+	width: 150px;
+	color: black;
+	margin-right: 40px;
+	border-radius: 5px;
+	background: linear-gradient(to top, #a9dba2, #fff);
 }
 
 .botao-salvar:hover {
-  background: linear-gradient(to top, #7be46d, #fff);
+	background: linear-gradient(to top, #7be46d, #fff);
 }
 
 .botao-adicionar {
-  padding: 3px;
-  padding-top: 6px;
-  font-size: 25px;
-  width: 150px;
-  background-color: #cee4f0;
-  color: black;
-  margin-right: 50px;
-  border-radius: 5px;
-  background: linear-gradient(to top, #cee4f0, #fff);
+	padding: 3px;
+	padding-top: 6px;
+	font-size: 25px;
+	width: 150px;
+	background-color: #cee4f0;
+	color: black;
+	margin-right: 50px;
+	border-radius: 5px;
+	background: linear-gradient(to top, #cee4f0, #fff);
 }
 
 #modal-conv-aluno .botao-adicionar {
-  margin-top: 10px;
-  margin-right: 10px;
-  width: 150px;
-  font-size: 19px;
+	margin-top: 10px;
+	margin-right: 10px;
+	width: 150px;
+	font-size: 19px;
 }
 
 .botao-adicionar:hover {
-  background-color: #91cdec;
-  background: linear-gradient(to top, #8bcbee, #fff);
+	background-color: #91cdec;
+	background: linear-gradient(to top, #8bcbee, #fff);
 }
 
 .botao-adicionar:active,
 .botao-salvar:active {
-  transform: translateY(1.5px);
+	transform: translateY(1.5px);
 }
 
 #botao-close {
-  font-family: Arial, Helvetica, sans-serif;
-  position: absolute;
-  top: 0;
-  right: 0;
-  margin-right: 20px;
-  margin-top: 10px;
-  font-size: 20px;
-  transition: transform 0.2s ease-in-out;
-  cursor: pointer;
+	font-family: Arial, Helvetica, sans-serif;
+	position: absolute;
+	top: 0;
+	right: 0;
+	margin-right: 20px;
+	margin-top: 10px;
+	font-size: 20px;
+	transition: transform 0.2s ease-in-out;
+	cursor: pointer;
 }
 
 dialog #botao-close {
-  margin-right: 10px;
-  margin-top: 1px;
-  font-size: 15px;
+	margin-right: 10px;
+	margin-top: 1px;
+	font-size: 15px;
 }
 
 p#botao-close:hover {
-  transform: scale(1.3);
-  color: red;
+	transform: scale(1.3);
+	color: red;
 }
 
 /*  SESSÃO ARTHUR - FINAL*/ /*# sourceMappingURL=main.css.map */
 
 /* Cards CSS */
 
-div.cards{
+div.cards {
 	display: flex;
 	flex-direction: row;
-  }
-  div.cards section.card{
+}
+div.cards section.card {
 	display: flex;
 	flex-direction: column;
 	align-items: center;
@@ -997,11 +1013,11 @@ div.cards{
 	margin-left: 32px;
 	margin-top: 230px;
 	border-radius: 4px;
-  }
-  div.cards section.card :first-child{
+}
+div.cards section.card :first-child {
 	margin-left: 0;
-  }
-  div.cards section.card button {
+}
+div.cards section.card button {
 	cursor: pointer;
 	display: inline-block;
 	padding: 5px 20px;
@@ -1012,20 +1028,19 @@ div.cards{
 	color: #fff;
 	padding-top: 2px;
 	padding-bottom: 2px;
-  }
-  div.cards section.card{
-	box-shadow: 15px 15px 40px -30px #1a1a1b ;
-  }
-  .title_grupo{
+}
+div.cards section.card {
+	box-shadow: 15px 15px 40px -30px #1a1a1b;
+}
+.title_grupo {
 	display: flex;
 	text-align: center;
-	margin-top:60px;
-  }
-div.cards{
+	margin-top: 60px;
+}
+div.cards {
 	width: 400px;
-  }
-img.imagem-fundo{
+}
+img.imagem-fundo {
 	width: 320px;
 	height: 170px;
 }
-
