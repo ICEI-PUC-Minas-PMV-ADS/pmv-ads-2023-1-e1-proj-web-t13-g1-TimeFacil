@@ -48,5 +48,5 @@ Discorra sobre os resultados do teste. Ressaltando pontos fortes e fracos identi
 | Critério de Êxito   | A matéria solicitada deve ser criada com as informações fornecidas pelo professor. As informações devem ser armazenadas no LocalStorage. |
 | Êxito?              | Sim.                                                                  |
 | Comentário          | Os dados informados durante o cadastro estão sendo armazenados e o professor consegue criar as turmas.   |
-| Evidência           | ![gerenciar turmas imagem](img/gerenciar-turmas.png) ![RF-01 imagem 1](img/rf1-gerenciar-turmas.png) ![RF-01 imagem2](img/info-gerenciar-turmas.png) |
+| Evidência           | ![gerenciar turmas imagem](img/gerenciar-turmas.png) ![RF-01 imagem 1](img/rf1-gerenciar-turmas.png) ![RF-01 imagem2](img/rf1-info-gerenciar-turmas.png) |
 
