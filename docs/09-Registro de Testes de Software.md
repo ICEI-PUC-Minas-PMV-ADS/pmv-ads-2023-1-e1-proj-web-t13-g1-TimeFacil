@@ -25,7 +25,7 @@ Discorra sobre os resultados do teste. Ressaltando pontos fortes e fracos identi
 |---------------------|---------------------------------------------------------------------|
 |	Requisito Associado | [RF-14] O site deve permitir o login dos usuários cadastrados.      |
 | Objetivo do Teste 	 | Verificar se o login dos usuários está sendo realizado com sucesso.|
-| Passos 	            | - Acessar a página Entre no Time Fácil (login tela.html) <br> - Preencher os campos "Nome de usuário" e "Senha" <br> - Clicar no botão "Entrar" |
+| Passos 	            | - Acessar a página Entre no Time Fácil (login tela.html); <br> - Preencher os campos "Nome de usuário" e "Senha"; <br> - Clicar no botão "Entrar". |
 | Critério de Êxito   | O usuário deverá ter conseguido entrar no sistema.                  |
 | Êxito?              | Não.                                                                |
 | Comentário          | Após efetuar login, o usuário não entra no sistema.   |
