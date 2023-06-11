@@ -43,10 +43,7 @@ Instruções de acesso
 
 A tela permite ao aluno entrar no grupo ao clicar no botão e retorna ao usuário uma caixa de confirmação em que ele pode confirmar ou cancelar a ação.
 
-![Entrar-grupo tela](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-1-e1-proj-web-t13-g1-TimeFacil/blob/main/docs/img/entrar-grupo.png)
-![confirma-entrar-grupo](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-1-e1-proj-web-t13-g1-TimeFacil/blob/main/docs/img/confirmar-entrar-grupo.png)
-![confirmacao-entrar-grupo](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-1-e1-proj-web-t13-g1-TimeFacil/blob/main/docs/img/confirmacao-entrar-grupo.png)
-![cancela_entrar-grupo](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-1-e1-proj-web-t13-g1-TimeFacil/blob/main/docs/img/cancela-entrar-grupo.png)
+![Entrar_grupo tela](img/entrar_grupo.png)
 
 Artefatos da funcionalidade
 - entrar_grupo.html
@@ -62,3 +59,22 @@ Instruções de acesso
 6. Abra um navegador de Internet e informe a seguinte URL:
 http://127.0.0.1:5500/src/entrar_grupo.html
 
+### Sair de um grupo (RF-08)
+
+Após o aluno entrar no grupo, a tela permite que ele saia ao clicar no botão.
+
+![sair_grupo tela](img/sair_grupo.png)
+
+Artefatos da funcionalidade
+- entrar_grupo.html
+- script.js
+- main.css
+- foto-fundo.png
+
+Instruções de acesso
+
+3. Faça o download do arquivo do projeto (ZIP) ou clone do projeto no GitHub;
+4. Descompacte o arquivo em uma pasta específica;
+5. Abra o Visual Studio Code e execute o Live Server;
+6. Abra um navegador de Internet e informe a seguinte URL:
+http://127.0.0.1:5500/src/entrar_grupo.html
