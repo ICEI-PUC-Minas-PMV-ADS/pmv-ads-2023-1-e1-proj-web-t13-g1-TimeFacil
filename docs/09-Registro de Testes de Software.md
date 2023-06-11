@@ -59,7 +59,7 @@ Discorra sobre os resultados do teste. Ressaltando pontos fortes e fracos identi
 | Critério de Êxito   | A Turma criada deve ser excluída. |
 | Êxito?              | Sim.                                                                  |
 | Comentário          | A turma é excluída. |
-| Evidência           | ![Imagem de exclusão da turma.](img/rf1-exluir tuma.png) ![Imagem de sucesso da exclusão](img/gerenciar-turmas.png) |
+| Evidência           | ![Imagem de exclusão da turma.](img/rf1-excluir%20turma.png) ![Imagem de sucesso da exclusão](img/gerenciar-turmas.png) |
 
 
 
