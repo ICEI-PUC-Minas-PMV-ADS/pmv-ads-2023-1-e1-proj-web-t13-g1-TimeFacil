@@ -19,7 +19,7 @@ Discorra sobre os resultados do teste. Ressaltando pontos fortes e fracos identi
 | Critério de Êxito   | Os dados informados por meio do formulário deverão ter sido armazenados com sucesso (em um arquivo JSON ou no LocalStorage). |
 | Êxito?              | Não.                                                                  |
 | Comentário          | Os dados informados durante o cadastro não estão sendo armazenados.   |
-| Evidência           | (inserir imagem) |
+| Evidência           | ![RF13](img/testes-RF13.png) |
 
 |Caso de Teste        | [CT-14] O site deve permitir o login dos usuários cadastrados.      |
 |---------------------|---------------------------------------------------------------------|
@@ -29,4 +29,4 @@ Discorra sobre os resultados do teste. Ressaltando pontos fortes e fracos identi
 | Critério de Êxito   | O usuário deverá ter conseguido entrar no sistema.                  |
 | Êxito?              | Não.                                                                |
 | Comentário          | Após efetuar login, o usuário não entra no sistema.   |
-| Evidência           | (inserir imagem) |
+| Evidência           | ![RF14](img/testes-RF14.png) |
