@@ -39,3 +39,15 @@ Discorra sobre os resultados do teste. Ressaltando pontos fortes e fracos identi
 | Exito?              | Sim                                                                 |
 | Comentário          | Após a inserção de todos os dados pertinente o site solicitou que fosse salvo em um diretorio de sua maquina o Arquivo JSON referente a atividade criada.  |
 | Evidência           | ![Teste RF-05 e RF-15](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-1-e1-proj-web-t13-g1-TimeFacil/assets/127905690/8a9b0b81-9db3-418c-8fdd-b255520f2012) ![Evidencia RF-05 e RF-15](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-1-e1-proj-web-t13-g1-TimeFacil/assets/127905690/f9707cbe-5ab3-421a-9dc8-44f7d1634314)|
+
+|Caso de Teste        | [CT-01] O site deve permitir o gerenciamento de turmas.      |
+|---------------------|-----------------------------------------------------------------------|
+|	Requisito Associado | [RF-01] - O site deve permitir ao professor criar uma página para sua matéria.   |
+| Objetivo do Teste 	 | : Verificar se o usuário consegue criar uma página para a sua matéria. |
+| Passos 	            | : 1) Acessar a página de gerenciar turmas, 2) Clicar em “Nova Turma”, 3) Informar nos campos indicados eixo/período, código da turma e disciplina, 4) Clicar em “Adicionar” |
+| Critério de Êxito   | A matéria solicitada deve ser criada com as informações fornecidas pelo professor.
+ As informações devem ser armazenadas no LocalStorage. |
+| Êxito?              | Sim.                                                                  |
+| Comentário          | Os dados informados durante o cadastro estão sendo armazenados e o professor consegue criar as turmas.   |
+| Evidência           | |
+
