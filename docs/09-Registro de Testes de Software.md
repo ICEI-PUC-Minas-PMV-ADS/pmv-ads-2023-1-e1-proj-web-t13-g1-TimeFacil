@@ -15,7 +15,7 @@ Discorra sobre os resultados do teste. Ressaltando pontos fortes e fracos identi
 |---------------------|-----------------------------------------------------------------------|
 |	Requisito Associado | [RF-01] - O site deve permitir ao professor criar uma página para sua matéria.   |
 | Objetivo do Teste 	 |  Verificar se o usuário consegue criar uma página para a sua matéria. |
-| Passos 	            |  1) Acessar a página de gerenciar turmas, 2) Clicar em “Nova Turma”, 3) Informar nos campos indicados eixo/período, código da turma e disciplina, 4) Clicar em “Adicionar” |
+| Passos 	            |  1) Acessar a página de gerenciar turmas, 2) Clicar em “Nova Turma”, 3) Informar nos campos indicados eixo/período, código da turma e disciplina, 4) Clicar em “Adicionar”. |
 | Critério de Êxito   | A matéria solicitada deve ser criada com as informações fornecidas pelo professor. As informações devem ser armazenadas no LocalStorage. |
 | Êxito?              | Sim.                                                                  |
 | Comentário          | Os dados informados durante o cadastro estão sendo armazenados e o professor consegue criar as turmas.   |
@@ -51,7 +51,15 @@ Discorra sobre os resultados do teste. Ressaltando pontos fortes e fracos identi
 | Comentário          | Após efetuar login, o usuário não entra no sistema.   |
 | Evidência           | ![RF14](img/testes-RF14.png) |
 
-
+|Caso de Teste        | [CT-16] O site deve permitir o gerenciamento de turmas.      |
+|---------------------|-----------------------------------------------------------------------|
+|	Requisito Associado | [RF-16] - O site deve permitir que o professor exclua as páginas criadas. |
+| Objetivo do Teste 	 | Verificar se o usuário consegue excluir a página criada. |
+| Passos 	            |  1)Clicar no ícone de uma lixeira que indica a exclusão da página, 2)Clicar em “Ok” na mensagem de confirmação para excluir a página. |
+| Critério de Êxito   | A Turma criada deve ser excluída. |
+| Êxito?              | Sim.                                                                  |
+| Comentário          | A turma é excluída. |
+| Evidência           | ![Imagem de exclusão da turma.](img/rf1-exluir tuma.png) ![Imagem de sucesso da exclusão](img/gerenciar-turmas.png) |
 
 
 
