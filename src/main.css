@@ -310,27 +310,37 @@ input[type=reset] {
 
 /* Entrar grupo CSS */
 #botao {
-  text-align: center; margin-left: 448px;
+  text-align: center;
+  margin-left: 448px;
   padding: 1px 40px;
   background-color: #9732ad;
   text-decoration: none;
   border-radius: 5px;
-  color: #fff; margin-top: 10px;
+  color: #fff; 
+margin-top: 10px;
+}
 #foto-fundo {
-  text-align: center; margin-top: 10px; margin-left: 395px;
-  width: 300px; height: 180px;
-  padding-top: 10px;}
+  text-align: center;
+  margin-top: 10px;
+  margin-left: 395px;
+width: 300px;
+  height: 180px;
+padding-top: 10px;
+}
 table{
 padding-top: 10px;
-margin-left: 255px;}
+margin-left: 255px;
+}
+
 table.info-tabela, td{
 border: 1px solid darkblue;
 white-space: nowrap;
 padding-top: 5px;
-padding-bottom: 4px; padding-right: 4px; 
-padding-left: 5px;}
-
-  @media screen and (max-width: 768px) {
+padding-bottom: 4px;
+padding-right: 4px;
+padding-left: 5px;
+}
+@media screen and (max-width: 768px) {
   .navbar,
   .tema,
   .ideia {
@@ -979,53 +989,3 @@ p#botao-close:hover {
 }
 
 /*  SESSÃO ARTHUR - FINAL*/ /*# sourceMappingURL=main.css.map */
-
-/* Cards CSS */
-
-div.cards{
-	display: flex;
-	flex-direction: row;
-  }
-  div.cards section.card{
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	text-align: center;
-	background-color: lightgray;
-	padding: 1rem 1.5rem;
-	max-height: 265px;
-	margin-left: 32px;
-	margin-top: 230px;
-	border-radius: 4px;
-  }
-  div.cards section.card :first-child{
-	margin-left: 0;
-  }
-  div.cards section.card button {
-	cursor: pointer;
-	display: inline-block;
-	padding: 5px 20px;
-	background-color: #9732ad;
-	text-decoration: none;
-	border-radius: 5px;
-	margin-right: 10px;
-	color: #fff;
-	padding-top: 2px;
-	padding-bottom: 2px;
-  }
-  div.cards section.card{
-	box-shadow: 15px 15px 40px -30px #1a1a1b ;
-  }
-  .title_grupo{
-	display: flex;
-	text-align: center;
-	margin-top:60px;
-  }
-div.cards{
-	width: 400px;
-  }
-img.imagem-fundo{
-	width: 320px;
-	height: 170px;
-}
-

@@ -53,55 +53,6 @@ function generateJSON() {
 	document.body.removeChild(downloadLink);
 	window.location.href = "index.html";
 }
-
-//Editar Grupo
-
-document.addEventListener("DOMContentLoaded", () => {
-    if (document.body.id === "edit-group") {
-      loadDefaultValues();
-    }
-});
-
-function loadDefaultValues() {
-fetch("group_edit_mockup.json")
-    .then((response) => response.json())
-    .then((data) => {
-    document.querySelector("#disciplina").textContent = data.disciplina;
-    document.querySelector("#atividade").textContent = data.atividade;
-    document.querySelector("#prazo").textContent = data.prazo;
-    document.querySelector("#integrantesMin").textContent = data.integrantesMin;
-    document.querySelector("#integrantesMax").textContent = data.integrantesMax;
-    document.querySelector("#tema").value = data.tema;
-    document.querySelector("#hora").value = data.hora;
-    document.querySelector("#comentario").value = data.comentario;
-
-    if (data.domingo) {
-        document.querySelector("#dia_dom").classList.add("clicked");
-    }
-    if (data.segunda) {
-        document.querySelector("#dia_seg").classList.add("clicked");
-    }
-    if (data.terca) {
-        document.querySelector("#dia_ter").classList.add("clicked");
-    }
-    if (data.quarta) {
-        document.querySelector("#dia_qua").classList.add("clicked");
-    }
-    if (data.quinta) {
-        document.querySelector("#dia_qui").classList.add("clicked");
-    }
-    if (data.sexta) {
-        document.querySelector("#dia_sex").classList.add("clicked");
-    }
-    if (data.sabado) {
-        document.querySelector("#dia_sab").classList.add("clicked");
-    }
-    })
-    .catch((error) => {
-    console.error("Nenhum arquivo default_values.json encontrado:", error);
-    });
-}
-
 //Entrar em Grupo.
 function confirmaSaida(){
 var meuBotao = document.getElementById("botao");
@@ -119,7 +70,6 @@ var meuBotao = document.getElementById("botao");
 	  meuBotao.innerHTML = "Entrar no grupo";
 	}
 }
-
 //=================================
 //Criar Atividade - Início da seção
 //=================================
@@ -215,6 +165,15 @@ let gravaAtividade = () => {
 	}
 };
 
+document.getElementById("formularioAtividade").addEventListener("submit", function (event) {
+event.preventDefault();
+gravaAtividade();
+ });
+
+//===============================
+// Criar Atividade - Fim da seção
+//===============================
+
 //Trecho usado para não carregar o EventListener do formularioAtividade quando o usuário estiver na página "Gerenciar Atividades".
 if (window.location.pathname.includes("criar-atividade.html")) {
 	if (document.getElementById("formularioAtividade")) {
@@ -224,159 +183,156 @@ if (window.location.pathname.includes("criar-atividade.html")) {
 		});
 	}
 } else {
-	//===============================
-	// Criar Atividade - Fim da seção
-	//===============================
 
-	//======================================
-	//Gerenciar Atividades - Início da seção
-	//======================================
-	document.addEventListener("DOMContentLoaded", function () {
-		gerenciarAtividades();
-	});
+//======================================
+//Gerenciar Atividades - Início da seção
+//======================================
+document.addEventListener("DOMContentLoaded", function () {
+  gerenciarAtividades();
+});
 
-	//Carrega os dados armazenados no LocalStorage
-	function gerenciarAtividades() {
-		let atividades = readAtividade();
-		let tabelaBody = document.querySelector("#tabela-atividades tbody");
+//Carrega os dados armazenados no LocalStorage
+function gerenciarAtividades() {
+  let atividades = readAtividade();
+  let tabelaBody = document.querySelector("#tabela-atividades tbody");
 
-		// Limpa o conteúdo atual da tabela
-		if (tabelaBody) {
-			tabelaBody.innerHTML = "";
+  // Limpa o conteúdo atual da tabela
+  if (tabelaBody) {
+    tabelaBody.innerHTML = "";
 
-			// Adiciona as linhas da tabela
-			for (let atividade of atividades) {
-				let row = tabelaBody.insertRow();
-				row.classList.add("tabela-linha");
+    // Adiciona as linhas da tabela
+    for (let atividade of atividades) {
+      let row = tabelaBody.insertRow();
+      row.classList.add("tabela-linha");
 
-				let celulaAtividade = row.insertCell();
-				celulaAtividade.textContent = atividade.atividade;
-				celulaAtividade.classList.add("tabela-celula");
+      let celulaAtividade = row.insertCell();
+      celulaAtividade.textContent = atividade.atividade;
+      celulaAtividade.classList.add("tabela-celula");
 
-				let celulaTema = row.insertCell();
-				celulaTema.textContent = atividade.tema;
-				celulaTema.classList.add("tabela-celula");
+      let celulaTema = row.insertCell();
+      celulaTema.textContent = atividade.tema;
+      celulaTema.classList.add("tabela-celula");
 
-				let celulaIntegrantes = row.insertCell();
-				celulaIntegrantes.textContent = atividade.integrantesMin.concat(" a ", atividade.integrantesMax);
-				celulaIntegrantes.classList.add("tabela-celula");
+      let celulaIntegrantes = row.insertCell();
+      celulaIntegrantes.textContent = atividade.integrantesMin.concat(" a ", atividade.integrantesMax);
+      celulaIntegrantes.classList.add("tabela-celula");
 
-				let celulaPrazo = row.insertCell();
-				celulaPrazo.textContent = atividade.prazo;
-				celulaPrazo.classList.add("tabela-celula");
+      let celulaPrazo = row.insertCell();
+      celulaPrazo.textContent = atividade.prazo;
+      celulaPrazo.classList.add("tabela-celula");
 
-				let celulaAcoes = row.insertCell();
-				celulaAcoes.classList.add("tabela-celula");
+      let celulaAcoes = row.insertCell();
+      celulaAcoes.classList.add("tabela-celula");
 
-				// Adiciona o ícone de edição
-				let iconeEditarAtividade = document.createElement("span");
-				iconeEditarAtividade.classList.add("icone-editar-atividade");
-				let editarImg = document.createElement("img");
-				editarImg.src = "icones/editar.png";
-				iconeEditarAtividade.appendChild(editarImg);
+      // Adiciona o ícone de edição
+      let iconeEditarAtividade = document.createElement("span");
+      iconeEditarAtividade.classList.add("icone-editar-atividade");
+      let editarImg = document.createElement("img");
+      editarImg.src = "icones/editar.png";
+      iconeEditarAtividade.appendChild(editarImg);
 
-				//Método para abrir o modal a partir do ícone editar
-				iconeEditarAtividade.addEventListener("click", function () {
-					let rowIndex = this.parentNode.parentNode.rowIndex - 1;
-					// document.getElementById("indiceLinha").value = rowIndex; //Tentativa de resolver o NaN
-					let atividade = readAtividade()[rowIndex];
-					document.getElementById("atividade").value = atividade.atividade;
-					document.getElementById("temaFixoSim").checked = atividade.temaFixo === "sim";
-					document.getElementById("temaFixoNao").checked = atividade.temaFixo === "nao";
-					let campoTema = document.getElementById("tema");
-					campoTema.value = atividade.tema;
+      //Método para abrir o modal a partir do ícone editar
+      iconeEditarAtividade.addEventListener("click", function () {
+        let rowIndex = this.parentNode.parentNode.rowIndex - 1;
+        // document.getElementById("indiceLinha").value = rowIndex; //Tentativa de resolver o NaN
+        let atividade = readAtividade()[rowIndex];
+        document.getElementById("atividade").value = atividade.atividade;
+        document.getElementById("temaFixoSim").checked = atividade.temaFixo === "sim";
+        document.getElementById("temaFixoNao").checked = atividade.temaFixo === "nao";
+        let campoTema = document.getElementById("tema");
+        campoTema.value = atividade.tema;
 
-					//Exibe ou oculta o campo tema, de acordo com o valor gravado no LocalStorage
-					if (atividade.temaFixo === "sim") {
-						campoTema.style.display = "inline-block";
-						document.getElementById("temaLabel").style.display = "inline-block";
-					} else {
-						campoTema.style.display = "none";
-						document.getElementById("temaLabel").style.display = "none";
-					}
-					document.getElementById("integrantesMin").value = atividade.integrantesMin;
-					document.getElementById("integrantesMax").value = atividade.integrantesMax;
-					document.getElementById("prazo").value = atividade.prazo;
+        //Exibe ou oculta o campo tema, de acordo com o valor gravado no LocalStorage
+        if (atividade.temaFixo === "sim") {
+          campoTema.style.display = "inline-block";
+          document.getElementById("temaLabel").style.display = "inline-block";
+        } else {
+          campoTema.style.display = "none";
+          document.getElementById("temaLabel").style.display = "none";
+        }
+        document.getElementById("integrantesMin").value = atividade.integrantesMin;
+        document.getElementById("integrantesMax").value = atividade.integrantesMax;
+        document.getElementById("prazo").value = atividade.prazo;
 
-					// Método para exibir o modal
-					let modal = document.getElementById("modal-atividades");
-					modal.style.display = "block";
-				});
-				celulaAcoes.appendChild(iconeEditarAtividade);
+        // Método para exibir o modal
+        let modal = document.getElementById("modal-atividades");
+        modal.style.display = "block";
+      });
+      celulaAcoes.appendChild(iconeEditarAtividade);
 
-				//Adiciona o ícone de exclusão
-				let iconeDeletarAtividade = document.createElement("span");
-				iconeDeletarAtividade.classList.add("icone-deletar-atividade");
-				let excluirImg = document.createElement("img");
-				excluirImg.src = "icones/excluir.png";
-				iconeDeletarAtividade.appendChild(excluirImg);
-				iconeDeletarAtividade.addEventListener("click", function () {
-					// Exclui a linha
-					let rowIndex = this.parentNode.parentNode.rowIndex - 1;
-					if (confirm("Tem certeza de que deseja excluir essa atividade?")) {
-						deleteAtividade(rowIndex);
-						// Atualiza a tabela após a exclusão
-						gerenciarAtividades();
-						alert("Atividade excluída com sucesso!");
-					}
-				});
-				celulaAcoes.appendChild(iconeDeletarAtividade);
-			}
+      //Adiciona o ícone de exclusão
+      let iconeDeletarAtividade = document.createElement("span");
+      iconeDeletarAtividade.classList.add("icone-deletar-atividade");
+      let excluirImg = document.createElement("img");
+      excluirImg.src = "icones/excluir.png";
+      iconeDeletarAtividade.appendChild(excluirImg);
+      iconeDeletarAtividade.addEventListener("click", function () {
+        // Exclui a linha
+        let rowIndex = this.parentNode.parentNode.rowIndex - 1;
+        if (confirm("Tem certeza de que deseja excluir essa atividade?")) {
+          deleteAtividade(rowIndex);
+          // Atualiza a tabela após a exclusão
+          gerenciarAtividades();
+          alert("Atividade excluída com sucesso!");
+        }
+      });
+      celulaAcoes.appendChild(iconeDeletarAtividade);
+    }
 
-			// Adiciona evento de envio do formulário
-			let form = document.getElementById("formularioAtividade");
-			form.addEventListener("submit", function (event) {
-				// Obtenha os valores dos campos no modal
+    // Adiciona evento de envio do formulário
+    let form = document.getElementById("formularioAtividade");
+    form.addEventListener("submit", function (event) {
+      // Obtenha os valores dos campos no modal
 
-				let atividade = document.getElementById("atividade").value;
-				let temaFixo = document.querySelector('input[name="temaFixoSimNao"]:checked').value;
-				let tema = document.getElementById("tema").value;
-				let integrantesMin = document.getElementById("integrantesMin").value;
-				let integrantesMax = document.getElementById("integrantesMax").value;
-				let prazo = document.getElementById("prazo").value;
+      let atividade = document.getElementById("atividade").value;
+      let temaFixo = document.querySelector('input[name="temaFixoSimNao"]:checked').value;
+      let tema = document.getElementById("tema").value;
+      let integrantesMin = document.getElementById("integrantesMin").value;
+      let integrantesMax = document.getElementById("integrantesMax").value;
+      let prazo = document.getElementById("prazo").value;
 
-				console.log("Valores obtidos:");
-				console.log("Atividade:", atividade);
-				console.log("Tema Fixo:", temaFixo);
-				console.log("Tema:", tema);
-				console.log("Integrantes Mínimo:", integrantesMin);
-				console.log("Integrantes Máximo:", integrantesMax);
-				console.log("Prazo:", prazo);
+      console.log("Valores obtidos:");
+      console.log("Atividade:", atividade);
+      console.log("Tema Fixo:", temaFixo);
+      console.log("Tema:", tema);
+      console.log("Integrantes Mínimo:", integrantesMin);
+      console.log("Integrantes Máximo:", integrantesMax);
+      console.log("Prazo:", prazo);
 
-				//Atualize a atividade no LocalStorage
-				let rowIndex = this.parentNode.parentNode.rowIndex - 1; //O PROBLEMA ESTÁ AQUI!
-				// document.getElementById("indiceLinha").value = rowIndex; //Tentativa de resolver o NaN
-				console.log("Índice da atividade:", rowIndex);
-				updateAtividade(rowIndex, atividade, temaFixo, tema, integrantesMin, integrantesMax, prazo);
-				// Feche o modal
-				let modal = document.getElementById("modal-atividades");
-				modal.style.display = "none";
+      //Atualize a atividade no LocalStorage
+      let rowIndex = this.parentNode.parentNode.rowIndex - 1; //O PROBLEMA ESTÁ AQUI!
+      // document.getElementById("indiceLinha").value = rowIndex; //Tentativa de resolver o NaN
+      console.log("Índice da atividade:", rowIndex);
+      updateAtividade(rowIndex, atividade, temaFixo, tema, integrantesMin, integrantesMax, prazo);
+      // Feche o modal
+      let modal = document.getElementById("modal-atividades");
+      modal.style.display = "none";
 
-				// Atualize a tabela com as alterações
-				gerenciarAtividades();
+      // Atualize a tabela com as alterações
+      gerenciarAtividades();
 
-				// Exiba uma mensagem de sucesso (opcional)
-				alert("Alterações salvas com sucesso!");
-			});
+      // Exiba uma mensagem de sucesso (opcional)
+      alert("Alterações salvas com sucesso!");
+    });
 
-			// Métodos para fechar o modal
-			let modal = document.getElementById("modal-atividades");
-			let fecharModal = document.querySelector(".fechar-modal-atividades");
-			let modalConteudo = document.querySelector(".modal-atividades-conteudo");
+    // Métodos para fechar o modal
+    let modal = document.getElementById("modal-atividades");
+    let fecharModal = document.querySelector(".fechar-modal-atividades");
+    let modalConteudo = document.querySelector(".modal-atividades-conteudo");
 
-			// Fecha o modal quando o usuário clica no botão de fechar
-			fecharModal.addEventListener("click", function () {
-				modal.style.display = "none";
-			});
+    // Fecha o modal quando o usuário clica no botão de fechar
+    fecharModal.addEventListener("click", function () {
+      modal.style.display = "none";
+    });
 
-			// Fecha o modal quando o usuário clica fora do modal
-			window.addEventListener("click", function (event) {
-				if (event.target === modalConteudo) {
-					modal.style.display = "none";
-				}
-			});
-		}
-	}
+    // Fecha o modal quando o usuário clica fora do modal
+    window.addEventListener("click", function (event) {
+      if (event.target === modalConteudo) {
+        modal.style.display = "none";
+      }
+    });
+  }
+}
 }
 //======================================
 //Gerenciar Atividades - Fim da seção
@@ -458,7 +414,6 @@ function deletarTurma(input) {
 		tabela.deleteRow(numLinha);
 	}
 }
-
 
 //===============================
 // Gerenciar Turmas - Inicio da seção
@@ -817,3 +772,4 @@ function fecharModalConvAluno() {
 // Gerenciar Turmas - Fim da seção
 
 //===============================
+
