@@ -81,7 +81,7 @@ http://127.0.0.1:5500/src/entrar_grupo.html
 
 ### Mostrar grupos (RF-10)
 
-A tela exibe os cards dos grupos, ao clicar no botão o usuário pode obter mais informações sobre o grupo.
+A tela exibe os cards dos grupos. Ao clicar no botão, o usuário pode obter mais informações sobre o grupo.
 
 ![Mostrar grupo tela](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-1-e1-proj-web-t13-g1-TimeFacil/blob/main/docs/img/mostrar-grupos.png)
 
