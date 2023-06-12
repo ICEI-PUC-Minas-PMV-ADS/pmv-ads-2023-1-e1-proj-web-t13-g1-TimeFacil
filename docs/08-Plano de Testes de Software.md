@@ -1,23 +1,5 @@
 # Plano de Testes de Software
 
-<span style="color:red">Pré-requisitos: <a href="2-Especificação do Projeto.md"> Especificação do Projeto</a></span>, <a href="3-Projeto de Interface.md"> Projeto de Interface</a>
-
-Apresente os cenários de testes utilizados na realização dos testes da sua aplicação. Escolha cenários de testes que demonstrem os requisitos sendo satisfeitos.
-
-Enumere quais cenários de testes foram selecionados para teste. Neste tópico o grupo deve detalhar quais funcionalidades avaliadas, o grupo de usuários que foi escolhido para participar do teste e as ferramentas utilizadas.
- 
-<!-- ## Ferramentas de Testes (Opcional)
-
-Comente sobre as ferramentas de testes utilizadas.
- 
-> **Links Úteis**:
-> - [IBM - Criação e Geração de Planos de Teste](https://www.ibm.com/developerworks/br/local/rational/criacao_geracao_planos_testes_software/index.html)
-> - [Práticas e Técnicas de Testes Ágeis](http://assiste.serpro.gov.br/serproagil/Apresenta/slides.pdf)
-> -  [Teste de Software: Conceitos e tipos de testes](https://blog.onedaytesting.com.br/teste-de-software/)
-> - [Criação e Geração de Planos de Teste de Software](https://www.ibm.com/developerworks/br/local/rational/criacao_geracao_planos_testes_software/index.html)
-> - [Ferramentas de Test para Java Script](https://geekflare.com/javascript-unit-testing/)
-> - [UX Tools](https://uxdesign.cc/ux-user-research-and-user-testing-tools-2d339d379dc7) -->
-
 |Caso de Teste        | [CT-01] O site deve permitir o gerenciamento de turmas.      |
 |---------------------|-----------------------------------------------------------------------|
 |	Requisito Associado | [RF-01] - O site deve permitir ao professor criar uma página para sua matéria.   |
@@ -53,3 +35,32 @@ Comente sobre as ferramentas de testes utilizadas.
 | Passos 	            |  1)Clicar no ícone de uma lixeira que indica a exclusão da página, 2)Clicar em “Ok” na mensagem de confirmação para excluir a página. |
 | Critério de Êxito   | A Turma criada deve ser excluída. |
 
+|Caso de Teste        | [CT-02] O site deve permitir ao professor criar uma página para a atividade em grupo.      |
+|---------------------|-----------------------------------------------------------------------|
+|	Requisito Associado | [RF-02] - O site deve permitir que o professor crie uma atividade em grupo. |
+| Objetivo do Teste 	 | Verificar se o professor consegue criar uma atividade. |
+| Passos 	            |  1) Clicar no menu de 'Criar Atividade' na sidebar, 2) Inserir os dados da atividade (Título, Fixo sim ou Não, Quantidade min e max de integrantes e prazo de formação), 3) Clicar em “Criar Atividade”. |
+| Critério de Êxito   | A Atividade deve ser criada e listada na página 'Gerenciar Atividades', no menu da sidebar. |
+
+
+|Caso de Teste        | [CT-03] O site deve permitir ao professor definir se a atividade tem um tema fixo ou não.      |
+|---------------------|-----------------------------------------------------------------------|
+|	Requisito Associado | [RF-03] - O site deve permitir que o professor defina se a atividade tem um tema fixo ou não. |
+| Objetivo do Teste 	 | Verificar se o professor consegue definir se o tema da atividade é fixo ou não. |
+| Passos 	            |  1) Clicar no menu de 'Criar Atividade' na sidebar, 2) Inserir os dados gerais da atividade (Título, Quantidade min e max de integrantes e prazo de formação), 3) Clicar no radio button 'Sim' para 'Tema Fixo', 4) 'Digitar um título para o tema no input que surgir, 5) Clicar em “Criar Atividade”. |
+| Critério de Êxito   | Ao clicar na opção de editar atividade (ícone da caneta), a atividade deve ser mostrada se está fixa ou não e seu título, na página 'Gerenciar Atividades', no menu da sidebar. |
+
+|Caso de Teste        | [CT-04] O site deve permitir ao professor definir o número mínimo e máximo de membros em um grupo.   |
+|---------------------|-----------------------------------------------------------------------|
+|	Requisito Associado | [RF-04] - O site deve permitir que o professor defina a quantidade mínima e máxima de membros em um grupo. |
+| Objetivo do Teste 	 | Verificar se o professor consegue definir a quantidade mínima e máxima de membros em um grupo. |
+| Passos 	            |  1) Clicar no menu de 'Criar Atividade' na sidebar, 2) Inserir os dados gerais da atividade (Título, tema fixo ou não, prazo de formação), 3) Definir um número específico para a quantidade mínima e máxima de membros em um grupo, 4) Clicar em “Criar Atividade”. |
+| Critério de Êxito   | A Atividade deve listada na página 'Gerenciar Atividades', no menu da sidebar, com a quantidade específica de integrantes cadastrada. |
+
+
+|Caso de Teste        | [CT-11] O site deve permitir ao professor definir uma data limite para formação dos grupos   |
+|---------------------|-----------------------------------------------------------------------|
+|	Requisito Associado | [RF-11] - O site deve permitir que o professor defina uma data limite para formação dos grupos. |
+| Objetivo do Teste 	 | Verificar se o professor consegue definir uma data limite para formação dos grupos. |
+| Passos 	            |  1) Clicar no menu de 'Criar Atividade' na sidebar, 2) Inserir os dados gerais da atividade (Título, tema fixo ou não e quantidade máxima e mínima de integrantes), 3) Definir uma data específica para o prazo de formação, 4) Clicar em “Criar Atividade”. |
+| Critério de Êxito   | A Atividade deve listada na página 'Gerenciar Atividades', no menu da sidebar, com o prazo específico cadastrado. |
