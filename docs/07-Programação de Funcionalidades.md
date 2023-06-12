@@ -83,7 +83,7 @@ http://127.0.0.1:5500/src/entrar_grupo.html
 
 A tela exibe os cards dos grupos, ao clicar no botão o usuário pode obter mais informações sobre o grupo.
 
-![Mostrar grupo tela](ihttps://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-1-e1-proj-web-t13-g1-TimeFacil/blob/main/docs/img/mostrar-grupos.png)
+![Mostrar grupo tela](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-1-e1-proj-web-t13-g1-TimeFacil/blob/main/docs/img/mostrar-grupos.png)
 
 Artefatos da funcionalidade
 - exibir_grupo.html
