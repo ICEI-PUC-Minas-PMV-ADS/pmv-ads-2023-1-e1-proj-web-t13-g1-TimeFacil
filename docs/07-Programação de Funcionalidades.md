@@ -78,3 +78,23 @@ Instruções de acesso
 5. Abra o Visual Studio Code e execute o Live Server;
 6. Abra um navegador de Internet e informe a seguinte URL:
 http://127.0.0.1:5500/src/entrar_grupo.html
+
+### Mostrar grupos (RF-10)
+
+A tela exibe os cards dos grupos, ao clicar no botão o usuário pode obter mais informações sobre o grupo.
+
+![Mostrar grupo tela](img/mostrar_gupo.png)
+
+Artefatos da funcionalidade
+- exibir_grupo.html
+- script.js
+- main.css
+- foto-fundo.png
+
+Instruções de acesso
+
+3. Faça o download do arquivo do projeto (ZIP) ou clone do projeto no GitHub;
+4. Descompacte o arquivo em uma pasta específica;
+5. Abra o Visual Studio Code e execute o Live Server;
+6. Abra um navegador de Internet e informe a seguinte URL:
+http://127.0.0.1:5501/src/exibir_grupo.html
