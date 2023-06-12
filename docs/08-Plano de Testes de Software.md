@@ -35,14 +35,6 @@
 | Passos 	            |  1)Clicar no ícone de uma lixeira que indica a exclusão da página, 2)Clicar em “Ok” na mensagem de confirmação para excluir a página. |
 | Critério de Êxito   | A Turma criada deve ser excluída. |
 
-|Caso de Teste        | [CT-16] O site deve permitir o gerenciamento de turmas.      |
-|---------------------|-----------------------------------------------------------------------|
-|	Requisito Associado | [RF-16] - O site deve permitir que o professor exclua as páginas criadas. |
-| Objetivo do Teste 	 | Verificar se o usuário consegue excluir a página criada. |
-| Passos 	            |  1)Clicar no ícone de uma lixeira que indica a exclusão da página, 2)Clicar em “Ok” na mensagem de confirmação para excluir a página. |
-| Critério de Êxito   | A Turma criada deve ser excluída. |
-
-
 |Caso de Teste        | [CT-02] O site deve permitir ao professor criar uma página para a atividade em grupo.      |
 |---------------------|-----------------------------------------------------------------------|
 |	Requisito Associado | [RF-02] - O site deve permitir que o professor crie uma atividade em grupo. |

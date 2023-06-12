@@ -54,3 +54,44 @@
 
 
 
+|Caso de Teste        | [CT-02] O site deve permitir ao professor criar uma página para a atividade em grupo.      |
+|---------------------|-----------------------------------------------------------------------|
+|	Requisito Associado | [RF-02] - O site deve permitir que o professor crie uma atividade em grupo. |
+| Objetivo do Teste 	 | Verificar se o professor consegue criar uma atividade. |
+| Passos 	            |  1) Clicar no menu de 'Criar Atividade' na sidebar, 2) Inserir os dados da atividade (Título, Fixo sim ou Não, Quantidade min e max de integrantes e prazo de formação), 3) Clicar em “Criar Atividade”. |
+| Critério de Êxito   | A Atividade deve ser criada e listada na página 'Gerenciar Atividades', no menu da sidebar. |
+| Êxito?              | Sim.                                                                  |
+| Comentário          | A atividade é criada e listada. |
+| Evidência           | ![Imagem da tela de criação.](img/teste_criar_atividade.png) ![Mensagem de scuesso](img/teste_criar_atividade2.png) ![Atividade listada](img/teste_criar_atividade3.png) |
+
+
+|Caso de Teste        | [CT-03] O site deve permitir ao professor definir se a atividade tem um tema fixo ou não.      |
+|---------------------|-----------------------------------------------------------------------|
+|	Requisito Associado | [RF-03] - O site deve permitir que o professor defina se a atividade tem um tema fixo ou não. |
+| Objetivo do Teste 	 | Verificar se o professor consegue definir se o tema da atividade é fixo ou não. |
+| Passos 	            |  1) Clicar no menu de 'Criar Atividade' na sidebar, 2) Inserir os dados gerais da atividade (Título, Quantidade min e max de integrantes e prazo de formação), 3) Clicar no radio button 'Sim' para 'Tema Fixo', 4) 'Digitar um título para o tema no input que surgir, 5) Clicar em “Criar Atividade”. |
+| Critério de Êxito   | Ao clicar na opção de editar atividade (ícone da caneta), a atividade deve ser mostrada se está fixa ou não e seu título, na página 'Gerenciar Atividades', no menu da sidebar. |
+| Êxito?              | Sim.                                                                  |
+| Comentário          | A opção é disponível e a atividade registrada de acordo. |
+| Evidência           | ![Selecionando Tema não fixo.](img/teste_tema_fixo1.png) ![Selecionando Tema fixo](img/teste_tema_fixo2.png) ![Criado com o tema definido](img/teste_tema_fixo3.png) |
+
+|Caso de Teste        | [CT-04] O site deve permitir ao professor definir o número mínimo e máximo de membros em um grupo.   |
+|---------------------|-----------------------------------------------------------------------|
+|	Requisito Associado | [RF-04] - O site deve permitir que o professor defina a quantidade mínima e máxima de membros em um grupo. |
+| Objetivo do Teste 	 | Verificar se o professor consegue definir a quantidade mínima e máxima de membros em um grupo. |
+| Passos 	            |  1) Clicar no menu de 'Criar Atividade' na sidebar, 2) Inserir os dados gerais da atividade (Título, tema fixo ou não, prazo de formação), 3) Definir um número específico para a quantidade mínima e máxima de membros em um grupo, 4) Clicar em “Criar Atividade”. |
+| Critério de Êxito   | A Atividade deve listada na página 'Gerenciar Atividades', no menu da sidebar, com a quantidade específica de integrantes cadastrada. |
+| Êxito?              | Sim.                                                                  |
+| Comentário          | O número mínimo e máximo é registrado. |
+| Evidência           | ![Imagem da tela de edição.](img/teste_integrantes.png) |
+
+
+|Caso de Teste        | [CT-11] O site deve permitir ao professor definir uma data limite para formação dos grupos   |
+|---------------------|-----------------------------------------------------------------------|
+|	Requisito Associado | [RF-11] - O site deve permitir que o professor defina uma data limite para formação dos grupos. |
+| Objetivo do Teste 	 | Verificar se o professor consegue definir uma data limite para formação dos grupos. |
+| Passos 	            |  1) Clicar no menu de 'Criar Atividade' na sidebar, 2) Inserir os dados gerais da atividade (Título, tema fixo ou não e quantidade máxima e mínima de integrantes), 3) Definir uma data específica para o prazo de formação, 4) Clicar em “Criar Atividade”. |
+| Critério de Êxito   | A Atividade deve listada na página 'Gerenciar Atividades', no menu da sidebar, com o prazo específico cadastrado. |
+| Êxito?              | Sim.                                                                  |
+| Comentário          | A data limite é registrada. |
+| Evidência           | ![Imagem do prazo definido.](img/teste_prazo.png) |
