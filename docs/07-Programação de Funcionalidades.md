@@ -89,7 +89,6 @@ Artefatos da funcionalidade
 - exibir_grupo.html
 - script.js
 - main.css
-- foto-fundo.png
 
 Instruções de acesso
 
