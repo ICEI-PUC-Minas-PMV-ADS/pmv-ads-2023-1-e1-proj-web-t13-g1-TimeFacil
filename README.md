@@ -43,7 +43,9 @@ Uma aplicação _web_ que objetiva facilitar a formação de grupos para a reali
 
 # Hospedagem
 
-- [Pendente]
+- https://time-facil.onrender.com/
+  - Página de Login: https://time-facil.onrender.com/login.html
+  - Página de Registro: https://time-facil.onrender.com/sign_up.html
 
 # Armazenamento do Código-Fonte
 

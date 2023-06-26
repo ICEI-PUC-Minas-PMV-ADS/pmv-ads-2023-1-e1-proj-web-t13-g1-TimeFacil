@@ -3,33 +3,37 @@
 <head>
     <meta charset="UTF-8">
     <title>Login no Time Fácil</title>
-    <link rel="stylesheet" href="login.css"> 
+    <link rel="stylesheet" href="login.css">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script>
         function validarFormulario() {
             var username = document.querySelector('input[type="text"]').value;
             var password = document.querySelector('input[type="password"]').value;
-            
+
             if (username === '' || password === '') {
                 alert('Por favor, preencha todos os campos.');
-                return false;
+                event.preventDefault();
+            } else {
+                setTimeout(redirecionarParaIndex, 100);
             }
         }
-        
+
         function redirecionarParaRegistro() {
-            window.location.href = "tela registro.html";
+            window.location.href = "sign_up.html";
         }
-        
         function redirecionarParaRecuperarSenha() {
-            window.location.href = "esqueci a senha.html";
+            window.location.href = "forgot_password.html";
+        }
+        function redirecionarParaIndex() {
+            window.location.href = "index.html";
         }
     </script>
 </head>
 <body>
     <div class="wrapper">
         <h1>Entre no Time Fácil</h1>
-        <form action="#" onsubmit="return validarFormulario()">
+        <form action="#" onsubmit="return validarFormulario(event)">
             <input type="text" placeholder="Nome de usuário">
             <input type="password" placeholder="Senha">
             <div class="recover">
